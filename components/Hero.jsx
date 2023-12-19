@@ -35,10 +35,8 @@ const Hero = () => {
                   Raolen Gradnja
                 </h1>
                 <p className="text-soft_green mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0">
-                  Raolen Gradnja je ugledna kompanija za nekretnine smeštena u
-                  samom centru grada Inđije. Naše projekte odlikuju visoki
-                  standardi gradnje, inovativni dizaj i pažljivo planiranje
-                  prostora.
+                  Ovo je mesto ge započinje vaše putovanje prema porodičnom domu
+                  kakvog ste ga oduvek zamišljali.
                 </p>
               </motion.div>
               {/* pattern */}

@@ -25,8 +25,9 @@ const Featured = () => {
           Nikad lakše do vašeg doma iz snova!
         </h2>
         <p className="flex-1 text-soft_green landing-loose">
-          Bilo da vam treba stan kao porodični dom, ili mesto za uspešno
-          pohadjanje studija, mi nudimo rešenja za sve vaše stambene potrebe.
+          Raolen Gradnja je ugledna kompanija za nekretnine smeštena u samom
+          centru grada Inđije. Naše projekte odlikuju visoki standardi gradnje,
+          inovativni dizaj i pažljivo planiranje prostora.
         </p>
       </div>
     </motion.section>

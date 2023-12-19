@@ -14,50 +14,58 @@ import { fadeIn } from "../variants";
 const markers = [
   {
     position: [45.04699, 20.08537],
-    title: "Univer Export",
-    subtitle: "Supermarket.",
-    distance: "20m",
-    type: "market",
-    image: "/map/1.png",
-    iconUrl: "/map/markers/store-2-solid.svg",
-    iconSize: [40, 40],
-  },
-  {
-    position: [45.04826, 20.09203],
-    title: "FK Indjija",
-    subtitle: "Fudbalski klub.",
-    distance: "1500m",
-    type: "market",
-    image: "/map/2.png",
-    iconUrl: "/map/markers/football-solid.svg",
-    iconSize: [40, 40],
+    title: "Raolen Gradnja",
+    subtitle: null,
+    distance: null,
+    type: null,
+    image: null,
+    iconUrl: "/logo.svg",
+    iconSize: [120, 120],
   },
   {
     position: [45.04083166147802, 20.08672533005239],
-    title: "Autobuska Stanica, Inđija",
-    subtitle: "Autobuska i železnička stanica.",
-    distance: "2000m",
+    title: "Autobuska Stanica",
+    subtitle: "Autobuska stanica.",
+    distance: "1000m",
     image: "/map/3.png",
     iconUrl: "/map/markers/bus-solid.svg",
-    iconSize: [40, 40],
+    iconSize: [35, 35],
   },
   {
     position: [45.047563403099176, 20.07855873364977],
     title: "Sports Center Inđija",
-    subtitle: "Centar za profesionalno bavljenje sportom i rekreaciju",
-    distance: "1300m",
+    subtitle: "Centar za profesionalno bavljenje sportom i rekreaciju.",
+    distance: "700m",
     image: "/map/4.png",
     iconUrl: "/map/markers/run-solid.svg",
-    iconSize: [40, 40],
+    iconSize: [35, 35],
   },
   {
     position: [45.0497648775468, 20.08961627848285],
     title: "Park Kraljice Marije",
-    subtitle: "Gradski park",
-    distance: "1450m",
+    subtitle: "Gradski park.",
+    distance: "750m",
     image: "/map/5.png",
     iconUrl: "/map/markers/tree-solid.svg",
-    iconSize: [40, 40],
+    iconSize: [35, 35],
+  },
+  {
+    position: [45.048923568976385, 20.092122911618947],
+    title: "Železnička stanica",
+    subtitle: "Železnička stanica.",
+    distance: "650m",
+    image: "/map/6.png",
+    iconUrl: "/map/markers/train-solid.svg",
+    iconSize: [35, 35],
+  },
+  {
+    position: [45.046811169710644, 20.07737726162274],
+    title: "Dom zdravlja",
+    subtitle: "Dom zdravlja Dr Milorad-Mika Pavlović.",
+    distance: "950m",
+    image: "/map/7.png",
+    iconUrl: "/map/markers/house-chimney-medical-solid.svg",
+    iconSize: [35, 35],
   },
 ];
 
@@ -66,9 +74,9 @@ const Map = () => {
     query: "(max-width: 768px)",
   });
   return (
-    <div>
+    <section className="bg-soft_green-secondary">
       {/* text */}
-      <div className="text-center">
+      <div className="text-center p-10">
         <motion.h2
           variants={fadeIn("up", 0.2)}
           initial="hidden"
@@ -92,7 +100,7 @@ const Map = () => {
       {/* locations */}
       <div className="flex flex-col xl:flex-row mx-2">
         {markers.map((marker, index) => {
-          return (
+          return marker.distance ? (
             <motion.div
               variants={fadeIn("right", 0.4)}
               initial="hidden"
@@ -116,7 +124,7 @@ const Map = () => {
                 <p className="">{marker.subtitle}</p>
               </div>
             </motion.div>
-          );
+          ) : null;
         })}
       </div>
       {/* Map */}
@@ -128,10 +136,11 @@ const Map = () => {
         viewport={{ once: true, amount: 0 }}
       >
         <MapContainer
-          center={[45.04437318237264, 20.08952561516737]}
+          center={[45.045, 20.087]}
           zoom={isMobile ? 14.5 : 15.4}
           className={`${isMobile ? "h-[400px]" : "h-[600px]"} z-10`}
           zoomControl={false}
+          attributionControl={false}
         >
           <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
           {/* markers */}
@@ -142,28 +151,30 @@ const Map = () => {
             });
             return (
               <Marker key={index} position={marker.position} icon={markerIcon}>
-                <Popup>
-                  <div className="flex gap-x-[30px]">
-                    <div className="flex-1">
-                      <h3>{marker.title}</h3>
-                      <p className="leading-snug">{marker.subtitle}</p>
+                {marker.image ? (
+                  <Popup>
+                    <div className="flex flex-col items-center gap-x-[20px]">
+                      <div className="flex-1">
+                        <h3>{marker.title}</h3>
+                        <p className="leading-snug">{marker.subtitle}</p>
+                      </div>
+                      <div className="">
+                        <Image
+                          src={marker.image}
+                          width={250}
+                          height={250}
+                          alt=""
+                        />
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <Image
-                        src={marker.image}
-                        width={130}
-                        height={160}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </Popup>
+                  </Popup>
+                ) : null}
               </Marker>
             );
           })}
         </MapContainer>
       </motion.section>
-    </div>
+    </section>
   );
 };
 
