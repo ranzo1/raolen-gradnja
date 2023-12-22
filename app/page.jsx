@@ -1,4 +1,4 @@
-import Header1 from "@/components/header/Header1";
+import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -14,7 +14,7 @@ const Map = dynamic(() => import("@/components/Map"), { ssr: false });
 export default function Home() {
   return (
     <main className="max-w-[1440px] mx-auto bg-white overflow-hidden">
-      <Header1 />
+      <Header />
       <Hero />
       <Featured />
       <About />

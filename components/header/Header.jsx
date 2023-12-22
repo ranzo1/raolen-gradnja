@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,13 +9,36 @@ import Nav from "./Nav";
 import NavMobile from "./NavMobile";
 import logo from "../../public/header/logo.png";
 
-const Header1 = () => {
+const Header = () => {
+  const headerRef = useRef(null);
   const [active, setActive] = useState(false);
+  // create a state for the scroll position
+  const [scrollPos, setScrollPos] = useState(0);
+  // create a state for the scroll direction
+  const [scrollDir, setScrollDir] = useState("up");
 
   useEffect(() => {
+    // get the header element from the ref
+    const header = headerRef.current;
+
     const handleScroll = () => {
       // detect scroll
       setActive(window.scrollY > 1);
+
+      // get the current scroll position
+      const currentScrollPos = window.scrollY;
+
+      // compare the current scroll position with the previous one
+      if (currentScrollPos > scrollPos) {
+        // scrolled down
+        setScrollDir("down");
+      } else {
+        // scrolled up
+        setScrollDir("up");
+      }
+
+      // update the scroll position state
+      setScrollPos(currentScrollPos);
     };
 
     // add event listener
@@ -25,13 +48,16 @@ const Header1 = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrollPos]);
 
   return (
     <header
+      ref={headerRef}
       className={`${
         active ? "bg-soft_green py-4" : "bg-none py-5 xl:py-8"
-      } fixed top-0 w-full z-50 left-0 right-0 transition-all duration-200`}
+      } fixed top-0 w-full z-50 left-0 right-0 transition-all duration-300 ${
+        scrollDir === "down" ? "transform -translate-y-full" : ""
+      }`}
     >
       <div className="container mx-auto">
         {/* logo, nav, btn */}
@@ -57,4 +83,4 @@ const Header1 = () => {
   );
 };
 
-export default Header1;
+export default Header;

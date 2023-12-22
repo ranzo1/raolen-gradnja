@@ -4,7 +4,7 @@ const links = [
   {
     path: "home",
     name: "početna",
-    offset: -50,
+    offset: 0,
   },
   {
     path: "about",
@@ -14,12 +14,12 @@ const links = [
   {
     path: "location",
     name: "lokacija",
-    offset: -50,
+    offset: -510,
   },
   {
     path: "apartments",
     name: "stanovi",
-    offset: -150,
+    offset: 0,
   },
   {
     path: "materials",

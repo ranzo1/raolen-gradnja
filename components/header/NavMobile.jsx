@@ -33,13 +33,13 @@ const links = [
     icon: <FaMap />,
     path: "location",
     name: "lokacija",
-    offset: -50,
+    offset: -1355,
   },
   {
     icon: <RiHomeSmile2Fill />,
     path: "apartments",
     name: "stanovi",
-    offset: 0,
+    offset: -70,
   },
   {
     icon: <FaBox />,
@@ -51,7 +51,7 @@ const links = [
     icon: <RiBuilding2Fill />,
     path: "projects",
     name: "projekti",
-    offset: 0,
+    offset: -100,
   },
   {
     icon: <RiContactsBookFill />,
