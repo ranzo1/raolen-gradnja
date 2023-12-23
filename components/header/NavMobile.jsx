@@ -75,7 +75,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
       </div>
       <aside
         className={`${
-          isOpen ? "right-0" : "-right-full"
+          isOpen ? "right-0 overflow-hidden" : "-right-full"
         } bg-soft_green fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
         <div className="flex flex-col items-center justify-between h-full">

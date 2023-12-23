@@ -22,29 +22,20 @@ const Header = () => {
     const header = headerRef.current;
 
     const handleScroll = () => {
-      // detect scroll
       setActive(window.scrollY > 1);
-
-      // get the current scroll position
       const currentScrollPos = window.scrollY;
 
-      // compare the current scroll position with the previous one
       if (currentScrollPos > scrollPos) {
-        // scrolled down
         setScrollDir("down");
       } else {
-        // scrolled up
         setScrollDir("up");
       }
 
-      // update the scroll position state
       setScrollPos(currentScrollPos);
     };
 
-    // add event listener
     window.addEventListener("scroll", handleScroll);
 
-    // clear event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -56,7 +47,9 @@ const Header = () => {
       className={`${
         active ? "bg-soft_green py-4" : "bg-none py-5 xl:py-8"
       } fixed top-0 w-full z-50 left-0 right-0 transition-all duration-300 ${
-        scrollDir === "down" ? "transform -translate-y-full" : ""
+        scrollDir === "down" && window.scrollY > 250
+          ? "transform -translate-y-full"
+          : ""
       }`}
     >
       <div className="container mx-auto">
