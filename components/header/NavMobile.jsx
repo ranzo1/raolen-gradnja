@@ -65,7 +65,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`${containerStyles}`}>
+    <div className={`${containerStyles}`} onTouchStart={() => setIsOpen(false)}>
       {/* nav trigger btn */}
       <div
         onClick={() => setIsOpen(!isOpen)}
@@ -75,8 +75,8 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
       </div>
       <aside
         className={`${
-          isOpen ? "right-0 overflow-hidden" : "-right-full"
-        } bg-soft_green fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
+          isOpen ? "right-0" : "-right-full"
+        } bg-soft_green overflow-hidden fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
         <div className="flex flex-col items-center justify-between h-full">
           {/* nav close btn */}
