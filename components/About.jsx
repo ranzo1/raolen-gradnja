@@ -42,7 +42,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.4 }}
             className="xl:max-w-[470px]"
           >
-            <h2 className="h2 mb-[38px]">O nama</h2>
+            <h2 className="h2 mb-[38px] mt-2">O nama</h2>
             <p>
               Naš plan podrazumeva izgradnju 80 stanova, visokog kvaliteta.
               Portfolio koji gradimo stanova odražava raznovrsnost i pažljiv

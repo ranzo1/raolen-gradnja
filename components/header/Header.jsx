@@ -45,7 +45,7 @@ const Header = () => {
     <header
       ref={headerRef}
       className={`${
-        active ? "bg-soft_green py-4" : "bg-none py-5 xl:py-8"
+        active ? "bg-soft_green py-3 xl:py-4" : "bg-none py-5 xl:py-8"
       } fixed top-0 w-full z-50 left-0 right-0 transition-all duration-300 ${
         scrollDir === "down" && window.scrollY > 250
           ? "transform -translate-y-full"

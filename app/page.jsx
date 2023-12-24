@@ -4,12 +4,12 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Featured from "@/components/Featured";
 import Recommendation from "@/components/Recommendation";
-import Find from "@/components/Find";
+import Apartments from "@/components/Apartments";
 import Testimonials from "@/components/Testimonials";
 
 import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import("@/components/Map"), { ssr: false });
+const Location = dynamic(() => import("@/components/Location"), { ssr: false });
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
       <Hero />
       <Featured />
       <About />
-      <Map />
-      <Find />
+      <Location />
+      <Apartments />
       <Recommendation />
       <Testimonials />
       <Footer />

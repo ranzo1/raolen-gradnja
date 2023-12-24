@@ -27,8 +27,8 @@ const markers = [
     title: "Autobuska Stanica",
     subtitle: "Autobuska stanica.",
     distance: "1000m",
-    image: "/map/3.png",
-    iconUrl: "/map/markers/bus-solid.svg",
+    image: "/location/3.png",
+    iconUrl: "/location/markers/bus-solid.svg",
     iconSize: [35, 35],
   },
   {
@@ -36,8 +36,8 @@ const markers = [
     title: "Sports Center Inđija",
     subtitle: "Centar za profesionalno bavljenje sportom i rekreaciju.",
     distance: "700m",
-    image: "/map/4.png",
-    iconUrl: "/map/markers/run-solid.svg",
+    image: "/location/4.png",
+    iconUrl: "/location/markers/run-solid.svg",
     iconSize: [35, 35],
   },
   {
@@ -45,8 +45,8 @@ const markers = [
     title: "Park Kraljice Marije",
     subtitle: "Gradski park.",
     distance: "750m",
-    image: "/map/5.png",
-    iconUrl: "/map/markers/tree-solid.svg",
+    image: "/location/5.png",
+    iconUrl: "/location/markers/tree-solid.svg",
     iconSize: [35, 35],
   },
   {
@@ -54,8 +54,8 @@ const markers = [
     title: "Železnička stanica",
     subtitle: "Železnička stanica.",
     distance: "650m",
-    image: "/map/6.png",
-    iconUrl: "/map/markers/train-solid.svg",
+    image: "/location/6.png",
+    iconUrl: "/location/markers/train-solid.svg",
     iconSize: [35, 35],
   },
   {
@@ -63,13 +63,13 @@ const markers = [
     title: "Dom zdravlja",
     subtitle: "Dom zdravlja Dr Milorad-Mika Pavlović.",
     distance: "950m",
-    image: "/map/7.png",
-    iconUrl: "/map/markers/house-chimney-medical-solid.svg",
+    image: "/location/7.png",
+    iconUrl: "/location/markers/house-chimney-medical-solid.svg",
     iconSize: [35, 35],
   },
 ];
 
-const Map = () => {
+const Location = () => {
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
@@ -136,7 +136,7 @@ const Map = () => {
         viewport={{ once: true, amount: 0 }}
       >
         <MapContainer
-          center={[45.045, 20.087]}
+          center={[45.045, 20.0848]}
           zoom={isMobile ? 14.5 : 15.4}
           className={`${isMobile ? "h-[400px]" : "h-[600px]"} z-10`}
           zoomControl={false}
@@ -178,4 +178,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default Location;

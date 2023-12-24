@@ -5,30 +5,30 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Image from "next/image";
 
-const hotelData = [
+const apartmentData = [
   {
-    image: "/find/hotel-1.png",
+    image: "/apartments/1.png",
     name: "Garsonjere",
-    location: "35 kvadrata",
+    info: "35 kvadrata",
   },
   {
-    image: "/find/hotel-2.png",
+    image: "/apartments/2.png",
     name: "Jednoiposobni stanovi",
-    location: "45 kvadrata",
+    info: "45 kvadrata",
   },
   {
-    image: "/find/hotel-3.png",
+    image: "/apartments/3.png",
     name: "Dvosobni stanovi",
-    location: "55 kvadrata",
+    info: "55 kvadrata",
   },
   {
-    image: "/find/hotel-4.png",
+    image: "/apartments/4.png",
     name: "Trosobni stanovi",
-    location: "75 kvadrata",
+    info: "75 kvadrata",
   },
 ];
 
-const Find = () => {
+const Apartments = () => {
   return (
     <section className="py-12 xl:py-36" id="apartments">
       <div className="container mx-auto">
@@ -63,7 +63,7 @@ const Find = () => {
             </Button>
           </motion.div>
         </div>
-        {/* hotel grid */}
+        {/* apartment grid */}
         <motion.div
           variants={fadeIn("up", 0.6)}
           initial="hidden"
@@ -71,10 +71,10 @@ const Find = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="grid gap-y-10 xl:gap-y-0 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-[30px]"
         >
-          {hotelData.map((hotel, index) => {
+          {apartmentData.map((hotel, index) => {
             return (
               <div
-                className="border-2 border-outline w-[270px] h-[390px] rounded-xl overflow-hidden hover:cursor-pointer
+                className="border-2 shadow-sm border-outline w-[270px] h-[390px] rounded-md overflow-hidden hover:cursor-pointer
                 group hover:bg-gold transition-all duration-700 mx-auto xl:mx-0"
                 key={index}
               >
@@ -84,7 +84,7 @@ const Find = () => {
                     {hotel.name}
                   </h4>
                   <p className="group-hover:text-white transition-all duration-300">
-                    {hotel.location}
+                    {hotel.info}
                   </p>
                 </div>
               </div>
@@ -96,4 +96,4 @@ const Find = () => {
   );
 };
 
-export default Find;
+export default Apartments;
