@@ -72,6 +72,36 @@ const markers = [
     iconUrl: "/location/markers/house-chimney-medical-solid.svg",
     iconSize: [35, 35],
   },
+  {
+    position: [45.05087402583116, 20.0796804412193],
+    title: "Vrtić",
+    subtitle: "Vrtić Sunce",
+    address: "Dušana Jerkovića 17a, Inđija 22320",
+    distance: "650m",
+    image: "/location/8.png",
+    iconUrl: "/location/markers/children-solid.svg",
+    iconSize: [35, 35],
+  },
+  {
+    position: [45.04971755975467, 20.081068234790866],
+    title: "Škola",
+    subtitle: "Osnovna škola Dušan Jerković",
+    address: "Dušana Jerkovića 1, Inđija 22320",
+    distance: "450m",
+    image: "/location/9.png",
+    iconUrl: "/location/markers/school-solid.svg",
+    iconSize: [35, 35],
+  },
+  {
+    position: [45.04994285491406, 20.084289786348048],
+    title: "Centar Grada",
+    subtitle: "Osnovna škola Dušan Jerković",
+    address: "Trg Slobode, Inđija 22320",
+    distance: "350m",
+    image: "/location/10.png",
+    iconUrl: "/location/markers/building-flag-solid.svg",
+    iconSize: [35, 35],
+  },
 ];
 
 const Location = () => {
