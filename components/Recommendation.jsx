@@ -15,39 +15,27 @@ import Image from "next/image";
 
 const recommendationData = [
   {
-    name: "Gradiliste 1",
+    name: "Projekat u Nišu",
     image: "/recommendation/hotel-1.png",
-    location: "Niš, Srbija",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    location: "Nikole Pašića 10, Niš",
+    desc: "U srcu Niša, između istorijskih spomenika i savremenih zgrada, smestila se inovativna firma za nekretnine koja nosi ime 'Niš Real Estate Solutions'. Ova kompanija nije samo posrednik u prodaji i kupovini nekretnina, već je i arhitekta života, spajajući ljude sa domovima iz snova.",
     price: 90,
     testimonial: {
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      personName: "Robert Rene",
+        "Usluge ove firme ne ograničavaju se samo na prodaju. Oni takođe nude usluge upravljanja nekretninama, prateći stanje i održavanje objekta kako bi vlasnici bili bezbrižni. Pored toga, tim arhitekata i dizajnera unutrašnjosti u okviru firme može pomoći klijentima da svoj dom prilagode ličnom stilu.",
+      personName: "",
     },
   },
   {
-    name: "Gradiliste 2",
+    name: "Projekat u Kragujevcu",
     image: "/recommendation/hotel-2.png",
-    location: "Kragujevac, Srbija",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    location: "Kneza Miloša 22, Kragujevac",
+    desc: "U srcu Šumadije, u jednom od najživopisnijih gradova Srbije, procvetala je izuzetna firma za nekretnine po imenu 'Kragujevac Real Estate Hub'. Ova agencija nije samo posrednik u transakcijama nekretnina; ona je stub zajednice, povezujući ljude sa domovima svojih snova i unapređujući kvalitet života u Kragujevcu.",
     price: 60,
     testimonial: {
       message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      personName: "Emily Jhonson Rene",
-    },
-  },
-  {
-    name: "Gradiliste 3",
-    image: "/recommendation/hotel-3.png",
-    location: "Inđija, Srbija",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: 80,
-    testimonial: {
-      message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      personName: "Michael Anderson Rene",
+        "Firma se ističe svojim sveobuhvatnim pristupom, prilagođavajući se individualnim potrebama svakog klijenta. Sa fokusom na transparentnosti, 'Kragujevac Real Estate Hub' pruža detaljne informacije o svakoj nekretnini, od virtuelnih obilazaka do temeljnih analiza stanja na tržištu.",
+      personName: "",
     },
   },
 ];

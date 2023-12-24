@@ -26,6 +26,7 @@ const markers = [
     position: [45.04083166147802, 20.08672533005239],
     title: "Autobuska Stanica",
     subtitle: "Autobuska stanica.",
+    address: "Аутобуска станица, Инђија",
     distance: "1000m",
     image: "/location/3.png",
     iconUrl: "/location/markers/bus-solid.svg",
@@ -35,6 +36,7 @@ const markers = [
     position: [45.047563403099176, 20.07855873364977],
     title: "Sports Center Inđija",
     subtitle: "Centar za profesionalno bavljenje sportom i rekreaciju.",
+    address: "Cara Dušana 2a, Inđija",
     distance: "700m",
     image: "/location/4.png",
     iconUrl: "/location/markers/run-solid.svg",
@@ -44,6 +46,7 @@ const markers = [
     position: [45.0497648775468, 20.08961627848285],
     title: "Park Kraljice Marije",
     subtitle: "Gradski park.",
+    address: "Kratka 14, Inđija",
     distance: "750m",
     image: "/location/5.png",
     iconUrl: "/location/markers/tree-solid.svg",
@@ -53,6 +56,7 @@ const markers = [
     position: [45.048923568976385, 20.092122911618947],
     title: "Železnička stanica",
     subtitle: "Železnička stanica.",
+    address: "Železnička bb, Inđija 22320",
     distance: "650m",
     image: "/location/6.png",
     iconUrl: "/location/markers/train-solid.svg",
@@ -62,6 +66,7 @@ const markers = [
     position: [45.046811169710644, 20.07737726162274],
     title: "Dom zdravlja",
     subtitle: "Dom zdravlja Dr Milorad-Mika Pavlović.",
+    address: "Srpskocrkvena 5, Inđija",
     distance: "950m",
     image: "/location/7.png",
     iconUrl: "/location/markers/house-chimney-medical-solid.svg",
@@ -156,7 +161,7 @@ const Location = () => {
                     <div className="flex flex-col items-center gap-x-[20px]">
                       <div className="flex-1">
                         <h3>{marker.title}</h3>
-                        <p className="leading-snug">{marker.subtitle}</p>
+                        <p className="leading-snug">{marker.address}</p>
                       </div>
                       <div className="">
                         <Image
