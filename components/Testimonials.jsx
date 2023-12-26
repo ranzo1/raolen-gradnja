@@ -96,9 +96,9 @@ const Testimonials = () => {
                       height={500}
                       quality={100}
                       alt=""
-                      className="w-[400px] [400px] xl:w-[500px] xl:h-[500px] rounded-t-md xl:rounded-tr-none xl:rounded-tl-md xl:rounded-bl-md"
+                      className="w-[370px] [380px] xl:w-[500px] xl:h-[500px] rounded-t-md xl:rounded-tr-none xl:rounded-tl-md xl:rounded-bl-md"
                     />
-                    <div className="bg-soft_green/80 rounded-b-md xl:rounded-bl-none xl:rounded-tr-md xl:rounded-br-md w-[400px] h-[450px] xl:w-[500px] xl:h-[500px] text-white p-10">
+                    <div className="bg-soft_green/80 rounded-b-md xl:rounded-bl-none xl:rounded-tr-md xl:rounded-br-md w-[370px] h-[470px] xl:w-[500px] xl:h-[500px] text-white p-10">
                       <p className="text-sm xl:text-base leading-8 mb-8">
                         {slide.message}
                       </p>
