@@ -34,7 +34,7 @@ const testimonialData = [
     message: `Za porodice koje su deo naše zajednice, posebno smo osmislili prostor koji će obradovati najmlađe članove. 
     Naša igraonica za decu predstavlja sigurno mesto gde se mališani mogu slobodno igrati, učiti i razvijati. 
     Ovaj prostor je pažljivo osmišljen uzimajući u obzir bezbednost i potrebe dece, pružajući im mogućnost da uživaju u igri u neposrednoj blizini svog doma.`,
-    title: "Igraonica za Decu",
+    title: "Igraonica za decu",
     subtitle: "Bezbedna i zabavna oaza",
   },
 ];
@@ -96,10 +96,10 @@ const Testimonials = () => {
                       height={500}
                       quality={100}
                       alt=""
-                      className="rounded-tl-md rounded-bl-md"
+                      className="w-[450px] [450px] xl:w-[500px] xl:h-[500px] rounded-t-md xl:rounded-tr-none xl:rounded-tl-md xl:rounded-bl-md"
                     />
-                    <div className="bg-soft_green/80 rounded-tr-md rounded-br-md w-[500px] h-[450px] xl:h-[500px] text-white p-10">
-                      <p className="text-base leading-8 mb-8">
+                    <div className="bg-soft_green/80 rounded-b-md xl:rounded-bl-none xl:rounded-tr-md xl:rounded-br-md w-[450px] h-[450px] xl:w-[500px] xl:h-[500px] text-white p-10">
+                      <p className="text-sm xl:text-base leading-8 mb-8">
                         {slide.message}
                       </p>
                       <p className="text-xl font-bold">{slide.title}</p>
