@@ -36,16 +36,16 @@ const links = [
     offset: -1355,
   },
   {
+    icon: <FaBox />,
+    path: "objects",
+    name: "objekti",
+    offset: -350,
+  },
+  {
     icon: <RiHomeSmile2Fill />,
     path: "apartments",
     name: "stanovi",
     offset: -70,
-  },
-  {
-    icon: <FaBox />,
-    path: "materials",
-    name: "materijali",
-    offset: 0,
   },
   {
     icon: <RiBuilding2Fill />,

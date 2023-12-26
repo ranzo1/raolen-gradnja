@@ -17,13 +17,13 @@ const links = [
     offset: -510,
   },
   {
-    path: "apartments",
-    name: "stanovi",
-    offset: 0,
+    path: "objects",
+    name: "objekti",
+    offset: -330,
   },
   {
-    path: "materials",
-    name: "materijali",
+    path: "apartments",
+    name: "stanovi",
     offset: 0,
   },
   {

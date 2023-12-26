@@ -19,9 +19,9 @@ export default function Home() {
       <Featured />
       <About />
       <Location />
+      <Testimonials />
       <Apartments />
       <Recommendation />
-      <Testimonials />
       <Footer />
       {/* <div className="h-[4000px]"></div> */}
     </main>

@@ -50,7 +50,7 @@ const Recommendation = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0 }}
-      className="pb-12 xl:pt-[157px] xl:pb-[112px] bg-soft_green-secondary relative"
+      className="pb-12 xl:pt-[157px] xl:pb-[112px] bg-grey-secondary relative"
       id="projects"
     >
       {/* slider */}
@@ -94,7 +94,7 @@ const Recommendation = () => {
                     </div>
                   </div>
                   {/* image & testimonial */}
-                  <div className="order-1 xl:order-2 flex-1 flex justify-center xl:justify-end relative h-[634px]">
+                  <div className="order-1 xl:mb-52 xl:order-2 flex-1 flex justify-center xl:justify-end relative h-[634px]">
                     <div>
                       <Image
                         src={hotel.image}
@@ -105,7 +105,7 @@ const Recommendation = () => {
                         className="xl:rounded-tl-md xl:rounded-bl-md"
                       />
                       <div
-                        className="bg-soft_green p-4 text-white text-center xl:text-left xl:max-w-[468px] xl:min-h-[212px] 
+                        className="bg-soft_green p-4 text-white text-center hidden xl:text-left xl:max-w-[468px] xl:min-h-[212px] 
                       xl:absolute xl:bottom-0 xl:translate-x-1/2 xl:rounded-md xl:px-10"
                       >
                         <p className="mb-3 max-w-md mx-auto xl:max-w-none xl:mx-0 xl:mb-6">
@@ -123,12 +123,12 @@ const Recommendation = () => {
           })}
         </Swiper>
       </motion.div>
-      {/* pattern */}
+      {/* pattern (xl:flex for displaying) */}
       <Image
         src={"/recommendation/pattern.svg"}
         width={240}
         height={240}
-        className="hidden xl:flex absolute left-[135px] -bottom-[120px]"
+        className="hidden absolute left-[135px] -bottom-[-40px]"
       />
     </motion.section>
   );

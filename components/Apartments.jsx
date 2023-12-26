@@ -30,7 +30,7 @@ const apartmentData = [
 
 const Apartments = () => {
   return (
-    <section className="py-12 xl:py-36" id="apartments">
+    <section className="bg-soft_green-secondary py-12 xl:py-32" id="apartments">
       <div className="container mx-auto">
         {/* text */}
         <div className="text-center">
@@ -74,7 +74,7 @@ const Apartments = () => {
           {apartmentData.map((hotel, index) => {
             return (
               <div
-                className="border-2 shadow-sm border-outline w-[270px] h-[390px] rounded-md overflow-hidden hover:cursor-pointer
+                className="bg-white border-2 shadow-sm border-outline w-[270px] h-[390px] rounded-md overflow-hidden hover:cursor-pointer
                 group hover:bg-gold transition-all duration-700 mx-auto xl:mx-0"
                 key={index}
               >

@@ -24,7 +24,7 @@ const markers = [
   },
   {
     position: [45.04083166147802, 20.08672533005239],
-    title: "Autobuska Stanica",
+    title: "Autobus",
     subtitle: "Autobuska stanica.",
     address: "Аутобуска станица, Инђија",
     distance: "1000m",
@@ -34,8 +34,8 @@ const markers = [
   },
   {
     position: [45.047563403099176, 20.07855873364977],
-    title: "Sports Center Inđija",
-    subtitle: "Centar za profesionalno bavljenje sportom i rekreaciju.",
+    title: "Sport",
+    subtitle: "Centar za bavljenje sportom.",
     address: "Cara Dušana 2a, Inđija",
     distance: "700m",
     image: "/location/4.png",
@@ -44,8 +44,8 @@ const markers = [
   },
   {
     position: [45.0497648775468, 20.08961627848285],
-    title: "Park Kraljice Marije",
-    subtitle: "Gradski park.",
+    title: "Park",
+    subtitle: "Gradski park Kraljice Marije.",
     address: "Kratka 14, Inđija",
     distance: "750m",
     image: "/location/5.png",
@@ -54,7 +54,7 @@ const markers = [
   },
   {
     position: [45.048923568976385, 20.092122911618947],
-    title: "Železnička stanica",
+    title: "Voz",
     subtitle: "Železnička stanica.",
     address: "Železnička bb, Inđija 22320",
     distance: "650m",
@@ -64,7 +64,7 @@ const markers = [
   },
   {
     position: [45.046811169710644, 20.07737726162274],
-    title: "Dom zdravlja",
+    title: "Bolnica",
     subtitle: "Dom zdravlja Dr Milorad-Mika Pavlović.",
     address: "Srpskocrkvena 5, Inđija",
     distance: "950m",
@@ -75,7 +75,7 @@ const markers = [
   {
     position: [45.05087402583116, 20.0796804412193],
     title: "Vrtić",
-    subtitle: "Vrtić Sunce",
+    subtitle: "Vrtić Sunce.",
     address: "Dušana Jerkovića 17a, Inđija 22320",
     distance: "650m",
     image: "/location/8.png",
@@ -85,7 +85,7 @@ const markers = [
   {
     position: [45.04971755975467, 20.081068234790866],
     title: "Škola",
-    subtitle: "Osnovna škola Dušan Jerković",
+    subtitle: "Osnovna škola Dušan Jerković.",
     address: "Dušana Jerkovića 1, Inđija 22320",
     distance: "450m",
     image: "/location/9.png",
@@ -94,8 +94,8 @@ const markers = [
   },
   {
     position: [45.04994285491406, 20.084289786348048],
-    title: "Centar Grada",
-    subtitle: "Osnovna škola Dušan Jerković",
+    title: "Centar",
+    subtitle: "Centar grada.",
     address: "Trg Slobode, Inđija 22320",
     distance: "350m",
     image: "/location/10.png",
@@ -152,11 +152,13 @@ const Location = () => {
                   width={40}
                   className="mb-3"
                 />
-                <h2 className="text-lg text-gray-900 font-medium title-font">
+                <h2 className="text-lg leading-6 text-gray-900 font-medium title-font">
                   {marker.title}
                 </h2>
-                <h4 className="text-black font-normal">{marker.distance}</h4>
-                <p className="">{marker.subtitle}</p>
+                <h4 className="text-black font-normal mt-1">
+                  {marker.distance}
+                </h4>
+                <p className="text-sm">{marker.subtitle}</p>
               </div>
             </motion.div>
           ) : null;
@@ -171,7 +173,7 @@ const Location = () => {
         viewport={{ once: true, amount: 0 }}
       >
         <MapContainer
-          center={[45.045, 20.0848]}
+          center={[45.0459, 20.0848]}
           zoom={isMobile ? 14.5 : 15.4}
           className={`${isMobile ? "h-[400px]" : "h-[600px]"} z-10`}
           zoomControl={false}
