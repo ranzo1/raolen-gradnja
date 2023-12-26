@@ -96,10 +96,10 @@ const Testimonials = () => {
                       height={500}
                       quality={100}
                       alt=""
-                      className="w-[370px] [380px] xl:w-[500px] xl:h-[500px] rounded-t-md xl:rounded-tr-none xl:rounded-tl-md xl:rounded-bl-md"
+                      className="w-[360px] h-[360px] xl:w-[500px] xl:h-[500px] rounded-t-md xl:rounded-tr-none xl:rounded-tl-md xl:rounded-bl-md"
                     />
-                    <div className="bg-soft_green/80 rounded-b-md xl:rounded-bl-none xl:rounded-tr-md xl:rounded-br-md w-[370px] h-[470px] xl:w-[500px] xl:h-[500px] text-white p-10">
-                      <p className="text-sm xl:text-base leading-8 mb-8">
+                    <div className="bg-soft_green/80 rounded-b-md xl:rounded-bl-none xl:rounded-tr-md xl:rounded-br-md w-[360px] h-[480px] xl:w-[500px] xl:h-[500px] text-white p-10">
+                      <p className="text-sm leading-5 xl:text-base xl:leading-8 mb-8">
                         {slide.message}
                       </p>
                       <p className="text-xl font-bold">{slide.title}</p>
