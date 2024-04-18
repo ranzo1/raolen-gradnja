@@ -12,9 +12,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
-const testimonialData = [
+const objectsData = [
   {
-    img: "/testimonials/img-1.png",
+    img: "/objects/img-1.png",
     message: `Kako smo sklopili saradnju sa firmom Univer Export, naši stanari imaju privilegiju uživanja u sopstvenom marketu. 
     Ovaj market nije samo obična prodavnica, ona je domaćin širokom spektru svežih namirnica, osnovnih potrepština i proizvoda vrhunskog kvaliteta. 
     Naš market je tu kako bi olakšao vašu svakodnevicu, omogućavajući vam da nabavite sve što vam je potrebno bez napuštanja komfora vašeg doma.`,
@@ -22,7 +22,7 @@ const testimonialData = [
     subtitle: "Praktična nabavka na dohvat ruke",
   },
   {
-    img: "/testimonials/img-2.png",
+    img: "/objects/img-2.png",
     message: `Kafić u sklopu Raolen Gradnje nije samo prostor za ispijanje kafe, to je društveno središte gde se susreću komšije, prijatelji i porodice. 
     Ovaj kafić je koncipiran kao udoban prostor za relaksaciju, rad od kuće ili neformalna druženja. 
     Sa širokom paletom napitaka i ukusnih poslastica, naš kafić postaje omiljeno mesto svih stanara, stvarajući atmosferu zajedništva i prijateljstva.`,
@@ -30,7 +30,7 @@ const testimonialData = [
     subtitle: "Mesto gde se svi okupljaju",
   },
   {
-    img: "/testimonials/img-3.png",
+    img: "/objects/img-3.png",
     message: `Za porodice koje su deo naše zajednice, posebno smo osmislili prostor koji će obradovati najmlađe članove. 
     Naša igraonica za decu predstavlja sigurno mesto gde se mališani mogu slobodno igrati, učiti i razvijati. 
     Ovaj prostor je pažljivo osmišljen uzimajući u obzir bezbednost i potrebe dece, pružajući im mogućnost da uživaju u igri u neposrednoj blizini svog doma.`,
@@ -39,7 +39,7 @@ const testimonialData = [
   },
 ];
 
-const Testimonials = () => {
+const Object = () => {
   return (
     <div className="bg-white mb-8 xl:mb-0">
       <div className="text-center p-8 mt-5">
@@ -86,7 +86,7 @@ const Testimonials = () => {
             pagination={{ clickable: true }}
             className="xl:h-[680px] overflow-hidden"
           >
-            {testimonialData.map((slide, index) => {
+            {objectsData.map((slide, index) => {
               return (
                 <SwiperSlide key={index}>
                   <div className="flex flex-col items-center py-12 xl:flex-row xl:justify-center xl:py-5">
@@ -116,4 +116,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Object;

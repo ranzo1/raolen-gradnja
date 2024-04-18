@@ -5,7 +5,7 @@ import About from "@/components/About";
 import Featured from "@/components/Featured";
 import Recommendation from "@/components/Recommendation";
 import Apartments from "@/components/Apartments";
-import Testimonials from "@/components/Testimonials";
+import Objects from "@/components/Objects";
 
 import dynamic from "next/dynamic";
 
@@ -19,7 +19,7 @@ export default function Home() {
       <Featured />
       <About />
       <Location />
-      <Testimonials />
+      <Objects />
       <Apartments />
       <Recommendation />
       <Footer />
