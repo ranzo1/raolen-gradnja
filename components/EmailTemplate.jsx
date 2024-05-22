@@ -25,8 +25,8 @@ export function emailTemplate(name, email, message) {
                           <!-- CTA Button -->
                           <table cellspacing="0" cellpadding="0" style="margin: auto;">
                               <tr>
-                                  <td align="center" style="background-color: #B0A695; padding: 10px 20px; border-radius: 5px;">
-                                      <a href="mailto:${email}" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: bold;">Odgovori</a>
+                                  <td align="center" style="background-color: #B0A695; padding: 12px 22px; border-radius: 5px;">
+                                      <a href="mailto:${email}" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: bold; font-size: 16px;">Odgovori</a>
                                   </td>
                               </tr>
                           </table>

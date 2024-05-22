@@ -176,8 +176,12 @@ const Location = () => {
           center={[45.0459, 20.0848]}
           zoom={isMobile ? 14.5 : 15.4}
           className={`${isMobile ? "h-[400px]" : "h-[600px]"} z-10`}
-          zoomControl={false}
-          attributionControl={false}
+          doubleClickZoom={false}
+          closePopupOnClick={false}
+          dragging={true}
+          zoomSnap={false}
+          touchZoom={false}
+          scrollWheelZoom={false}
         >
           <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
           {/* markers */}
