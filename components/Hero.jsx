@@ -15,12 +15,12 @@ const Hero = () => {
     // </section>
     <>
       <div className="relative h-full w-full">
-        <div className="absolute h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div>
+        {/* <div className="absolute h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div> */}
         <section
-          className="relative bg-hero3 bg-no-repeat xl:bg-none xl:h-[1098px] py-40 pb-32 xl:py-0"
+          className="bg-[url('/hero/bg4.png')] h-[600px] relative bg-hero3 bg-cover bg-no-repeat xl:bg-none xl:h-[1098px] py-40 pb-32 xl:py-0"
           id="home"
         >
-          <div className="container mx-auto ">
+          <div className="xl:container mx-auto absolute inset-x-0 bottom-0 ">
             {/* text & img */}
             <div className="flex flex-col items-center justify-center xl:justify-between md:flex-row xl:h-[960px]">
               {/* text */}
@@ -29,12 +29,12 @@ const Hero = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.4 }}
-                className="absolute xl:relative -bottom-[-100px] z-10 w-full xl:max-w-[560px] text-center xl:text-left rounded-sm bg-soft_green-secondary  p-3"
+                className=" xl:relative bottom-[100px] z-10 w-full xl:max-w-[560px] text-center xl:text-left rounded-sm backdrop-blur-sm bg-soft_green-secondary/50 shadow-md p-3"
               >
                 <h1 className="text-black mb-7 text-4xl xl:text-6xl">
                   Raolen Gradnja
                 </h1>
-                <p className="text-soft_green mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0">
+                <p className="text-gray mb-12 max-w-lg mx-auto xl:max-w-none xl:mx-0">
                   Ovo je mesto ge započinje vaše putovanje prema porodičnom domu
                   kakvog ste ga oduvek zamišljali.
                 </p>
@@ -47,15 +47,15 @@ const Hero = () => {
                 className="hidden xl:flex absolute left-[535px] -bottom-[-300px]"
               /> */}
               {/* image */}
-              <motion.div
+              {/* <motion.div
                 variants={fadeIn("up", 0.8)}
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.1 }}
                 className=" xl:flex xl:absolute xl:top-[200px] xl:right-0"
               >
-                <Image src="/hero/bg3.png" width={706} height={632} alt="" />
-              </motion.div>
+                <Image src="/hero/bg4.png" width={706} height={632} alt="" />
+              </motion.div> */}
             </div>
           </div>
         </section>

@@ -25,7 +25,7 @@ const markers = [
   {
     position: [45.04083166147802, 20.08672533005239],
     title: "Autobus",
-    subtitle: "Autobuska stanica.",
+    subtitle: "Autobuska stanica",
     address: "Аутобуска станица, Инђија",
     distance: "1000m",
     image: "/location/3.png",
@@ -35,7 +35,7 @@ const markers = [
   {
     position: [45.047563403099176, 20.07855873364977],
     title: "Sport",
-    subtitle: "Centar za bavljenje sportom.",
+    subtitle: "Centar za bavljenje sportom",
     address: "Cara Dušana 2a, Inđija",
     distance: "700m",
     image: "/location/4.png",
@@ -45,7 +45,7 @@ const markers = [
   {
     position: [45.0497648775468, 20.08961627848285],
     title: "Park",
-    subtitle: "Gradski park Kraljice Marije.",
+    subtitle: "Gradski park Kraljice Marije",
     address: "Kratka 14, Inđija",
     distance: "750m",
     image: "/location/5.png",
@@ -55,7 +55,7 @@ const markers = [
   {
     position: [45.048923568976385, 20.092122911618947],
     title: "Voz",
-    subtitle: "Železnička stanica.",
+    subtitle: "Železnička stanica",
     address: "Železnička bb, Inđija 22320",
     distance: "650m",
     image: "/location/6.png",
@@ -65,7 +65,7 @@ const markers = [
   {
     position: [45.046811169710644, 20.07737726162274],
     title: "Bolnica",
-    subtitle: "Dom zdravlja Dr Milorad-Mika Pavlović.",
+    subtitle: "Dom zdravlja Dr Milorad-Mika Pavlović",
     address: "Srpskocrkvena 5, Inđija",
     distance: "950m",
     image: "/location/7.png",
@@ -75,7 +75,7 @@ const markers = [
   {
     position: [45.05087402583116, 20.0796804412193],
     title: "Vrtić",
-    subtitle: "Vrtić Sunce.",
+    subtitle: "Vrtić Sunce",
     address: "Dušana Jerkovića 17a, Inđija 22320",
     distance: "650m",
     image: "/location/8.png",
@@ -85,7 +85,7 @@ const markers = [
   {
     position: [45.04971755975467, 20.081068234790866],
     title: "Škola",
-    subtitle: "Osnovna škola Dušan Jerković.",
+    subtitle: "Osnovna škola Dušan Jerković",
     address: "Dušana Jerkovića 1, Inđija 22320",
     distance: "450m",
     image: "/location/9.png",
@@ -95,7 +95,7 @@ const markers = [
   {
     position: [45.04994285491406, 20.084289786348048],
     title: "Centar",
-    subtitle: "Centar grada.",
+    subtitle: "Centar grada",
     address: "Trg Slobode, Inđija 22320",
     distance: "350m",
     image: "/location/10.png",
@@ -109,7 +109,7 @@ const Location = () => {
     query: "(max-width: 768px)",
   });
   return (
-    <section className="bg-soft_green-secondary">
+    <section className="bg-soft_green-secondary ">
       {/* text */}
       <div className="text-center p-10">
         <motion.h2
@@ -182,6 +182,7 @@ const Location = () => {
           zoomSnap={false}
           touchZoom={false}
           scrollWheelZoom={false}
+          attributionControl={false}
         >
           <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
           {/* markers */}

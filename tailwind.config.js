@@ -22,7 +22,7 @@ module.exports = {
       white: "#fff",
       black: "#273029",
       soft_green: {
-        DEFAULT: "#B0A695",
+        DEFAULT: "#F2F1EB",
         secondary: "#F2F1EB",
       },
       grey: {
