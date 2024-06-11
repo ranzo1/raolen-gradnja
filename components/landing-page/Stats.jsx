@@ -27,7 +27,7 @@ const Stats = () => {
         return (
           <div key={index} className="flex">
             <div className="flex items-baseline gap-x-2">
-              <h3 className="h3 text-soft_green">
+              <h3 className="h3 text-gold">
                 {/* checks if item.value is a decimal number */}
                 <CountUp
                   start={0}

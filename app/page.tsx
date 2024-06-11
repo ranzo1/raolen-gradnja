@@ -1,15 +1,17 @@
 import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Featured from "@/components/Featured";
-import Recommendation from "@/components/Recommendation";
-import Apartments from "@/components/Apartments";
-import Objects from "@/components/Objects";
+import Hero from "@/components/landing-page/Hero";
+import About from "@/components/landing-page/About";
+import Featured from "@/components/landing-page/Featured";
+import Recommendation from "@/components/landing-page/Recommendation";
+import Apartments from "@/components/landing-page/Apartments";
+import Objects from "@/components/landing-page/Objects";
 
 import dynamic from "next/dynamic";
 
-const Location = dynamic(() => import("@/components/Location"), { ssr: false });
+const Location = dynamic(() => import("@/components/landing-page/Location"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

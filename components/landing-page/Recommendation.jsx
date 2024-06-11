@@ -10,8 +10,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // components
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Animated from "@/components/Animated";
 
 const recommendationData = [
   {
@@ -40,26 +41,18 @@ const recommendationData = [
   },
 ];
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { fadeIn } from "../../variants";
 
 const Recommendation = () => {
   return (
-    <motion.section
-      variants={fadeIn("up", 0.2)}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0 }}
+    <Animated
+      animation={fadeIn("up", 0.2)}
+      elementType="section"
       className="pb-12 xl:pt-[157px] xl:pb-[112px] bg-grey-secondary relative"
       id="projects"
     >
       {/* slider */}
-      <motion.div
-        variants={fadeIn("up", 0.4)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
-      >
+      <Animated animation={fadeIn("up", 0.4)} elementType="div">
         <Swiper
           modules={[Autoplay]}
           autoplay={{
@@ -122,7 +115,7 @@ const Recommendation = () => {
             );
           })}
         </Swiper>
-      </motion.div>
+      </Animated>
       {/* pattern (xl:flex for displaying) */}
       <Image
         src={"/recommendation/pattern.svg"}
@@ -130,7 +123,7 @@ const Recommendation = () => {
         height={240}
         className="hidden absolute left-[135px] -bottom-[-40px]"
       />
-    </motion.section>
+    </Animated>
   );
 };
 

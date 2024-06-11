@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "./ui/button";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { Button } from "@/components/ui/button";
+import { fadeIn } from "@/variants";
+import Animated from "@/components/Animated";
 import Image from "next/image";
 
 const apartmentData = [
@@ -34,41 +34,30 @@ const Apartments = () => {
       <div className="container mx-auto">
         {/* text */}
         <div className="text-center">
-          <motion.h2
-            variants={fadeIn("up", 0.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
+          <Animated
             className="h2 mb-6"
+            elementType="h2"
+            animation={fadeIn("up", 0.2)}
           >
             Pronađite stan po vašoj meri
-          </motion.h2>
-          <motion.p
-            variants={fadeIn("up", 0.4)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
+          </Animated>
+          <Animated
             className="max-w-[638px] mx-auto mb-8"
+            elementType="p"
+            animation={fadeIn("up", 0.4)}
           >
             Odaberite stan po vašoj želji iz naše ponude.
-          </motion.p>
-          <motion.div
-            variants={fadeIn("up", 0.6)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-          >
+          </Animated>
+          <Animated animation={fadeIn("up", 0.6)} elementType="div">
             <Button variant="accent" className="px-12 mb-14 xl:mb-28">
               Pogledaj sve
             </Button>
-          </motion.div>
+          </Animated>
         </div>
         {/* apartment grid */}
-        <motion.div
-          variants={fadeIn("up", 0.6)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+        <Animated
+          animation={fadeIn("up", 0.6)}
+          elementType="div"
           className="grid gap-y-10 xl:gap-y-0 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-[30px]"
         >
           {apartmentData.map((hotel, index) => {
@@ -90,7 +79,7 @@ const Apartments = () => {
               </div>
             );
           })}
-        </motion.div>
+        </Animated>
       </div>
     </section>
   );

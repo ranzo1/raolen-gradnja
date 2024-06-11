@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-body text-grey leading-8;
+    @apply bg-body text-grey leading-7;
   }
   h1,
   h2,

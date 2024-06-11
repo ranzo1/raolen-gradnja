@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon } from "leaflet";
+import Animated from "@/components/Animated";
 
 // leaflet css
 import "leaflet/dist/leaflet.css";
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { fadeIn } from "@/variants";
 
 const markers = [
   {
@@ -112,35 +112,29 @@ const Location = () => {
     <section className="bg-soft_green-secondary ">
       {/* text */}
       <div className="text-center p-10">
-        <motion.h2
-          variants={fadeIn("up", 0.2)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+        <Animated
+          animation={fadeIn("up", 0.2)}
+          elementType="h2"
           className="h2 mb-6"
         >
           Lokacija
-        </motion.h2>
-        <motion.p
-          variants={fadeIn("up", 0.4)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+        </Animated>
+        <Animated
+          animation={fadeIn("up", 0.4)}
+          elementType="p"
           className="max-w-[638px] mx-auto mb-8"
         >
           Nalazimo se nedaleko od centra Inđije, a opet smešteni u mirnom kraju
           grada. Predstavljamo vam sve pogodnosti mesta na kom se nalazimo.
-        </motion.p>
+        </Animated>
       </div>
       {/* locations */}
       <div className="flex flex-col xl:flex-row mx-2">
         {markers.map((marker, index) => {
           return marker.distance ? (
-            <motion.div
-              variants={fadeIn("right", 0.4)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
+            <Animated
+              animation={fadeIn("right", 0.4)}
+              elementType="div"
               key={index}
               className="bg-grey-secondary shadow-sm mx-2 mb-4 flex-1 border-gray-200 p-6 rounded-md"
             >
@@ -160,17 +154,15 @@ const Location = () => {
                 </h4>
                 <p className="text-sm">{marker.subtitle}</p>
               </div>
-            </motion.div>
+            </Animated>
           ) : null;
         })}
       </div>
       {/* Map */}
-      <motion.section
+      <Animated
         id="location"
-        variants={fadeIn("left", 0.2)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0 }}
+        animation={fadeIn("left", 0.2)}
+        elementType="section"
       >
         <MapContainer
           center={[45.0459, 20.0848]}
@@ -215,7 +207,7 @@ const Location = () => {
             );
           })}
         </MapContainer>
-      </motion.section>
+      </Animated>
     </section>
   );
 };

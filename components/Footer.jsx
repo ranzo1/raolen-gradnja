@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Socials from "./Socials";
 
-import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import logo from "../public/footer/logo.png";
 import ContactForm from "./contact/form";
+import Animated from "@/components/Animated";
 
 const Footer = () => {
   const iframeSrc =
@@ -16,13 +16,7 @@ const Footer = () => {
   return (
     <footer className="bg-soft_green-secondary relative pt-12 xl:pt-0 ">
       <div className="container mx-auto">
-        <motion.div
-          variants={fadeIn("up", 0.2)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0 }}
-          id="contact"
-        >
+        <Animated animation={fadeIn("up", 0.2)} elementType="div" id="contact">
           <div className="flex flex-col xl:flex-row bg-white shadow-md p-8 rounded-sm min-h-[394px] xl:p-20 xl:-translate-y-36 xl:gap-x-12">
             <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
               <iframe
@@ -71,7 +65,7 @@ const Footer = () => {
               <ContactForm />
             </div>
           </div>
-        </motion.div>
+        </Animated>
         {/* copyright text */}
         <div className="py-12 xl:-mt-32 flex flex-col xl:flex-row xl:justify-between">
           <p className="text-black font-semibold text-center mb-4 xl:mb-0">

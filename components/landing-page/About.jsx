@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { fadeIn } from "@/variants";
 import { useInView } from "react-intersection-observer";
-import { Button } from "./ui/button";
 import { useMediaQuery } from "react-responsive";
-import Stats from "./Stats";
+import Stats from "@/components/landing-page/Stats";
+import Animated from "@/components/Animated";
 
 const About = () => {
   const isMobile = useMediaQuery({
@@ -17,17 +16,13 @@ const About = () => {
 
   return (
     <section className="py-12 xl:pt-0 xl:pb-24" ref={ref} id="about">
-      {/* <div className="absolute h-full left-0 w-[100%] bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"></div> */}
-
       <div className="container mx-auto">
         <div className="flex flex-col justify-between xl:flex-row">
           {/* img */}
-          <motion.div
-            variants={fadeIn("right", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.4 }}
+          <Animated
             className=" relative"
+            elementType="div"
+            animation={fadeIn("right", 0.2)}
           >
             <Image
               src={"/about/bg2.png"}
@@ -35,14 +30,12 @@ const About = () => {
               height={400}
               className="rounded-md"
             ></Image>
-          </motion.div>
+          </Animated>
           {/* text */}
-          <motion.div
-            variants={fadeIn("left", 0.5)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.4 }}
+          <Animated
             className="xl:max-w-[470px]"
+            elementType="div"
+            animation={fadeIn("left", 0.5)}
           >
             <h2 className="h2 mb-[38px] mt-2">O nama</h2>
             <p>
@@ -59,7 +52,7 @@ const About = () => {
               Ukupna kvadratura stanova premašuje 6.000 kvadratnih metara.
               Takođe u našem planu i programu se nalazi i 40 parking mesta.
             </p>
-          </motion.div>
+          </Animated>
         </div>
       </div>
     </section>
