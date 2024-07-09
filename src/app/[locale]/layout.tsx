@@ -4,15 +4,15 @@ import { getMessages } from "next-intl/server";
 
 type RootLayoutProps = {
   children: React.ReactNode;
-  locale: string;
+  params: { locale: string };
 };
 
 export default async function RootLayout({
   children,
-  locale,
+  params: { locale },
 }: RootLayoutProps) {
   // Receive messages provided in `i18n.ts`
-  const messages = await getMessages(locale);
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
