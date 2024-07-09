@@ -1,0 +1,96 @@
+{
+  "LocalsDropdown": {
+    "serbian": "Serbian",
+    "english": "English",
+    "russian": "Russian"
+  },
+
+  "Header": {
+    "home": "Home",
+    "about": "About Us",
+    "location": "Location",
+    "facilities": "Facilities",
+    "apartments": "Apartments",
+    "projects": "Projects",
+    "contact": "Contact Us"
+  },
+
+  "HeroPage": {
+    "welcome": "Raolen Gradnja",
+    "description": "This is the place where your journey towards the family home you've always imagined begins."
+  },
+
+  "AboutPage": {
+    "title": "About Us",
+    "intro": "Raolen Gradnja is a real estate company located in the heart of Inđija. Our projects are characterized by high construction standards, innovative design, and careful space planning.",
+    "vision": "Our vision is simple - to create properties that meet everyone's expectations. We consider your needs, desires, and future plans to create a space that reflects your unique story and lifestyle.",
+    "skillsTitle": "Why Choose Us?",
+    "innovation": "Innovation",
+    "design": "Design",
+    "manufacturing": "Manufacturing"
+  },
+
+  "PlanPage": {
+    "title": "Plan",
+    "p": "Our plan includes the construction of 80 high-quality apartments. The portfolio we are building reflects diversity and a careful approach to projects, tailored to the different needs of clients.",
+    "p2": "The total area of the apartments exceeds 6,000 square meters. Additionally, our plan and program include 40 parking spots.",
+    "appartments": "Apartments",
+    "parkingSpot": "Parking spots",
+    "squareMeters": "Square meters"
+  },
+
+  "LocationPage": {
+    "title": "Location",
+    "p": "We are located not far from the center of Inđija, yet situated in a quiet part of the city. We present to you all the advantages of the place where we are located.",
+    "bus": "Bus",
+    "basLabel": "Bus Station",
+    "sport": "Sport",
+    "sportLabel": "Sports Center",
+    "park": "Park",
+    "parkLabel": "Queen Marija City Park",
+    "train": "Train",
+    "trainLabel": "Train Station",
+    "hospital": "Hospital",
+    "hospitalLabel": "Dr Milorad-Mika Pavlović Health Center",
+    "kindergarten": "Kindergarten",
+    "kindergartenLabel": "Sunce Kindergarten",
+    "school": "School",
+    "schoolLabel": "Dušan Jerković Elementary School",
+    "center": "Center",
+    "centerLabel": "City Center"
+  },
+  "FacilitiesPage": {
+    "title": "Facilities",
+    "p": "One of the key elements of our philosophy is the introduction of additional amenities within the buildings, creating a vibrant micro-environment. In our facilities, you will find more than just residential space. We offer additional conveniences that make our residents' lives simpler and more enjoyable.",
+    "marketTitle": "Market",
+    "marketSubTitle": "Convenient shopping at your fingertips",
+    "marketText": "One of the potential options is to provide our residents with the privilege of enjoying their own market. This market offers a wide range of fresh groceries, essential supplies, and products crucial for everyday life. Our market is here to simplify your daily routine, allowing you to get everything you need without leaving the comfort of your home.",
+    "cafeTitle": "Cafe",
+    "cafeSubTitle": "A place where everyone gathers",
+    "cafeText": "The cafe within Raolen Construction is not just a place for coffee; it is a social hub where neighbors, friends, and families meet. This cafe is designed as a cozy space for relaxation, working from home, or informal gatherings. With a wide array of beverages and delicious treats, our cafe becomes a favorite spot for all residents, creating an atmosphere of community and friendship.",
+    "playroomTitle": "Children's Playroom",
+    "playroomSubTitle": "A safe and fun oasis",
+    "playroomText": "For the families that are part of our community, we have specifically designed a space that will delight the youngest members. Our children's playroom is a safe place where kids can play freely, learn, and grow. This space is carefully designed with the safety and needs of children in mind, providing them with the opportunity to enjoy playing in the immediate vicinity of their home."
+  },
+
+  "ApartmentsPage": {
+    "title": "Find an Apartment that Fits You",
+    "p": "Choose an apartment from our offer that suits your needs.",
+    "studioApartments": "Studio Apartments",
+    "buttonText": "View All",
+    "apartments1": "One and a Half Bedroom Apartments",
+    "apartments2": "Two Bedroom Apartments",
+    "apartments3": "Three Bedroom Apartments"
+  },
+
+  "ProjectsPage": {
+    "title": "Project in Niš",
+    "subTitle": "Nikole Pašića 10, Niš",
+    "text": "In the heart of Niš, between historical monuments and modern buildings, an innovative real estate company named 'Niš Real Estate Solutions' has established itself. This company is not just an intermediary in buying and selling properties, but also an architect of life, connecting people with their dream homes.",
+    "title2": "Project in Kragujevac",
+    "subTitle2": "Kneza Miloša 22, Kragujevac",
+    "text2": "In the heart of Šumadija, in one of the most picturesque cities in Serbia, a remarkable real estate company named 'Kragujevac Real Estate Hub' has flourished. This agency is not just an intermediary in real estate transactions; it is a pillar of the community, connecting people with their dream homes and enhancing the quality of life in Kragujevac.",
+    "buttonLabel": "Learn More",
+    "label": "Apartments"
+  }
+}

@@ -21,21 +21,22 @@ module.exports = {
     colors: {
       white: "#fff",
       black: "#273029",
-      soft_green: {
-        DEFAULT: "#F2F1EB",
-        secondary: "#F2F1EB",
-      },
+      background: "#F5F2ED",
       grey: {
         DEFAULT: "#888",
         secondary: "#fafafa",
       },
-      gold: "#E2C799",
+      gold: "#DABE9D",
       outline: "#f1f1f1",
       pink: "#f3d1d7",
       body: "#e5e5e5",
     },
     extend: {
       keyframes: {
+        expand: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -46,6 +47,8 @@ module.exports = {
         },
       },
       animation: {
+        "expand-left-right": "expand 0.4s forwards",
+        "contract-left-right": "contract 0.4s forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

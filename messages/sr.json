@@ -1,0 +1,97 @@
+{
+  "LocalsDropdown": {
+    "serbian": "Srpski",
+    "english": "Engleski",
+    "russian": "Ruski"
+  },
+
+  "Header": {
+    "home": "Početna",
+    "about": "O Nama",
+    "location": "Lokacija",
+    "facilities": "Objekti",
+    "apartments": "Stanovi",
+    "projects": "Projekti",
+    "contact": "Kontakt"
+  },
+
+  "HeroPage": {
+    "welcome": "Raolen Gradnja",
+    "description": "Ovo je mesto gde započinje vaše putovanje prema porodičnom domu kakvog ste ga oduvek zamišljali."
+  },
+
+  "AboutPage": {
+    "title": "O Nama",
+    "intro": "Raolen Gradnja je kompanija za nekretnine smeštena u samom centru grada Inđije. Naše projekte odlikuju visoki standardi gradnje, inovativni dizaj i pažljivo planiranje prostora.",
+    "vision": "Naša vizija je jednostavna - stvarati nekretnine koje ispunjavaju svačija očekivanja. Uzimamo u obzir vaše potrebe, želje i buduće planove kako bismo stvorili prostor koji odražava vašu jedinstvenu priču i stil života.",
+    "skillsTitle": "Zašto baš mi?",
+    "innovation": "Inovativnost",
+    "design": "Dizajn",
+    "manufacturing": "Izrada"
+  },
+
+  "PlanPage": {
+    "title": "Plan",
+    "p": "Naš plan podrazumeva izgradnju 80 stanova, visokog kvaliteta. Portfolio koji gradimo stanova odražava raznovrsnost i pažljiv pristup projektima, koji su prilagođeni različitim potrebama klijenata.",
+    "p2": "Ukupna kvadratura stanova premašuje 6.000 kvadratnih metara. Takođe u našem planu i programu se nalazi i 40 parking mesta.",
+    "appartments": "Stanova",
+    "parkingSpot": "Parking mesta",
+    "squareMeters": "Kvadrata"
+  },
+
+  "LocationPage": {
+    "title": "Lokacija",
+    "p": "Nalazimo se nedaleko od centra Inđije, a opet smešteni u mirnom kraju grada. Predstavljamo vam sve pogodnosti mesta na kom se nalazimo.",
+    "bus": "Autobus",
+    "basLabel": "Autobuska stanica",
+    "sport": "Sport",
+    "sportLabel": "Centar za bavljenje sportom",
+    "park": "Park",
+    "parkLabel": "Gradski park Kraljice Marije",
+    "train": "Voz",
+    "trainLabel": "Železnička stanica",
+    "hospital": "Bolnica",
+    "hospitalLabel": "Dom zdravlja Dr Milorad-Mika Pavlović",
+    "kindergarten": "Vrtić",
+    "kindergartenLabel": "Vrtić Sunce",
+    "school": "Škola",
+    "schoolLabel": "Osnovna škola Dušan Jerković",
+    "center": "Centar",
+    "centerLabel": "Centar grada"
+  },
+
+  "FacilitiesPage": {
+    "title": "Objekti",
+    "p": "Jedan od ključnih elemenata naše filozofije je uvođenje dodatnih sadržaja unutar zgrada, čime stvaramo živopisno mikrookruženje. U našim objektima pronaći ćete više od samo stambenog prostora. Nudimo dodatne pogodnosti koje čine život naših stanara jednostavnijim i ugodnijim.",
+    "marketTitle": "Market",
+    "marketSubTitle": "Praktična nabavka na dohvat ruke",
+    "marketText": "Jedna od potencijalnih opcija jeste da našim stanarima omogućimo privilegiju uživanja u sopstvenom marketu. Ovaj market je mesto na kom se nalazi širok spektar svežih namirnica, osnovnih potrepština i proizvoda bitnih za svakodnevni život. Naš market je tu kako bi olakšao vašu svakodnevicu, omogućavajući vam da nabavite sve što vam je potrebno bez napuštanja komfora vašeg doma.",
+    "cafeTitle": "Kafić",
+    "cafeSubTitle": "Mesto gde se svi okupljaju",
+    "cafeText": "Kafić u sklopu Raolen Gradnje nije samo prostor za ispijanje kafe, to je društveno središte gde se susreću komšije, prijatelji i porodice. Ovaj kafić je koncipiran kao udoban prostor za relaksaciju, rad od kuće ili neformalna druženja. Sa širokom paletom napitaka i ukusnih poslastica, naš kafić postaje omiljeno mesto svih stanara, stvarajući atmosferu zajedništva i prijateljstva.",
+    "playroomTitle": "Igraonica za decu",
+    "playroomSubTitle": "Bezbedna i zabavna oaza",
+    "playroomText": "Za porodice koje su deo naše zajednice, posebno smo osmislili prostor koji će obradovati najmlađe članove. Naša igraonica za decu predstavlja sigurno mesto gde se mališani mogu slobodno igrati, učiti i razvijati. Ovaj prostor je pažljivo osmišljen uzimajući u obzir bezbednost i potrebe dece, pružajući im mogućnost da uživaju u igri u neposrednoj blizini svog doma."
+  },
+
+  "ApartmentsPage": {
+    "title": "Pronađite stan po vašoj meri",
+    "p": "Odaberite stan po vašoj želji iz naše ponude.",
+    "studioApartments": "Garsonjere",
+    "buttonText": "Pogledaj sve",
+    "apartments1": "Jednoiposobni stanovi",
+    "apartments2": "Dvosobni stanovi",
+    "apartments3": "Trosobni stanovi"
+  },
+
+  "ProjectsPage": {
+    "title": "Projekat u Nišu",
+    "subTitle": "Nikole Pašića 10, Niš",
+    "text": "U srcu Niša, između istorijskih spomenika i savremenih zgrada, smestila se inovativna firma za nekretnine koja nosi ime 'Niš Real Estate Solutions'. Ova kompanija nije samo posrednik u prodaji i kupovini nekretnina, već je i arhitekta života, spajajući ljude sa domovima iz snova.",
+    "title2": "Projekat u Kragujevcu",
+    "subTitle2": "Kneza Miloša 22, Kragujevac",
+    "text2": "U srcu Šumadije, u jednom od najživopisnijih gradova Srbije, procvetala je izuzetna firma za nekretnine po imenu 'Kragujevac Real Estate Hub'. Ova agencija nije samo posrednik u transakcijama nekretnina; ona je stub zajednice, povezujući ljude sa domovima svojih snova i unapređujući kvalitet života u Kragujevcu.",
+    "buttonLabel": "Saznaj više",
+    "label": "Stanova"
+  }
+}
