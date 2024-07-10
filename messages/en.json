@@ -23,11 +23,14 @@
   "AboutPage": {
     "title": "About Us",
     "intro": "Raolen Gradnja is a real estate company located in the heart of Inđija. Our projects are characterized by high construction standards, innovative design, and careful space planning.",
-    "vision": "Our vision is simple - to create properties that meet everyone's expectations. We consider your needs, desires, and future plans to create a space that reflects your unique story and lifestyle.",
+    "vision": "Our vision is simple - to create real estate that meets everyone's expectations. We take into account your needs, desires, and future plans to create a space that reflects your unique story and lifestyle.",
     "skillsTitle": "Why Choose Us?",
-    "innovation": "Innovation",
+    "inovation": "Innovation",
+    "inovationText": "We consider the latest trends in the construction industry, but we also encourage creativity to create unique and original concepts.",
     "design": "Design",
-    "manufacturing": "Manufacturing"
+    "designText": "Design is not just about aesthetics, but also about functionality. Carefully designed spaces combine elegance and practicality.",
+    "manufacturing": "Construction",
+    "manufacturingText": "Quality construction involves the use of premium materials, careful planning, and project execution to create homes that last."
   },
 
   "PlanPage": {
@@ -84,13 +87,15 @@
   },
 
   "ProjectsPage": {
-    "title": "Project in Niš",
-    "subTitle": "Nikole Pašića 10, Niš",
-    "text": "In the heart of Niš, between historical monuments and modern buildings, an innovative real estate company named 'Niš Real Estate Solutions' has established itself. This company is not just an intermediary in buying and selling properties, but also an architect of life, connecting people with their dream homes.",
-    "title2": "Project in Kragujevac",
-    "subTitle2": "Kneza Miloša 22, Kragujevac",
-    "text2": "In the heart of Šumadija, in one of the most picturesque cities in Serbia, a remarkable real estate company named 'Kragujevac Real Estate Hub' has flourished. This agency is not just an intermediary in real estate transactions; it is a pillar of the community, connecting people with their dream homes and enhancing the quality of life in Kragujevac.",
-    "buttonLabel": "Learn More",
+    "title": "Projects",
+    "p": "We present to you our other projects in the portfolio.",
+    "projectTitle": "Project in Niš",
+    "projectSubTitle": "Nikole Pašića 10, Niš",
+    "projectText": "In the heart of Niš, between historical monuments and modern buildings, there is an innovative real estate company named 'Niš Real Estate Solutions'. This company is not just a mediator in the sale and purchase of real estate but also an architect of life, connecting people with their dream homes.",
+    "projectTitle2": "Project in Kragujevac",
+    "projectSubTitle2": "Kneza Miloša 22, Kragujevac",
+    "projectText2": "In the heart of Šumadija, in one of the most picturesque cities in Serbia, a remarkable real estate company named 'Kragujevac Real Estate Hub' has blossomed. This agency is not just a mediator in real estate transactions; it is a pillar of the community, connecting people with their dream homes and improving the quality of life in Kragujevac.",
+    "buttonLabel": "Learn more",
     "label": "Apartments"
   }
 }

@@ -3,6 +3,7 @@
 import { Button } from "@/src/components/ui/button";
 import { fadeIn } from "@/src/components/animations/variants";
 import { useTranslations } from "next-intl";
+import PageTitle from "../PageTitle";
 import Animated from "@/src/components/animations/Animated";
 import Image from "next/image";
 
@@ -34,28 +35,12 @@ const Apartments = () => {
   return (
     <section className="mb-5" id="apartments">
       <div className="">
-        {/* text */}
-        <div className="flex flex-col items-center justify-center border-2 shadow-sm border-outline rounded-md mt-3 py-7 mb-5 bg-background">
-          <Animated
-            className="h2 mb-6"
-            elementType="h2"
-            animation={fadeIn("up", 0.2)}
-          >
-            {t("title")}
-          </Animated>
-          <Animated
-            className="max-w-[638px]  mb-8"
-            elementType="p"
-            animation={fadeIn("up", 0.4)}
-          >
-            {t("p")}
-          </Animated>
-          <Animated animation={fadeIn("up", 0.6)} elementType="div">
-            <Button variant="accent" className="px-12">
-              {t("buttonText")}
-            </Button>
-          </Animated>
-        </div>
+        {/* Title */}
+        <PageTitle
+          title={t("title")}
+          text={t("p")}
+          buttonText={t("buttonText")}
+        />
         {/* apartment grid */}
         <Animated
           animation={fadeIn("up", 0.6)}

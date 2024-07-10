@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { fadeIn } from "@/src/components/animations/variants";
+import PageTitle from "../PageTitle";
 import Animated from "@/src/components/animations/Animated";
 
 const Facilities = () => {
@@ -37,22 +38,8 @@ const Facilities = () => {
   ];
   return (
     <div className=" bg-white xl:mb-0">
-      <div className="border-2 shadow-sm border-outline rounded-md text-center mt-5  py-5 bg-background">
-        <Animated
-          animation={fadeIn("up", 0.2)}
-          elementType="h2"
-          className="h2 mb-6"
-        >
-          {t("title")}
-        </Animated>
-        <Animated
-          animation={fadeIn("up", 0.4)}
-          elementType="p"
-          className="max-w-[638px] mx-auto "
-        >
-          {t("p")}
-        </Animated>
-      </div>
+      {/* Title */}
+      <PageTitle title={t("title")} text={t("p")} />
       <Animated
         animation={fadeIn("up", 0.2)}
         elementType="section"
@@ -68,7 +55,7 @@ const Facilities = () => {
             {facilitiesData.map((slide, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className=" mt-5 grid grid-cols-1 xl:grid-cols-3 gap-5">
+                  <div className=" grid grid-cols-1 xl:grid-cols-3 gap-5">
                     {/* img */}
                     <div className="relative xl:col-span-2 bg-white border-2 shadow-sm border-outline rounded-md">
                       <Image

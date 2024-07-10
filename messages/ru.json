@@ -21,13 +21,16 @@
   },
 
   "AboutPage": {
-    "title": "О Нас",
-    "intro": "Raolen Gradnja - это компания по недвижимости, расположенная в самом центре города Инđия. Наши проекты характеризуются высокими стандартами строительства, инновационным дизайном и тщательным планированием пространства.",
-    "vision": "Наша цель проста - создавать недвижимость, которая соответствует ожиданиям каждого. Мы учитываем ваши потребности, желания и планы на будущее, чтобы создать пространство, которое отражает вашу уникальную историю и стиль жизни.",
-    "skillsTitle": "Почему выбирают нас?",
-    "innovation": "Инновации",
-    "design": "Дизайн",
-    "manufacturing": "Изготовление"
+    "title": "About Us",
+    "intro": "Raolen Gradnja is a real estate company located in the heart of Inđija. Our projects are characterized by high construction standards, innovative design, and careful space planning.",
+    "vision": "Our vision is simple - to create real estate that meets everyone's expectations. We take into account your needs, desires, and future plans to create a space that reflects your unique story and lifestyle.",
+    "skillsTitle": "Why Choose Us?",
+    "inovation": "Innovation",
+    "inovationText": "We consider the latest trends in the construction industry, but we also encourage creativity to create unique and original concepts.",
+    "design": "Design",
+    "designText": "Design is not just about aesthetics, but also about functionality. Carefully designed spaces combine elegance and practicality.",
+    "manufacturing": "Construction",
+    "manufacturingText": "Quality construction involves the use of premium materials, careful planning, and project execution to create homes that last."
   },
 
   "PlanPage": {
@@ -85,12 +88,14 @@
   },
 
   "ProjectsPage": {
-    "title": "Проект в Нише",
-    "subTitle": "Николе Пашича 10, Ниш",
-    "text": "В самом сердце Ниша, между историческими памятниками и современными зданиями, расположилась инновационная фирма по недвижимости под названием 'Niš Real Estate Solutions'. Эта компания не просто посредник в купле-продаже недвижимости, она также архитектор жизни, соединяя людей с домами их мечты.",
-    "title2": "Проект в Крагуеваце",
-    "subTitle2": "Кнеза Милоша 22, Крагуевац",
-    "text2": "В самом сердце Шумадии, в одном из самых живописных городов Сербии, расцвела исключительная фирма по недвижимости под названием 'Kragujevac Real Estate Hub'. Это агентство не просто посредник в сделках с недвижимостью; оно является опорой сообщества, соединяя людей с домами их мечты и улучшая качество жизни в Крагуеваце.",
+    "title": "Проекты",
+    "p": "Представляем вам другие наши проекты в портфолио.",
+    "projectTitle": "Проект в Нише",
+    "projectSubTitle": "Николе Пашича 10, Ниш",
+    "projectText": "В самом сердце Ниша, между историческими памятниками и современными зданиями, находится инновационная компания по недвижимости под названием 'Niš Real Estate Solutions'. Эта компания не просто посредник в купле-продаже недвижимости, но и архитектор жизни, соединяющий людей с домами их мечты.",
+    "projectTitle2": "Проект в Крагуеваце",
+    "projectSubTitle2": "Кнеза Милоша 22, Крагуевац",
+    "projectText2": "В самом сердце Шумадии, в одном из самых живописных городов Сербии, процветает выдающаяся компания по недвижимости под названием 'Kragujevac Real Estate Hub'. Это агентство не просто посредник в сделках с недвижимостью; оно является опорой сообщества, соединяя людей с домами их мечты и улучшая качество жизни в Крагуеваце.",
     "buttonLabel": "Узнать больше",
     "label": "Квартиры"
   }

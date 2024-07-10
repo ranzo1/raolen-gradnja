@@ -17,7 +17,7 @@ const Plan = () => {
   });
 
   return (
-    <section className="pb-5 mt-5 xl:pt-0" ref={ref} id="plan">
+    <section className="mt-5 xl:pt-0" ref={ref} id="plan">
       {/* <div className="flex flex-col justify-center items-center text-2xl font-sans bg-background h-[250px] w-full">
         <p className="">Plan je ništa, planiranje je sve.</p>
       </div> */}

@@ -14,25 +14,22 @@ export default function About() {
       icon: "ri-lightbulb-fill",
       iconSize: "text-4xl",
       iconColor: "text-gold",
-      title: t("innovation"),
-      description:
-        "Uzimamo u obzir najnovije trendove u građevinskoj industriji, ali isto tako podstičemo kreativnost kako bismo stvorili jedinstvene i originalne koncepte.",
+      title: t("inovation"),
+      description: t("inovationText"),
     },
     {
       icon: "ri-brush-fill",
       iconSize: "text-4xl",
       iconColor: "text-gold",
       title: t("design"),
-      description:
-        "Dizajn nije samo stvar estetike, već i funkcionalnosti. Pažljivo osmišljeni prostori spajaju eleganciju i praktičnost.",
+      description: t("designText"),
     },
     {
       icon: "ri-pencil-ruler-fill",
       iconSize: "text-4xl",
       iconColor: "text-gold",
       title: t("manufacturing"),
-      description:
-        "Kvalitetna gradnja podrazumeva upotrebu vrhunskih materijala, pažljivo planiranje i izvedbu projekata kako bi se stvorili domovi koji traju.",
+      description: t("manufacturingText"),
     },
   ];
 

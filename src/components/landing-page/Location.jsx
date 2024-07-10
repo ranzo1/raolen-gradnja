@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { Icon, divIcon } from "leaflet";
 import { useTranslations } from "next-intl";
+import PageTitle from "@/src/components/PageTitle";
 import Animated from "@/src/components/animations/Animated";
 
 // leaflet css
@@ -126,25 +127,10 @@ const Location = () => {
 
   return (
     <section className="">
-      {/* text */}
-      <div className="border-2 shadow-sm border-outline rounded-md text-center p-10 bg-background">
-        <Animated
-          animation={fadeIn("up", 0.2)}
-          elementType="h2"
-          className="h2 mb-6"
-        >
-          {t("title")}
-        </Animated>
-        <Animated
-          animation={fadeIn("up", 0.4)}
-          elementType="p"
-          className="max-w-[638px] mx-auto mb-8"
-        >
-          {t("p")}
-        </Animated>
-      </div>
+      {/* Title */}
+      <PageTitle title={t("title")} text={t("p")} />
       {/* locations */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  py-5 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 pb-5 gap-5">
         {markers.map((marker, index) => {
           return marker.distance ? (
             <Animated

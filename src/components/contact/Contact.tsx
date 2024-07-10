@@ -21,7 +21,7 @@ const Contact = () => {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                Univerexport Jug Bogdana 29 Inđija, Jug Bogdana, Inđija, Serbia
+                Univerexport Jug Bogdana 25 Inđija, Jug Bogdana, Inđija, Serbia
               </p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">

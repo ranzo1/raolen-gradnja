@@ -25,9 +25,12 @@
     "intro": "Raolen Gradnja je kompanija za nekretnine smeštena u samom centru grada Inđije. Naše projekte odlikuju visoki standardi gradnje, inovativni dizaj i pažljivo planiranje prostora.",
     "vision": "Naša vizija je jednostavna - stvarati nekretnine koje ispunjavaju svačija očekivanja. Uzimamo u obzir vaše potrebe, želje i buduće planove kako bismo stvorili prostor koji odražava vašu jedinstvenu priču i stil života.",
     "skillsTitle": "Zašto baš mi?",
-    "innovation": "Inovativnost",
+    "inovation": "Inovativnost",
+    "inovationText": "Uzimamo u obzir najnovije trendove u građevinskoj industriji, ali isto tako podstičemo kreativnost kako bismo stvorili jedinstvene i originalne koncepte.",
     "design": "Dizajn",
-    "manufacturing": "Izrada"
+    "designText": "Dizajn nije samo stvar estetike, već i funkcionalnosti. Pažljivo osmišljeni prostori spajaju eleganciju i praktičnost.",
+    "manufacturing": "Izrada",
+    "manufacturingText": "Kvalitetna gradnja podrazumeva upotrebu vrhunskih materijala, pažljivo planiranje i izvedbu projekata kako bi se stvorili domovi koji traju."
   },
 
   "PlanPage": {
@@ -85,12 +88,14 @@
   },
 
   "ProjectsPage": {
-    "title": "Projekat u Nišu",
-    "subTitle": "Nikole Pašića 10, Niš",
-    "text": "U srcu Niša, između istorijskih spomenika i savremenih zgrada, smestila se inovativna firma za nekretnine koja nosi ime 'Niš Real Estate Solutions'. Ova kompanija nije samo posrednik u prodaji i kupovini nekretnina, već je i arhitekta života, spajajući ljude sa domovima iz snova.",
-    "title2": "Projekat u Kragujevcu",
-    "subTitle2": "Kneza Miloša 22, Kragujevac",
-    "text2": "U srcu Šumadije, u jednom od najživopisnijih gradova Srbije, procvetala je izuzetna firma za nekretnine po imenu 'Kragujevac Real Estate Hub'. Ova agencija nije samo posrednik u transakcijama nekretnina; ona je stub zajednice, povezujući ljude sa domovima svojih snova i unapređujući kvalitet života u Kragujevcu.",
+    "title": "Projekti",
+    "p": "Predstavljamo vam druge naše projekte u portfoliju.",
+    "projectTitle": "Projekat u Nišu",
+    "projectSubTitle": "Nikole Pašića 10, Niš",
+    "projectText": "U srcu Niša, između istorijskih spomenika i savremenih zgrada, smestila se inovativna firma za nekretnine koja nosi ime 'Niš Real Estate Solutions'. Ova kompanija nije samo posrednik u prodaji i kupovini nekretnina, već je i arhitekta života, spajajući ljude sa domovima iz snova.",
+    "projectTitle2": "Projekat u Kragujevcu",
+    "projectSubTitle2": "Kneza Miloša 22, Kragujevac",
+    "projectText2": "U srcu Šumadije, u jednom od najživopisnijih gradova Srbije, procvetala je izuzetna firma za nekretnine po imenu 'Kragujevac Real Estate Hub'. Ova agencija nije samo posrednik u transakcijama nekretnina; ona je stub zajednice, povezujući ljude sa domovima svojih snova i unapređujući kvalitet života u Kragujevcu.",
     "buttonLabel": "Saznaj više",
     "label": "Stanova"
   }

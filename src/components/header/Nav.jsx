@@ -15,27 +15,27 @@ const Nav = ({ containerStyles, linkStyles }) => {
     {
       path: "about",
       name: t("about"),
-      offset: -50,
+      offset: 40,
     },
     {
       path: "location",
       name: t("location"),
-      offset: -510,
+      offset: -760,
     },
     {
       path: "facilities",
       name: t("facilities"),
-      offset: -330,
+      offset: -310,
     },
     {
       path: "apartments",
       name: t("apartments"),
-      offset: 0,
+      offset: -10,
     },
     {
       path: "projects",
       name: t("projects"),
-      offset: -50,
+      offset: -10,
     },
     {
       path: "contact",
