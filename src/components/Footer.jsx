@@ -14,11 +14,11 @@ const Footer = () => {
     "https://maps.google.com/maps?width=100%&height=600&hl=en&q=Univerexport%20Jug%20Bogdana%2025%20In%C4%91ija,%20Jug%20Bogdana,%20In%C4%91ija,%20Serbia&ie=UTF8&t=&z=14&iwloc=B&ll=45.046990,20.085370&output=embed";
 
   return (
-    <footer className="bg-background relative pt-12 xl:pt-0 ">
+    <footer className="bg-background relative pt-12 xl:pt-3 ">
       <div className="container mx-auto">
         <Animated animation={fadeIn("up", 0.2)} elementType="div" id="contact">
           <div className="flex flex-col xl:flex-row bg-white shadow-md p-8 rounded-sm min-h-[394px] xl:p-20 xl:-translate-y-36 xl:gap-x-12">
-            <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+            <div className="relative bg-gray-300 rounded-lg overflow-hidden p-10 flex items-end justify-start">
               <iframe
                 title="map"
                 src={iframeSrc}
@@ -49,18 +49,18 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+            <div className="bg-white flex flex-col w-full">
               {/* logo & text */}
-              <div className="xl:w-[470px] mb-6 xl:mb-0">
+              <div className="">
                 <Link href="/" className="mb-24">
                   <Image src={logo} width={140} height={140} alt="" priority />
                 </Link>
               </div>
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                Feedback
+                Kontakt
               </h2>
               <p className="leading-relaxed mb-5 text-gray-600">
-                Post-ironic portland shabby chic echo park, banjo fashion axe
+                Tu smo za sva vaša pitanja, pišite nam!
               </p>
               <ContactForm />
             </div>

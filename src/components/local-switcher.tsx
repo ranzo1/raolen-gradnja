@@ -22,7 +22,7 @@ export default function LocalSwitcher() {
       <p className="sr-only">change language</p>
       <select
         defaultValue={localActive}
-        className="block w-full px-4 py-2 bg-white text-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold"
+        className="block w-full px-4 py-2 bg-white text-black rounded-md shadow-sm"
         onChange={onSelectChange}
         disabled={isPending}
       >

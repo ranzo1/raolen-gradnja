@@ -3,7 +3,7 @@
 // swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 // swiper modules
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 // swiper styles
 import "swiper/css";
@@ -22,18 +22,18 @@ const Projects = () => {
   const t = useTranslations("ProjectsPage");
   const projectsData = [
     {
-      name: t("projectTitle"),
+      title: t("projectTitle"),
       image: "/projects/1.png",
-      location: t("projectSubTitle"),
-      desc: t("projectText"),
-      price: 90,
+      subtitle: t("projectSubTitle"),
+      text: t("projectText"),
+      value: 90,
     },
     {
-      name: t("projectTitle2"),
+      title: t("projectTitle2"),
       image: "/projects/2.png",
-      location: t("projectSubTitle2"),
-      desc: t("projectText"),
-      price: 60,
+      subtitle: t("projectSubTitle2"),
+      text: t("projectText"),
+      value: 60,
     },
   ];
   return (
@@ -48,7 +48,8 @@ const Projects = () => {
       {/* slider */}
       <Animated animation={fadeIn("up", 0.4)} elementType="div">
         <Swiper
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
+          pagination={{ clickable: true }}
           autoplay={{
             delay: 4000,
             disableOnInteraction: true,
@@ -62,21 +63,19 @@ const Projects = () => {
                 <div className="grid grid-cols-1 xl:grid-cols-3 gap-5">
                   {/* text */}
                   <div className=" bg-white border-2 shadow-sm border-outline rounded-md p-12">
-                    <h2 className="h2 mb-4">{project.name}</h2>
-                    <p className="text-background text-sm mb-6">
-                      {project.location}
-                    </p>
-                    <p className="mb-[60px]">{project.desc}</p>
+                    <h2 className="h2 mb-4">{project.title}</h2>
+                    <p className="text-gold text-sm mb-6">{project.subtitle}</p>
+                    <p className="mb-[60px]">{project.text}</p>
                     <div className="flex items-center gap-x-[50px]">
                       <Button variant="accent" className="px-[44px]">
                         {" "}
-                        Saznaj više
+                        {t("buttonLabel")}
                       </Button>
-                      <div className="text-black">
+                      <div className="flex flex-col text-black">
                         <span className="font-bold text-2xl">
-                          {project.price}
+                          {project.value}
                         </span>
-                        <span className="text-sm"> Stanova</span>
+                        <span className="text-sm">{t("label")}</span>
                       </div>
                     </div>
                   </div>

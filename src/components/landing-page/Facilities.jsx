@@ -3,7 +3,7 @@
 // swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 // swiper modules
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 // swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -48,9 +48,15 @@ const Facilities = () => {
       >
         <Animated animation={fadeIn("up", 0.4)} elementType="div" className="">
           <Swiper
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination]}
             pagination={{ clickable: true }}
-            className="h-[950px] xl:h-[800px] overflow-hidden"
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: true,
+            }}
+            loop
+            speed={2000}
+            className=" overflow-hidden"
           >
             {facilitiesData.map((slide, index) => {
               return (
@@ -73,7 +79,7 @@ const Facilities = () => {
                       elementType="div"
                     >
                       <h2 className="h2 mb-2 mt-2">{slide.title}</h2>
-                      <p className="mb-5 text-grey">{slide.subtitle}</p>
+                      <p className="text-gold text-sm mb-6">{slide.subtitle}</p>
                       <p>{slide.message}</p>
                     </div>
                   </div>

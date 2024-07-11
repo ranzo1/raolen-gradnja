@@ -12,7 +12,7 @@ const Hero = () => {
     <>
       {/* background bg-[url('/hero/bg4.png')] bg-cover bg-no-repeat */}
       <section
-        className="relative h-[600px] md:h-[1000px] py-40 pb-32 xl:py-12"
+        className="relative items-center justify-center h-[600px] md:h-[1000px] py-40 pb-32"
         id="home"
       >
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -26,14 +26,14 @@ const Hero = () => {
           />
         </div>
         {/* text & img */}
-        <div className="absolute bottom-0 inset-x-0 z-10 flex flex-col items-center justify-center xl:justify-between md:flex-row xl:h-[1000px] mx-auto xl:container">
+        <div className="absolute h-[700px]  bottom-0 mx-auto inset-x-0 z-10 flex flex-col items-center justify-center md:flex-row xl:h-[1000px] container">
           {/* text */}
           <Animated
-            className="bottom-[100px] w-full text-center rounded-sm  shadow-md p-3"
+            className="w-full   text-center rounded-sm shadow-md "
             elementType="div"
             animation={fadeIn("down", 0.6)}
           >
-            <h1 className="text-gold mb-7 text-5xl xl:text-9xl tracking-[1em]">
+            <h1 className="text-gold text-6xl md:text-8xl xl:text-9xl tracking-[1em]">
               RAOLEN
               {/* {t("welcome")} */}
             </h1>

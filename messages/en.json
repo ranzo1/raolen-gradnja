@@ -35,11 +35,14 @@
 
   "PlanPage": {
     "title": "Plan",
-    "p": "Our plan includes the construction of 80 high-quality apartments. The portfolio we are building reflects diversity and a careful approach to projects, tailored to the different needs of clients.",
-    "p2": "The total area of the apartments exceeds 6,000 square meters. Additionally, our plan and program include 40 parking spots.",
+    "p": "Our plan involves the construction of 40 high-quality apartments. The portfolio we are building reflects diversity and a careful approach to projects that are tailored to different clients' needs.",
+    "p2": "The total area of the apartments exceeds 1,800 square meters. Our plan and program also include 40 parking spaces, so each apartment has a parking space. The average area of the apartments is 45 square meters.",
+    "floors": "Floors",
     "appartments": "Apartments",
-    "parkingSpot": "Parking spots",
-    "squareMeters": "Square meters"
+    "parkingSpot": "Parking spaces",
+    "greenArea": "Green areas",
+    "biggestApartment": "Largest apartment",
+    "smallestApartment": "Smallest apartment"
   },
 
   "LocationPage": {

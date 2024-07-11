@@ -4,8 +4,6 @@ import { Button } from "@/src/components/ui/button";
 import { useTranslations } from "next-intl";
 
 const PageTitle = ({ title, text, buttonText }) => {
-  const t = useTranslations("YourTranslationNamespace");
-
   return (
     <div
       animation={fadeIn("up", 0.4)}

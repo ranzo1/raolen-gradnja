@@ -35,11 +35,14 @@
 
   "PlanPage": {
     "title": "Plan",
-    "p": "Naš plan podrazumeva izgradnju 80 stanova, visokog kvaliteta. Portfolio koji gradimo stanova odražava raznovrsnost i pažljiv pristup projektima, koji su prilagođeni različitim potrebama klijenata.",
-    "p2": "Ukupna kvadratura stanova premašuje 6.000 kvadratnih metara. Takođe u našem planu i programu se nalazi i 40 parking mesta.",
+    "p": "Naš plan podrazumeva izgradnju 40 stanova, visokog kvaliteta. Portfolio koji gradimo stanova odražava raznovrsnost i pažljiv pristup projektima, koji su prilagođeni različitim potrebama klijenata.",
+    "p2": "Ukupna kvadratura stanova premašuje 1.800 kvadratnih metara. Takođe u našem planu i programu se nalazi i 40 parking mesta, tako da svaki stan poseduje parking mesto. Prosečna kvadratura stanova je 45 metara kvadratnih.",
+    "floors": "Sprata",
     "appartments": "Stanova",
     "parkingSpot": "Parking mesta",
-    "squareMeters": "Kvadrata"
+    "greenArea": "Zelene površine",
+    "biggestApartment": "Najveći stan",
+    "smallestApartment": "Najmanji stan"
   },
 
   "LocationPage": {

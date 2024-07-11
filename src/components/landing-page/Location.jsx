@@ -34,7 +34,7 @@ const Location = () => {
       address: "Аутобуска станица, Инђија",
       distance: "1000m",
       image: "/location/3.png",
-      iconUrl: "/location/markers/bus-line.svg",
+      iconUrl: "/location/markers/bus-fill.svg",
       iconSize: [35, 35],
     },
     {

@@ -63,7 +63,7 @@ const ContactForm = () => {
         <Form>
           <div className=" mx-auto">
             <div className="flex flex-col">
-              <div className="p-2 w-1/2">
+              <div className="p-2 ">
                 <div className="relative">
                   <label className="leading-7 text-sm text-gray-600">
                     Name
@@ -81,7 +81,7 @@ const ContactForm = () => {
                   />
                 </div>
               </div>
-              <div className="p-2 w-1/2">
+              <div className="p-2 ">
                 <div className="relative">
                   <label className="leading-7 text-sm text-gray-600">
                     Email

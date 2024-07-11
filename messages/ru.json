@@ -21,25 +21,28 @@
   },
 
   "AboutPage": {
-    "title": "About Us",
-    "intro": "Raolen Gradnja is a real estate company located in the heart of Inđija. Our projects are characterized by high construction standards, innovative design, and careful space planning.",
-    "vision": "Our vision is simple - to create real estate that meets everyone's expectations. We take into account your needs, desires, and future plans to create a space that reflects your unique story and lifestyle.",
-    "skillsTitle": "Why Choose Us?",
-    "inovation": "Innovation",
-    "inovationText": "We consider the latest trends in the construction industry, but we also encourage creativity to create unique and original concepts.",
-    "design": "Design",
-    "designText": "Design is not just about aesthetics, but also about functionality. Carefully designed spaces combine elegance and practicality.",
-    "manufacturing": "Construction",
-    "manufacturingText": "Quality construction involves the use of premium materials, careful planning, and project execution to create homes that last."
+    "title": "О нас",
+    "intro": "Raolen Gradnja - это компания по недвижимости, расположенная в самом сердце Инђии. Наши проекты характеризуются высокими стандартами строительства, инновационным дизайном и тщательным планированием пространства.",
+    "vision": "Наша визия проста - создавать недвижимость, которая соответствует ожиданиям каждого. Мы учитываем ваши потребности, желания и будущие планы, чтобы создать пространство, которое отражает вашу уникальную историю и стиль жизни.",
+    "skillsTitle": "Почему выбирают нас?",
+    "inovation": "Инновации",
+    "inovationText": "Мы учитываем последние тенденции в строительной индустрии, но также поощряем креативность для создания уникальных и оригинальных концепций.",
+    "design": "Дизайн",
+    "designText": "Дизайн - это не только эстетика, но и функциональность. Тщательно продуманные пространства объединяют элегантность и практичность.",
+    "manufacturing": "Строительство",
+    "manufacturingText": "Качественное строительство включает использование первоклассных материалов, тщательное планирование и выполнение проектов для создания домов, которые прослужат долго."
   },
 
   "PlanPage": {
     "title": "План",
-    "p": "Наш план предусматривает строительство 80 высококачественных квартир. Портфель, который мы строим, отражает разнообразие и тщательный подход к проектам, адаптированным к различным потребностям клиентов.",
-    "p2": "Общая площадь квартир превышает 6000 квадратных метров. Также в наш план и программу входит 40 парковочных мест.",
+    "p": "Наш план предусматривает строительство 40 квартир высокого качества. Портфель, который мы строим, отражает разнообразие и тщательный подход к проектам, адаптированным к различным потребностям клиентов.",
+    "p2": "Общая площадь квартир превышает 1 800 квадратных метров. В наш план и программу также включены 40 парковочных мест, так что каждая квартира имеет парковочное место. Средняя площадь квартир составляет 45 квадратных метров.",
+    "floors": "Этажи",
     "appartments": "Квартиры",
     "parkingSpot": "Парковочные места",
-    "squareMeters": "Квадратные метры"
+    "greenArea": "Зеленые зоны",
+    "biggestApartment": "Самая большая квартира",
+    "smallestApartment": "Самая маленькая квартира"
   },
 
   "LocationPage": {
