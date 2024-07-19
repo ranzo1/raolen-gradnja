@@ -22,17 +22,17 @@ const Stats = ({ t }) => {
     {
       value: 400,
       type: t("greenArea"),
-      unit: "m2",
+      unit: "m",
     },
     {
       value: 20,
       type: t("smallestApartment"),
-      unit: "m2",
+      unit: "m",
     },
     {
       value: 70,
       type: t("biggestApartment"),
-      unit: "m2",
+      unit: "m",
     },
   ];
   return (
@@ -46,7 +46,15 @@ const Stats = ({ t }) => {
               decimals={item.value % 1 !== 0 ? 1 : 0}
               duration={5}
             />
-            <span className="h3">{item.unit}</span>
+            <span className="h3">
+              {" "}
+              {item.unit ? (
+                <>
+                  {item.unit}
+                  <sup>2</sup>
+                </>
+              ) : null}
+            </span>
           </h2>
           <div className="text-black font-semibold">{item.type}</div>
         </div>

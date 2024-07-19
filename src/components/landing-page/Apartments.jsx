@@ -13,22 +13,22 @@ const Apartments = () => {
     {
       image: "/apartments/3.png",
       name: t("apartments2"),
-      info: "55 m2",
+      info: "55",
     },
     {
       image: "/apartments/1.png",
       name: t("studioApartments"),
-      info: "35 m2",
+      info: "35",
     },
     {
       image: "/apartments/2.png",
       name: t("apartments1"),
-      info: "45 m2",
+      info: "45",
     },
     {
       image: "/apartments/4.png",
       name: t("apartments3"),
-      info: "75 m2",
+      info: "75",
     },
   ];
 
@@ -73,7 +73,7 @@ const Apartments = () => {
                     {hotel.name}
                   </h4>
                   <p className="group-hover:text-white transition-all duration-300">
-                    {hotel.info}
+                    {hotel.info} m<sup>2</sup>
                   </p>
                 </div>
               </div>

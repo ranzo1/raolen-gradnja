@@ -81,7 +81,7 @@ const ContactForm = () => {
                   />
                 </div>
               </div>
-              <div className="p-2 ">
+              <div className="p-2">
                 <div className="relative">
                   <label className="leading-7 text-sm text-gray-600">
                     Email
