@@ -32,17 +32,12 @@ const Projects = () => {
       title: t("projectTitle2"),
       image: "/projects/2.png",
       subtitle: t("projectSubTitle2"),
-      text: t("projectText"),
+      text: t("projectText2"),
       value: 60,
     },
   ];
   return (
-    <Animated
-      animation={fadeIn("up", 0.2)}
-      elementType="section"
-      className="pb-40"
-      id="projects"
-    >
+    <section className="pb-40" id="projects">
       {/* Title */}
       <PageTitle title={t("title")} text={t("p")} />
       {/* slider */}
@@ -105,7 +100,7 @@ const Projects = () => {
         height={240}
         className="hidden absolute left-[135px] -bottom-[-40px]"
       />
-    </Animated>
+    </section>
   );
 };
 

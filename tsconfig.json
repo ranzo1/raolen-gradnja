@@ -31,7 +31,8 @@
     "src/app/app.jsx",
     "src/app/[locale]/page.jsx",
     "src/app/[locale]/page.jsx",
-    "src/app/[locale]/layout.jsx"
+    "src/app/[locale]/layout.jsx",
+    "data/apartmentsData.js"
   ],
   "exclude": ["node_modules"]
 }

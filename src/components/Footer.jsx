@@ -8,17 +8,20 @@ import { fadeIn } from "./animations/variants";
 import logo from "@/public/footer/logo.png";
 import ContactForm from "./contact/form";
 import Animated from "@/src/components/animations/Animated";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
+
   const iframeSrc =
-    "https://maps.google.com/maps?width=100%&height=600&hl=en&q=Univerexport%20Jug%20Bogdana%2025%20In%C4%91ija,%20Jug%20Bogdana,%20In%C4%91ija,%20Serbia&ie=UTF8&t=&z=14&iwloc=B&ll=45.046990,20.085370&output=embed";
+    "https://maps.google.com/maps?width=100%&height=600&hl=en&q=%20Jug%20Bogdana%2029%20In%C4%91ija,%20Jug%20Bogdana,%20In%C4%91ija,%20Serbia&ie=UTF8&t=&z=14&iwloc=B&ll=45.04678,20.085750&output=embed";
 
   return (
-    <footer className="bg-background relative pt-12 xl:pt-3 ">
+    <footer className="bg-background relative pt-12 xl:pt-3">
       <div className="container mx-auto">
         <Animated animation={fadeIn("up", 0.2)} elementType="div" id="contact">
-          <div className="flex flex-col xl:flex-row bg-white shadow-md p-8 rounded-sm min-h-[394px] xl:p-20 xl:-translate-y-36 xl:gap-x-12">
-            <div className="relative bg-gray-300 rounded-lg overflow-hidden p-10 flex items-end justify-start">
+          <div className="flex flex-col xl:flex-row bg-white shadow-md p-5 rounded-sm min-h-[394px] xl:p-20 xl:-translate-y-36 xl:gap-x-6">
+            <div className="relative w-full h-[500px] bg-gray-300 rounded-lg overflow-hidden p-10 flex items-end justify-start">
               <iframe
                 title="map"
                 src={iframeSrc}
@@ -27,29 +30,26 @@ const Footer = () => {
               />
               <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
                 <div className="lg:w-1/2 px-6">
-                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                    ADDRESS
+                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs uppercase">
+                    {t("address")}
                   </h2>
-                  <p className="mt-1">
-                    Univerexport Jug Bogdana 25 Inđija, Jug Bogdana, Inđija,
-                    Serbia
-                  </p>
+                  <p className="mt-1 text-sm">Jug Bogdana 29 Inđija, Srbija</p>
                 </div>
                 <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                    EMAIL
+                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs uppercase">
+                    {t("email")}
                   </h2>
-                  <a className="text-indigo-500 leading-relaxed">
+                  <a className="text-indigo-500  text-sm">
                     raolengradnja@yahoo.com
                   </a>
-                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
-                    PHONE
+                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4 uppercase">
+                    {t("phone")}
                   </h2>
-                  <p className="leading-relaxed">123-456-7890</p>
+                  <p className="leading-relaxed text-sm">123-456-7890</p>
                 </div>
               </div>
             </div>
-            <div className="bg-white flex flex-col w-full">
+            <div className="bg-white flex flex-col w-full mt-4 xl:mt-0">
               {/* logo & text */}
               <div className="">
                 <Link href="/" className="mb-24">
@@ -57,10 +57,10 @@ const Footer = () => {
                 </Link>
               </div>
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                Kontakt
+                {t("title")}
               </h2>
               <p className="leading-relaxed mb-5 text-gray-600">
-                Tu smo za sva vaša pitanja, pišite nam!
+                {t("subTitle")}
               </p>
               <ContactForm />
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
         {/* copyright text */}
         <div className="py-12 xl:-mt-32 flex flex-col xl:flex-row xl:justify-between">
           <p className="text-black font-semibold text-center mb-4 xl:mb-0">
-            Copyright &copy; 2023. All rights reserved
+            Copyright &copy; 2024. All rights reserved
           </p>
           <Socials containerStyles="flex gap-x-4 text-black mx-auto xl:mx-0" />
         </div>

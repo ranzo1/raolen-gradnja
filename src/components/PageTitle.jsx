@@ -1,9 +1,10 @@
 import Animated from "@/src/components/animations/Animated";
 import { fadeIn } from "@/src/components/animations/variants";
 import { Button } from "@/src/components/ui/button";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const PageTitle = ({ title, text, buttonText }) => {
+const PageTitle = ({ title, text, buttonText, route }) => {
   return (
     <div
       animation={fadeIn("up", 0.4)}
@@ -12,13 +13,17 @@ const PageTitle = ({ title, text, buttonText }) => {
     >
       <h2 className="h2 mb-6">{title}</h2>
       <p className="max-w-[638px] mx-auto mb-8">{text}</p>
-      {buttonText && (
-        <div>
+      {/* {buttonText && (
+        <Link
+          href={{
+            pathname: { route },
+          }}
+        >
           <Button variant="accent" className="px-12">
             {buttonText}
           </Button>
-        </div>
-      )}
+        </Link>
+      )} */}
     </div>
   );
 };

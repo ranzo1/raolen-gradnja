@@ -101,5 +101,16 @@
     "projectText2": "U srcu Šumadije, u jednom od najživopisnijih gradova Srbije, procvetala je izuzetna firma za nekretnine po imenu 'Kragujevac Real Estate Hub'. Ova agencija nije samo posrednik u transakcijama nekretnina; ona je stub zajednice, povezujući ljude sa domovima svojih snova i unapređujući kvalitet života u Kragujevcu.",
     "buttonLabel": "Saznaj više",
     "label": "Stanova"
+  },
+
+  "Footer": {
+    "title": "Kontakt",
+    "subTitle": "Tu smo za sva vaša pitanja, pišite nam!",
+    "name": "Ime",
+    "address": "Adresa",
+    "message": "Poruka",
+    "phone": "Telefon",
+    "email": "Email",
+    "send": "Pošalji"
   }
 }

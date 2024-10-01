@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Confetti from "react-confetti";
 import { Button } from "@/src/components/ui/button";
+import { useTranslations } from "next-intl";
 
 type FormValues = {
   name: string;
@@ -18,6 +19,8 @@ type FormValues = {
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+
+  const t = useTranslations("Footer");
 
   const handleSubmit = async (
     values: FormValues,
@@ -65,64 +68,65 @@ const ContactForm = () => {
             <div className="flex flex-col">
               <div className="p-2 ">
                 <div className="relative">
-                  <label className="leading-7 text-sm text-gray-600">
-                    Name
+                  <label className="leading-7 text-sm font-medium text-black">
+                    {t("name")}
                   </label>
                   <Field
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full border rounded-sm py-1"
+                    className="w-full border border-grey rounded-sm py-1"
                   />
                   <ErrorMessage
                     name="name"
                     component="div"
-                    className="text-red-500"
+                    className="text-red"
                   />
                 </div>
               </div>
               <div className="p-2">
                 <div className="relative">
-                  <label className="leading-7 text-sm text-gray-600">
-                    Email
+                  <label className="leading-7 text-sm text-gray-600 font-medium text-black">
+                    {t("email")}
                   </label>
                   <Field
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full bg-opacity-50 rounded-sm border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8"
+                    className="w-full border border-grey rounded-sm py-1"
                   />
                   <ErrorMessage
                     name="email"
                     component="div"
-                    className="text-red-500"
+                    className="text-red"
                   />
                 </div>
               </div>
               <div className="p-2 w-full">
                 <div className="relative">
-                  <label className="leading-7 text-sm text-gray-600">
-                    Message
+                  <label className="leading-7 text-sm text-gray-600 font-medium text-black">
+                    {t("message")}
                   </label>
                   <Field
                     id="message"
                     name="message"
                     as="textarea"
-                    className="w-full bg-gray-100 bg-opacity-50 rounded-sm border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    className="w-full border border-grey rounded-sm py-1"
+                    style={{ height: "200px" }} // Custom height
                   />
                   <ErrorMessage
                     name="message"
                     component="div"
-                    className="text-red-500"
+                    className="text-red"
                   />
                 </div>
               </div>
               <div className="p-2 w-full">
                 <button
                   disabled={isLoading}
-                  className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                  className="flex mx-auto text-white bg-gold border-0 p-3 focus:outline-none font-bold hover:bg-gold/90 rounded text-lg"
                 >
-                  {isLoading ? "Sending..." : "Send"}
+                  {t("send")}
                 </button>
               </div>
             </div>

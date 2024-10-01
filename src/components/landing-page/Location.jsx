@@ -140,15 +140,16 @@ const Location = () => {
               className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden flex-1 border-gray-200 p-6"
             >
               <div className="text-center">
-                <div className="mx-auto mb-4 w-20 h-20 p-5 rounded-full shadow-md">
+                <div className="mx-auto mb-4 w-20 h-20 p-5 rounded-full shadow-md sm:w-16 sm:h-16 sm:p-4">
                   <Image
                     alt=""
                     src={marker.iconUrl}
                     height={40}
                     width={40}
-                    className="mb-3"
+                    className="mb-3 sm:h-8 sm:w-8"
                   />
                 </div>
+
                 <h2 className="text-lg leading-6 text-gray-900 font-medium title-font">
                   {marker.title}
                 </h2>

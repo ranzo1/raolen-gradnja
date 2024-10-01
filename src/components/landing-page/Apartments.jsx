@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Button } from "@/src/components/ui/button";
 import { fadeIn } from "@/src/components/animations/variants";
 import { useTranslations } from "next-intl";
@@ -9,7 +10,46 @@ import Image from "next/image";
 
 const Apartments = () => {
   const t = useTranslations("ApartmentsPage");
-  const apartmentData = [
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if the screen is mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Data for mobile screens
+  const apartmentDataMobile = [
+    {
+      image: "/apartments/1.png",
+      name: t("studioApartments"),
+      info: "35",
+    },
+    {
+      image: "/apartments/2.png",
+      name: t("apartments1"),
+      info: "45",
+    },
+    {
+      image: "/apartments/3.png",
+      name: t("apartments2"),
+      info: "55",
+    },
+    {
+      image: "/apartments/4.png",
+      name: t("apartments3"),
+      info: "75",
+    },
+  ];
+
+  // Data for larger screens
+  const apartmentDataDesktop = [
     {
       image: "/apartments/3.png",
       name: t("apartments2"),
@@ -32,9 +72,12 @@ const Apartments = () => {
     },
   ];
 
+  // Choose the correct data array based on screen size
+  const apartmentData = isMobile ? apartmentDataMobile : apartmentDataDesktop;
+
   return (
     <section className="mb-5" id="apartments">
-      <div className="">
+      <div>
         {/* Title */}
         <PageTitle
           title={t("title")}

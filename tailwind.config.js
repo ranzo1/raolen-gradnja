@@ -30,6 +30,7 @@ module.exports = {
       outline: "#f1f1f1",
       pink: "#f3d1d7",
       body: "#e5e5e5",
+      red: "#fb5d3b",
     },
     extend: {
       keyframes: {

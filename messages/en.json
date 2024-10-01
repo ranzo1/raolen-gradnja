@@ -100,5 +100,16 @@
     "projectText2": "In the heart of Šumadija, in one of the most picturesque cities in Serbia, a remarkable real estate company named 'Kragujevac Real Estate Hub' has blossomed. This agency is not just a mediator in real estate transactions; it is a pillar of the community, connecting people with their dream homes and improving the quality of life in Kragujevac.",
     "buttonLabel": "Learn more",
     "label": "Apartments"
+  },
+
+  "Footer": {
+    "title": "Contact",
+    "subTitle": "We are here for all your questions, write to us!",
+    "name": "Name",
+    "address": "Address",
+    "message": "Message",
+    "phone": "Phone",
+    "email": "Email",
+    "send": "Send"
   }
 }
