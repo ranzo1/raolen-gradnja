@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <section
-        className="relative flex items-center justify-center h-[600px] md:h-[1000px] py-40 pb-32"
+        className="relative flex items-center justify-center h-[600px] sm:h-[450px] md:h-[1000px]"
         id="home"
       >
         <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -27,12 +27,12 @@ const Hero = () => {
         <div className="relative z-10 flex items-center justify-center flex-col container h-full">
           {/* text */}
           <Animated
-            className="w-full max-w-full text-center rounded-sm shadow-md px-4 md:px-0"
+            className="w-full max-w-full text-center rounded-sm shadow-md"
             elementType="div"
             animation={fadeIn("down", 0.6)}
           >
             <div className="bg-grey bg-opacity-50 p-4 rounded-md">
-              <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.6em] lg:tracking-[1em]">
+              <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
                 RAOLEN
               </h1>
             </div>
