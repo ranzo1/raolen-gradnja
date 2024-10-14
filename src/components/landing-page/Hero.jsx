@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <section
-        className="relative flex items-center justify-center h-[450px] md:h-[600px] lg:h-[1000px]"
+        className="relative flex items-center justify-center h-[600px] lg:h-[1000px]"
         id="home"
       >
         <div className="absolute inset-0 w-full h-full overflow-hidden">
