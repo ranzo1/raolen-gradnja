@@ -18,8 +18,9 @@ const Header = () => {
   // create a state for the scroll direction
   const [scrollDir, setScrollDir] = useState("up");
 
+  const [imageSize, setImageSize] = useState({ width: 130, height: 130 });
+
   useEffect(() => {
-    // get the header element from the ref
     const header = headerRef.current;
 
     const handleScroll = () => {
@@ -35,10 +36,29 @@ const Header = () => {
       setScrollPos(currentScrollPos);
     };
 
+    // Add scroll listener
     window.addEventListener("scroll", handleScroll);
 
+    // Add media query listener for screen size changes
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
+    const handleMediaQueryChange = (e) => {
+      if (e.matches) {
+        setImageSize({ width: 80, height: 80 });
+      } else {
+        setImageSize({ width: 130, height: 130 });
+      }
+    };
+
+    // Initial check
+    handleMediaQueryChange(mediaQuery);
+
+    // Listen to media query changes
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, [scrollPos]);
 
@@ -58,7 +78,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* logo */}
           <Link href="/">
-            <Image src={logo} width={130} height={130} alt="" />
+            <Image
+              src={logo}
+              width={imageSize.width}
+              height={imageSize.height}
+              alt="Logo"
+            />
           </Link>
           {/* nav */}
           <Nav
