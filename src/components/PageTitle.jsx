@@ -11,7 +11,7 @@ const PageTitle = ({ title, text, buttonText, route }) => {
       elementType="div"
       className="border-2 shadow-sm border-outline rounded-md text-center my-5 p-10 bg-background"
     >
-      <h2 className="h2 mb-6">{title}</h2>
+      <h2 className="h3 md:h2 mb-6 md:mb-10">{title}</h2>
       <p className="max-w-[638px] mx-auto mb-8">{text}</p>
       {/* {buttonText && (
         <Link
