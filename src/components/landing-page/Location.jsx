@@ -201,8 +201,8 @@ const Location = () => {
                       <div className="">
                         <Image
                           src={marker.image}
-                          width={isMobile ? 150 : 250}
-                          height={isMobile ? 150 : 250}
+                          width={250}
+                          height={250}
                           alt=""
                         />
                       </div>

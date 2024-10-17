@@ -42,9 +42,11 @@ export default function About() {
           elementType="div"
           animation={fadeIn("right", 0.2)}
         >
-          <h3 className="h2 mb-10">{t("title")}</h3>
-          <p className="landing-loose mb-6">{t("intro")}</p>
-          <p>{t("vision")}</p>
+          <h3 className="h3 md:h2 mb-6 md:mb-10">{t("title")}</h3>
+          <p className="text-sm md:text-base landing-loose mb-6">
+            {t("intro")}
+          </p>
+          <p className="text-sm md:text-base">{t("vision")}</p>
         </Animated>
         {/* img */}
         <Animated
