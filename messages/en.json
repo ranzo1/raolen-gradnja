@@ -8,6 +8,7 @@
   "Header": {
     "home": "Home",
     "about": "About Us",
+    "plan": "Plan",
     "location": "Location",
     "facilities": "Facilities",
     "apartments": "Apartments",
@@ -35,14 +36,19 @@
 
   "PlanPage": {
     "title": "Plan",
-    "p": "Our plan involves the construction of 40 high-quality apartments. The portfolio we are building reflects diversity and a careful approach to projects that are tailored to different clients' needs.",
-    "p2": "The total area of the apartments exceeds 1,800 square meters. Our plan and program also include 40 parking spaces, so each apartment has a parking space. The average area of the apartments is 45 square meters.",
-    "floors": "Floors",
+    "p": "Our plan involves the construction of high-quality apartments and commercial spaces, tailored to the diverse needs of clients.",
+    "p2": "It is planned so that each apartment and commercial space will have a parking spot. Additionally, to provide future residents with a healthier environment, 33% of the total plot will be covered with green areas.",
+    "floors": "Floors + Ground Floor",
     "appartments": "Apartments",
-    "parkingSpot": "Parking spaces",
-    "greenArea": "Green areas",
+    "parkingSpot": "Parking spots in the garage",
+    "greenArea": "Green area",
     "biggestApartment": "Largest apartment",
-    "smallestApartment": "Smallest apartment"
+    "smallestApartment": "Smallest apartment",
+    "businessPremises": "Commercial space",
+    "parkingSpotDisabledPeople": "Parking spots for disabled people",
+    "parkingSpotOutside": "Outdoor parking spots",
+    "apartmentNeto": "Net apartments",
+    "businessPremisesNeto": "Net commercial space"
   },
 
   "LocationPage": {

@@ -83,6 +83,7 @@ const Apartments = () => {
           title={t("title")}
           text={t("p")}
           buttonText={t("buttonText")}
+          route="http://localhost:3000/sr/apartments"
         />
         {/* apartment grid */}
         <Animated

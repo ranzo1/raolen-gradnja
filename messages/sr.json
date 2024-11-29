@@ -8,6 +8,7 @@
   "Header": {
     "home": "Početna",
     "about": "O Nama",
+    "plan": "Plan",
     "location": "Lokacija",
     "facilities": "Objekti",
     "apartments": "Stanovi",
@@ -35,16 +36,56 @@
 
   "PlanPage": {
     "title": "Plan",
-    "p": "Naš plan podrazumeva izgradnju 40 stanova, visokog kvaliteta. Portfolio koji gradimo stanova odražava raznovrsnost i pažljiv pristup projektima, koji su prilagođeni različitim potrebama klijenata.",
-    "p2": "Ukupna kvadratura stanova premašuje 1.800 kvadratnih metara. Takođe u našem planu i programu se nalazi i 40 parking mesta, tako da svaki stan poseduje parking mesto. Prosečna kvadratura stanova je 45 metara kvadratnih.",
-    "floors": "Sprata",
-    "appartments": "Stanova",
-    "parkingSpot": "Parking mesta",
-    "greenArea": "Zelene površine",
-    "biggestApartment": "Najveći stan",
-    "smallestApartment": "Najmanji stan"
-  },
+    "p": "Naš plan podrazumeva izgradnju stanova i poslovnog prostora, visokog kvaliteta, koji su prilagođeni različitim potrebama klijenata. Stambeni objekat upotpunjuje dvorište sa podzemnom garažom.",
+    "p2": "Predviđeno je tako da svaki stan i poslovni prostor poseduju parking mesto. Takođe, da bi omogućili budućim stanarima zdravije okruženje, 33% ukupne parcele pokrivaće zelena površina",
 
+    "apartmentsSlide": {
+      "title": "Stanovi",
+      "text": "Naši stanovi pružaju udobnost i moderan dizajn na svakom spratu.",
+      "groundFloor": "Prizemlje",
+      "firstFloor": "Prvi sprat",
+      "secondFloor": "Drugi sprat",
+      "thirdFloor": "Treći sprat"
+    },
+    "apartmentSizesSlide": {
+      "title": "Veličine stanova",
+      "text": "Naši stanovi nude opcije raznih veličina, prilagođene svim potrebama.",
+      "biggestApartment": "Najveći stan",
+      "smallestApartment": "Najmanji stan"
+    },
+    "businessPremisesSlide": {
+      "title": "Poslovni prostori",
+      "text": "Naši poslovni prostori osmišljeni su za različite tipove delatnosti i idealan su izbor za kompanije koje traže moderno i praktično radno okruženje.",
+      "premises": "Poslovni prostor"
+    },
+    "apartmentNetoSlide": {
+      "title": "Kvadratura",
+      "text": "Ukupna kvadratura stanova i poslovnog prostora pruža optimalan komfor i funkcionalnost.",
+      "apartmentNeto": "Neto stanovi",
+      "businessPremisesNeto": "Neto poslovni prostor"
+    },
+    "parkingSlide": {
+      "title": "Parking",
+      "text": "Parking mesta su obezbeđena u garaži, na otvorenom i prilagođena osobama sa invaliditetom.",
+      "parkingSpot": "Parking mesta u garaži",
+      "parkingSpotOutside": "Parking mesta napolju",
+      "parkingSpotDisabledPeople": "Parking mesta za invalide"
+    },
+
+    "greenAreaSlide": {
+      "title": "Zelenilo",
+      "text": "Zelene površine čine 33% parcele, pružajući prijatno i zdravo okruženje.",
+      "greenArea": "Zelena površina"
+    },
+    "completionTimelineSlide": {
+      "title": "Rokovi završetka",
+      "text": "Planirani završetak radova definisan fazama realizacije projekta.",
+
+      "permit": "Dobijanje dozvole",
+      "construction": "Početak radova",
+      "movingInApartment": "Useljenje"
+    }
+  },
   "LocationPage": {
     "title": "Lokacija",
     "p": "Nalazimo se nedaleko od centra Inđije, a opet smešteni u mirnom kraju grada. Predstavljamo vam sve pogodnosti mesta na kom se nalazimo.",

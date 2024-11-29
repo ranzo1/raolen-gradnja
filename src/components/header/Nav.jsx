@@ -18,6 +18,11 @@ const Nav = ({ containerStyles, linkStyles }) => {
       offset: 40,
     },
     {
+      path: "plan",
+      name: t("plan"),
+      offset: -10,
+    },
+    {
       path: "location",
       name: t("location"),
       offset: -760,

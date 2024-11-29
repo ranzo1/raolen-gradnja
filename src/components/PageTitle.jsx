@@ -13,17 +13,14 @@ const PageTitle = ({ title, text, buttonText, route }) => {
     >
       <h2 className="h3 md:h2 mb-6 md:mb-10">{title}</h2>
       <p className="max-w-[638px] mx-auto mb-8">{text}</p>
-      {/* {buttonText && (
-        <Link
-          href={{
-            pathname: { route },
-          }}
-        >
-          <Button variant="accent" className="px-12">
-            {buttonText}
-          </Button>
-        </Link>
-      )} */}
+      {buttonText &&
+        route && ( // Check if both buttonText and route are provided
+          <Link href={route}>
+            <Button variant="accent" className="px-12">
+              {buttonText}
+            </Button>
+          </Link>
+        )}
     </div>
   );
 };
