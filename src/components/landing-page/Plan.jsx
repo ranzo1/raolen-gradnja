@@ -258,7 +258,7 @@ const Plan = () => {
                   </div>
                   {/* text */}
                   <div
-                    className="bg-white border-2 shadow-sm border-outline rounded-md p-4 md:p-6 flex flex-col justify-between min-h-[25rem] "
+                    className="bg-white border-2 shadow-sm border-outline rounded-md p-4 md:p-6 flex flex-col justify-between min-h-[20rem] "
                     elementType="div"
                   >
                     <h2 className="text-lg md:text-3xl font-bold mb-2">

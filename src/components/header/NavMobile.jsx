@@ -8,7 +8,7 @@ import {
   RiHomeSmile2Fill,
 } from "react-icons/ri";
 import { IoCloseOutline } from "react-icons/io5";
-import { FaUsers, FaMap, FaBox } from "react-icons/fa";
+import { FaUsers, FaMap, FaBox, FaBuilding } from "react-icons/fa";
 
 import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
@@ -32,6 +32,12 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
       icon: <FaUsers />,
       path: "about",
       name: t("about"),
+      offset: 0,
+    },
+    {
+      icon: <FaBuilding />,
+      path: "plan",
+      name: t("plan"),
       offset: 0,
     },
     {

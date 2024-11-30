@@ -36,19 +36,55 @@
 
   "PlanPage": {
     "title": "Plan",
-    "p": "Our plan involves the construction of high-quality apartments and commercial spaces, tailored to the diverse needs of clients.",
-    "p2": "It is planned so that each apartment and commercial space will have a parking spot. Additionally, to provide future residents with a healthier environment, 33% of the total plot will be covered with green areas.",
-    "floors": "Floors + Ground Floor",
-    "appartments": "Apartments",
-    "parkingSpot": "Parking spots in the garage",
-    "greenArea": "Green area",
-    "biggestApartment": "Largest apartment",
-    "smallestApartment": "Smallest apartment",
-    "businessPremises": "Commercial space",
-    "parkingSpotDisabledPeople": "Parking spots for disabled people",
-    "parkingSpotOutside": "Outdoor parking spots",
-    "apartmentNeto": "Net apartments",
-    "businessPremisesNeto": "Net commercial space"
+    "p": "Our plan involves the construction of high-quality apartments and business spaces, tailored to meet the diverse needs of clients. The residential building is complemented by a courtyard with an underground garage.",
+    "p2": "Each apartment and business space is designed to have a parking spot. Additionally, to provide future residents with a healthier environment, 33% of the total plot will be covered by green areas.",
+
+    "apartmentsSlide": {
+      "title": "Apartments",
+      "text": "Our apartments offer comfort and modern design on every floor.",
+      "groundFloor": "Ground Floor",
+      "firstFloor": "First Floor",
+      "secondFloor": "Second Floor",
+      "thirdFloor": "Third Floor"
+    },
+    "apartmentSizesSlide": {
+      "title": "Apartment Sizes",
+      "text": "Our apartments offer various size options, tailored to meet all needs.",
+      "biggestApartment": "Largest Apartment",
+      "smallestApartment": "Smallest Apartment"
+    },
+    "businessPremisesSlide": {
+      "title": "Business Premises",
+      "text": "Our business premises are designed for various types of activities and are an ideal choice for companies looking for a modern and practical work environment.",
+      "premises": "Business Premises"
+    },
+    "apartmentNetoSlide": {
+      "title": "Square Footage",
+      "text": "The total square footage of the apartments and business spaces provides optimal comfort and functionality.",
+      "apartmentNeto": "Net Apartments",
+      "businessPremisesNeto": "Net Business Space"
+    },
+    "parkingSlide": {
+      "title": "Parking",
+      "text": "Parking spaces are provided in the garage, outdoors, and are adapted for people with disabilities.",
+      "parkingSpot": "Parking Spaces in the Garage",
+      "parkingSpotOutside": "Outdoor Parking Spaces",
+      "parkingSpotDisabledPeople": "Parking Spaces for Disabled People"
+    },
+
+    "greenAreaSlide": {
+      "title": "Green Area",
+      "text": "Green areas make up 33% of the plot, providing a pleasant and healthy environment.",
+      "greenArea": "Green Area"
+    },
+    "completionTimelineSlide": {
+      "title": "Completion Timeline",
+      "text": "The planned completion of works is defined by the phases of project implementation.",
+
+      "permit": "Obtaining the Permit",
+      "construction": "Start of Work",
+      "movingInApartment": "Moving In"
+    }
   },
 
   "LocationPage": {
