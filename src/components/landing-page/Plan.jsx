@@ -35,7 +35,7 @@ const Plan = () => {
       // subtitle: t("marketSubTitle"),
       statsData: [
         {
-          value: 2,
+          value: 3,
           name: t("apartmentsSlide.groundFloor"),
           unit: null,
         },
@@ -63,12 +63,12 @@ const Plan = () => {
       //subtitle: t("marketSubTitle"),
       statsData: [
         {
-          value: 34,
+          value: 29,
           name: t("apartmentSizesSlide.smallestApartment"),
           unit: "m",
         },
         {
-          value: 111,
+          value: 105,
           name: t("apartmentSizesSlide.biggestApartment"),
           unit: "m",
         },
@@ -95,12 +95,12 @@ const Plan = () => {
       //subtitle: t("playroomSubTitle"),
       statsData: [
         {
-          value: 1883,
+          value: 1710,
           name: t("apartmentNetoSlide.apartmentNeto"),
           unit: "m",
         },
         {
-          value: 146,
+          value: 143,
           name: t("apartmentNetoSlide.businessPremisesNeto"),
           unit: "m",
         },
@@ -113,7 +113,7 @@ const Plan = () => {
       //subtitle: t("playroomSubTitle"),
       statsData: [
         {
-          value: 29,
+          value: 27,
           name: t("parkingSlide.parkingSpot"),
           unit: null,
         },
@@ -137,7 +137,7 @@ const Plan = () => {
       //subtitle: t("cafeSubTitle"),
       statsData: [
         {
-          value: 490,
+          value: 588,
           name: t("greenAreaSlide.greenArea"),
           unit: "m",
         },
@@ -151,7 +151,7 @@ const Plan = () => {
       //subtitle: t("marketSubTitle"),
       statsData: [
         {
-          value: 2024,
+          value: 2025,
           name: t("completionTimelineSlide.permit"),
           unit: null,
         },
@@ -211,7 +211,7 @@ const Plan = () => {
       unit: "m",
     },
     {
-      value: 1882.66,
+      value: 1709.78,
       name: t("apartmentNeto"),
       unit: "m",
     },
@@ -221,7 +221,7 @@ const Plan = () => {
       unit: "m",
     },
     {
-      value: 490.41,
+      value: 588.14,
       name: t("greenArea"),
       unit: "m",
     },

@@ -74,7 +74,7 @@
 
     "greenAreaSlide": {
       "title": "Green Area",
-      "text": "Green areas make up 33% of the plot, providing a pleasant and healthy environment.",
+      "text": "Green areas make up 40% of the plot, providing a pleasant and healthy environment.",
       "greenArea": "Green Area"
     },
     "completionTimelineSlide": {
@@ -122,14 +122,15 @@
   },
 
   "ApartmentsPage": {
-    "title": "Find an Apartment that Fits You",
-    "p": "Choose an apartment from our offer that suits your needs.",
-    "studioApartments": "Studio Apartments",
-    "buttonText": "View All",
-    "apartments1": "One and a Half Bedroom Apartments",
-    "apartments2": "Two Bedroom Apartments",
-    "apartments3": "Three Bedroom Apartments"
-  },
+  "title": "Find the apartment that suits you",
+  "p": "Choose the apartment you like from our offer.",
+  "all": "All apartments",
+  "studioApartments": "Smaller apartments",
+  "buttonText": "View all",
+  "apartments1": "Medium apartments",
+  "apartments2": "Office space",
+  "apartments3": "Larger apartments"
+},
 
   "ProjectsPage": {
     "title": "Projects",

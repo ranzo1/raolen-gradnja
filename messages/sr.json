@@ -37,7 +37,7 @@
   "PlanPage": {
     "title": "Plan",
     "p": "Naš plan podrazumeva izgradnju stanova i poslovnog prostora, visokog kvaliteta, koji su prilagođeni različitim potrebama klijenata. Stambeni objekat upotpunjuje dvorište sa podzemnom garažom.",
-    "p2": "Predviđeno je tako da svaki stan i poslovni prostor poseduju parking mesto. Takođe, da bi omogućili budućim stanarima zdravije okruženje, 33% ukupne parcele pokrivaće zelena površina",
+    "p2": "Predviđeno je tako da svaki stan i poslovni prostor poseduju parking mesto. Takođe, da bi omogućili budućim stanarima zdravije okruženje, 40% ukupne parcele pokrivaće zelena površina",
 
     "apartmentsSlide": {
       "title": "Stanovi",
@@ -124,11 +124,12 @@
   "ApartmentsPage": {
     "title": "Pronađite stan po vašoj meri",
     "p": "Odaberite stan po vašoj želji iz naše ponude.",
-    "studioApartments": "Garsonjere",
+    "all": "Svi stanovi",
+    "studioApartments": "Manji stanovi",
     "buttonText": "Pogledaj sve",
-    "apartments1": "Jednoiposobni stanovi",
-    "apartments2": "Dvosobni stanovi",
-    "apartments3": "Trosobni stanovi"
+    "apartments1": "Srednji stanovi",
+    "apartments2": "Posloni prostor",
+    "apartments3": "Veći stanovi"
   },
 
   "ProjectsPage": {

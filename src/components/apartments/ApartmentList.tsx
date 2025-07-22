@@ -1,116 +1,129 @@
+'use client';
+
 import { useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import PageTitle from "@/src/components/PageTitle";
+import Animated from "../animations/Animated";
+import { fadeIn } from "../animations/variants";
 
-import { Tabs, TabsList, TabsTrigger } from "@/src/components/ui/tabs";
+interface Apartment {
+  id: number;
+  type: string;
+  image: string;
+  floor: string;
+  title: string;
+  area: number;
+  name: string;
+  info: string;
+}
 
-const ApartmentList = ({ apartments }: { apartments: any }) => {
-  const [apartmentType, setApartmentType] = useState("all");
-  const [filteredApartments, setFilteredApartments] = useState([]);
+interface ApartmentListProps {
+  apartments: Apartment[];
+}
 
+const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
+  const t = useTranslations("ApartmentsPage");
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const currentLanguage = pathname.split('/')[1] || 'sr';
+
+  // Apartment types should match exactly what's used in the Apartments component
+  const apartmentTypes = [
+    { value: "all", label: t("all")},
+    { value: "small", label: t("studioApartments") },
+    { value: "medium", label: t("apartments1") },
+    { value: "large", label: t("apartments3") },
+    { value: "office", label: t("apartments2") },
+  ];
+
+  // Get initial type from URL search params
+  const initialType = searchParams?.get('selected') || 'all';
+  const [apartmentType, setApartmentType] = useState<string>(initialType);
+  const [filteredApartments, setFilteredApartments] = useState<Apartment[]>([]);
+
+  // Filter apartments whenever type changes
   useEffect(() => {
-    const filtered = apartments.filter((apartment: any) => {
-      return apartmentType === "all"
-        ? apartments
-        : apartmentType === apartment.type;
+    const filtered = apartments.filter((apartment) => {
+      return apartmentType === "all" ? true : apartment.type === apartmentType;
     });
     setFilteredApartments(filtered);
-  }, [apartmentType]);
+  }, [apartmentType, apartments]);
+
+  const handleTypeChange = (value: string) => {
+    setApartmentType(value);
+    // Update URL without page reload
+    const newUrl = new URL(window.location.href);
+    if (value === 'all') {
+      newUrl.searchParams.delete('selected');
+    } else {
+      newUrl.searchParams.set('selected', value);
+    }
+    window.history.pushState({}, '', newUrl.toString());
+  };
+
+  const picker = (
+    <select
+      className="w-[240px] lg:w-[540px] h-[46px] mx-auto block border border-gray-300 rounded-md px-4 py-2 text-sm shadow-sm focus:outline-none"
+      onChange={(e) => handleTypeChange(e.target.value)}
+      value={apartmentType}
+    >
+      {apartmentTypes.map(({ value, label }) => (
+        <option key={value} value={value}>
+          {label}
+        </option>
+      ))}
+    </select>
+  );
 
   return (
-    <section className="py-16 container min-h-screen flex flex-col justify-between">
-      {/* image & title */}
-      <div className="flex flex-col items-center">
-        {/* image */}
-        <div className="relative w-[82px] h-[20px]">
-          <Image
-            src={"/assets/heading-icon.svg"}
-            fill
-            alt=""
-            className="object-cover"
-          />
-        </div>
-        <h2 className="h2 mb-8">Ponuda stanova</h2>
-      </div>
-
-      {/* tabs */}
-      <Tabs
-        defaultValue="all"
-        className="w-[240px] lg:w-[540px] h-[200px] lg:h-auto mb-8 mx-auto"
-      >
-        <TabsList className="w-full h-full lg:h-[46px] flex flex-col lg:flex-row">
-          <TabsTrigger
-            className="w-full h-full"
-            value="all"
-            onClick={() => setApartmentType("all")}
-          >
-            Sve
-          </TabsTrigger>
-          <TabsTrigger
-            className="w-full h-full"
-            value="single"
-            onClick={() => setApartmentType("single")}
-          >
-            Garsonjere
-          </TabsTrigger>
-          <TabsTrigger
-            className="w-full h-full"
-            value="extended"
-            onClick={() => setApartmentType("extended")}
-          >
-            Jednoiposobni
-          </TabsTrigger>
-          <TabsTrigger
-            className="w-full h-full"
-            value="double"
-            onClick={() => setApartmentType("double")}
-          >
-            Dvosobni
-          </TabsTrigger>
-          <TabsTrigger
-            className="w-full h-full"
-            value="three-room"
-            onClick={() => setApartmentType("three-room")}
-          >
-            Trosobni
-          </TabsTrigger>
-        </TabsList>
-      </Tabs>
+    <section className="container min-h-screen flex flex-col justify-between">
+      <PageTitle
+        title={t("title")}
+        text={t("p")}
+        className="border-2 shadow-sm border-outline rounded-md text-center mb-5 p-10 bg-background"
+        titleClassName="h3 md:h2 mb-6 md:mb-10"
+        picker={picker}
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {filteredApartments.map((apartment: any) => {
-          const imgURL = `/apartments/3DApartment4.png`;
-          return (
-            <div key={apartment.id} className="mb-8 flex flex-col items-center">
-              {/* Center the whole grid item */}
-              <Link href={`/apartment/${apartment.id}`}>
-                <div className="relative h-[300px] w-[250px] overflow-hidden mb-4">
-                  <Image
-                    src={imgURL}
-                    height={300}
-                    width={300}
-                    priority
-                    alt=""
-                    className="object-cover"
-                  />
-                </div>
-              </Link>
-              <div className="h-[134px] text-center">
-                {/* Center text inside */}
-                <div className="flex items-center justify-center mb-4">
-                  Capacity - {apartment.capacity} person
-                </div>
-                <Link href={`/apartment/${apartment.id}`}>
-                  <h3 className="h3 mb-2">{apartment.title}</h3>
-                </Link>
-                <p className="h3 font-secondary font-medium text-accent mb-4">
-                  ${apartment.price}
-                  <span className="text-base text-secondary">/ night</span>
+        {filteredApartments.map((apartment) => (
+          <Animated
+            elementType="div"
+            animation={fadeIn("up", 0.4)}
+            className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden hover:cursor-pointer group hover:bg-gold col-span-1 flex flex-col"
+            key={`${apartmentType}-${apartment.id}`}
+          >
+            <Link
+              href={{
+                pathname: `/${currentLanguage}/apartments`,
+                query: { selected: apartment.type }, // Consistent with Apartments component
+              }}
+              className="flex flex-col flex-grow"
+            >
+              <div className="relative w-full h-[200px] md:h-[300px]">
+                <Image
+                  src={apartment.image}
+                  alt={`Apartment ${apartment.title}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6 flex-grow flex flex-col justify-center text-center">
+                <p className="group-hover:text-white mb-2 transition-all duration-300">
+                  {apartment.floor}
+                </p>
+                <h4 className="h4 group-hover:text-white transition-all duration-300">{apartment.title}</h4>
+                <p className="group-hover:text-white transition-all duration-300">
+                  {apartment.area} m<sup>2</sup>
                 </p>
               </div>
-            </div>
-          );
-        })}
+            </Link>
+          </Animated>
+        ))}
       </div>
     </section>
   );

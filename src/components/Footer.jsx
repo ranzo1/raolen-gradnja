@@ -45,7 +45,8 @@ const Footer = () => {
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4 uppercase">
                     {t("phone")}
                   </h2>
-                  <p className="leading-relaxed text-sm">123-456-7890</p>
+                  <p className="leading-relaxed text-sm">+381628904781</p>
+                  <p className="leading-relaxed text-sm">+381638094249</p>
                 </div>
               </div>
             </div>

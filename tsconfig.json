@@ -33,6 +33,6 @@
     "src/app/[locale]/page.jsx",
     "src/app/[locale]/layout.jsx",
     "data/apartmentsData.js"
-  ],
+, "src/components/apartments/ApartmentList.jsx", "src/components/apartments/ApartmentList.jsx", "src/components/Footer.jsx"  ],
   "exclude": ["node_modules"]
 }
