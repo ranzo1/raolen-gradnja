@@ -123,13 +123,47 @@
 
   "ApartmentsPage": {
     "title": "Pronađite stan po vašoj meri",
-    "p": "Odaberite stan po vašoj želji iz naše ponude.",
+    "p": "Odaberite stan po vašoj želji iz naše ponude",
     "all": "Svi stanovi",
     "studioApartments": "Manji stanovi",
     "buttonText": "Pogledaj sve",
     "apartments1": "Srednji stanovi",
     "apartments2": "Posloni prostor",
-    "apartments3": "Veći stanovi"
+    "apartments3": "Veći stanovi",
+     "floors": {
+      "ground": "Prizemlje",
+      "1": "1. sprat",
+      "2": "2. sprat",
+      "3": "3. sprat"
+    },"titles": {
+      "office": "Poslovni prostor 1",
+      "apartment1": "Stan 1",
+      "apartment2": "Stan 2",
+      "apartment3": "Stan 3",
+      "apartment4": "Stan 4",
+      "apartment5": "Stan 5",
+      "apartment6": "Stan 6",
+      "apartment7": "Stan 7",
+      "apartment8": "Stan 8",
+      "apartment9": "Stan 9",
+      "apartment10": "Stan 10",
+      "apartment11": "Stan 11",
+      "apartment12": "Stan 12",
+      "apartment13": "Stan 13",
+      "apartment14": "Stan 14",
+      "apartment15": "Stan 15",
+      "apartment16": "Stan 16",
+      "apartment17": "Stan 17",
+      "apartment18": "Stan 18",
+      "apartment19": "Stan 19",
+      "apartment20": "Stan 20",
+      "apartment21": "Stan 21",
+      "apartment22": "Stan 22",
+      "apartment23": "Stan 23",
+      "apartment24": "Stan 24",
+      "apartment25": "Stan 25",
+      "apartment26": "Stan 26"
+    }
   },
 
   "ProjectsPage": {

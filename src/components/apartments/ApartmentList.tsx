@@ -8,16 +8,17 @@ import { useTranslations } from "next-intl";
 import PageTitle from "@/src/components/PageTitle";
 import Animated from "../animations/Animated";
 import { fadeIn } from "../animations/variants";
+import Socials from "../Socials";
 
 interface Apartment {
   id: number;
   type: string;
   image: string;
   floor: string;
-  title: string;
+  titleKey: string;
   area: number;
-  name: string;
-  info: string;
+  // name: string;
+  // info: string;
 }
 
 interface ApartmentListProps {
@@ -106,7 +107,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
               <div className="relative w-full h-[200px] md:h-[300px]">
                 <Image
                   src={apartment.image}
-                  alt={`Apartment ${apartment.title}`}
+                  alt={t(`titles.${apartment.titleKey}`)}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -114,9 +115,9 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
               </div>
               <div className="p-6 flex-grow flex flex-col justify-center text-center">
                 <p className="group-hover:text-white mb-2 transition-all duration-300">
-                  {apartment.floor}
+                  {t(`floors.${apartment.floor}`)}
                 </p>
-                <h4 className="h4 group-hover:text-white transition-all duration-300">{apartment.title}</h4>
+                <h4 className="h4 group-hover:text-white transition-all duration-300">{t(`titles.${apartment.titleKey}`)}</h4>
                 <p className="group-hover:text-white transition-all duration-300">
                   {apartment.area} m<sup>2</sup>
                 </p>
@@ -124,6 +125,9 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
             </Link>
           </Animated>
         ))}
+        
+      </div>
+      <div className="h-[200px]">
       </div>
     </section>
   );

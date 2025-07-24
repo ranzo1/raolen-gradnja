@@ -9,7 +9,7 @@ export default function page() {
   return (
     <section className="bg-white">
       <ApartmentList apartments={apartmentsData} />
-      <Footer hideAnimated={false}/>
+      <Footer/>
     </section>
   );
 }

@@ -123,13 +123,48 @@
 
   "ApartmentsPage": {
   "title": "Find the apartment that suits you",
-  "p": "Choose the apartment you like from our offer.",
+  "p": "Choose the apartment you want from our offer",
   "all": "All apartments",
   "studioApartments": "Smaller apartments",
   "buttonText": "View all",
   "apartments1": "Medium apartments",
-  "apartments2": "Office space",
-  "apartments3": "Larger apartments"
+  "apartments2": "Business space",
+  "apartments3": "Larger apartments",
+  "floors": {
+    "ground": "Ground floor",
+    "1": "1st floor",
+    "2": "2nd floor",
+    "3": "3rd floor"
+  },
+  "titles": {
+    "office": "Business Space 1",
+    "apartment1": "Apartment 1",
+    "apartment2": "Apartment 2",
+    "apartment3": "Apartment 3",
+    "apartment4": "Apartment 4",
+    "apartment5": "Apartment 5",
+    "apartment6": "Apartment 6",
+    "apartment7": "Apartment 7",
+    "apartment8": "Apartment 8",
+    "apartment9": "Apartment 9",
+    "apartment10": "Apartment 10",
+    "apartment11": "Apartment 11",
+    "apartment12": "Apartment 12",
+    "apartment13": "Apartment 13",
+    "apartment14": "Apartment 14",
+    "apartment15": "Apartment 15",
+    "apartment16": "Apartment 16",
+    "apartment17": "Apartment 17",
+    "apartment18": "Apartment 18",
+    "apartment19": "Apartment 19",
+    "apartment20": "Apartment 20",
+    "apartment21": "Apartment 21",
+    "apartment22": "Apartment 22",
+    "apartment23": "Apartment 23",
+    "apartment24": "Apartment 24",
+    "apartment25": "Apartment 25",
+    "apartment26": "Apartment 26"
+  }
 },
 
   "ProjectsPage": {
