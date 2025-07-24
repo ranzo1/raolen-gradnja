@@ -89,7 +89,7 @@ const Apartments = () => {
           title={t("title")}
           text={t("p")}
           buttonText={t("buttonText")}
-           route={`http://localhost:3000/${currentLanguage}/apartments`} // Use dynamic language
+           route={`/${currentLanguage}/apartments`} // Use dynamic language
         />
         <Animated
           animation={fadeIn("up", 0.6)}
