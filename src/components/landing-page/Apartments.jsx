@@ -89,7 +89,7 @@ const Apartments = () => {
           title={t("title")}
           text={t("p")}
           buttonText={t("buttonText")}
-           route={`/${currentLanguage}/apartments`} // Use dynamic language
+           route={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments`} // Use dynamic language
         />
         <Animated
           animation={fadeIn("up", 0.6)}
