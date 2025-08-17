@@ -59,31 +59,29 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             <h3 className="h3 md:h2 mb-6 md:mb-5">
               {t(`floors.${apartment.floor}`)} - {t(`overview`)}
             </h3>
-            <div className="flex flex-col gap-4 mt-4">
-              {floorPremises[apartment.floor].map((premise, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 bg-gray-50 p-3 rounded-md"
-                >
-                  <div className="sm:w-16 sm:h-16 sm:p-4 flex-shrink-0 rounded-full shadow-md">
-                    <Image
-                      src={premise.icon}
-                      alt={t(`floorPremises.${apartment.floor}.${premise.key}`)}
-                      width={35}
-                      height={35}
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-md font-medium">
-                      {t(`floorPremises.${premise.key}`)}
-                    </h4>
-                    {premise.area && (
-                      <p className="text-sm text-gray-600">{premise.area} m²</p>
-                    )}
-                  </div>
+            {floorPremises[apartment.floor].map((premise, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-4 p-3 rounded-md"
+              >
+                <div className="mb-4 w-20 h-20 p-5 rounded-full shadow-md sm:w-16 sm:h-16 sm:p-4">
+                  <Image
+                    src={premise.icon}
+                    alt={t(`floorPremises.${apartment.floor}.${premise.key}`)}
+                    width={40}
+                    height={40}
+                  />
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h4 className="text-md font-medium">
+                    {t(`floorPremises.${premise.key}`)}
+                  </h4>
+                  {premise.area && (
+                    <p className="text-sm text-gray-600">{premise.area} m²</p>
+                  )}
+                </div>
+              </div>
+            ))}
           </Animated>
 
           {/* img */}
