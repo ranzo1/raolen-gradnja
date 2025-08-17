@@ -11,66 +11,82 @@ import { IoCloseOutline } from "react-icons/io5";
 import { FaUsers, FaMap, FaBox, FaBuilding } from "react-icons/fa";
 
 import { Link as ScrollLink } from "react-scroll";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import logo from "@/public/footer/logo.png";
 import Socials from "../Socials";
 import { useTranslations } from "next-intl";
 
-const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
+const NavMobile = ({
+  containerStyles,
+  iconStyles,
+  linkStyles,
+  links: customLinks,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const t = useTranslations("Header");
 
-  const links = [
+  const defaultLinks = [
     {
       icon: <RiHomeFill />,
       path: "home",
       name: t("home"),
       offset: 0,
+      type: "scroll",
     },
     {
       icon: <FaUsers />,
       path: "about",
       name: t("about"),
       offset: 0,
+      type: "scroll",
     },
     {
       icon: <FaBuilding />,
       path: "plan",
       name: t("plan"),
       offset: 0,
+      type: "scroll",
     },
     {
       icon: <FaMap />,
       path: "location",
       name: t("location"),
       offset: -1355,
+      type: "scroll",
     },
     {
       icon: <FaBox />,
       path: "facilities",
       name: t("facilities"),
       offset: -350,
+      type: "scroll",
     },
     {
       icon: <RiHomeSmile2Fill />,
       path: "apartments",
       name: t("apartments"),
       offset: -70,
+      type: "scroll",
     },
     {
       icon: <RiBuilding2Fill />,
       path: "projects",
       name: t("projects"),
       offset: -100,
+      type: "scroll",
     },
     {
       icon: <RiContactsBookFill />,
       path: "contact",
       name: t("contact"),
       offset: 0,
+      type: "scroll",
     },
   ];
+
+  const links =
+    customLinks && customLinks.length > 0 ? customLinks : defaultLinks;
 
   return (
     <div className={`${containerStyles}`} onTouchStart={() => setIsOpen(false)}>
@@ -94,28 +110,41 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
           >
             <IoCloseOutline />
           </div>
+
           {/* logo */}
           <Link href="/">
             <Image src={logo} width={140} height={140} alt="" />
           </Link>
+
           {/* links */}
           <div className="flex flex-col gap-y-8">
             {links.map((link, index) => {
-              return (
+              return link.type === "scroll" ? (
                 <ScrollLink
                   key={index}
                   to={link.path}
                   offset={link.offset}
                   smooth={false}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center gap-x-3 text-black font-medium"
+                  className={`flex items-center gap-x-3 text-black font-medium ${linkStyles}`}
                 >
                   <div className={`${iconStyles}`}>{link.icon}</div>
-                  <div className={`${linkStyles}`}>{link.name}</div>
+                  <div>{link.name}</div>
                 </ScrollLink>
+              ) : (
+                <Link
+                  key={index}
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`flex items-center gap-x-3 text-black font-medium ${linkStyles}`}
+                >
+                  <div className={`${iconStyles}`}>{link.icon}</div>
+                  <div>{link.name}</div>
+                </Link>
               );
             })}
           </div>
+
           {/* Socials */}
           <Socials containerStyles="flex text-black" />
         </div>

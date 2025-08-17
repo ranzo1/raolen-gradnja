@@ -5,7 +5,7 @@ import {
   floorPremises,
   premiseTypes,
 } from "@/data/apartmentsData";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 import Image from "next/image";
 import Footer from "@/src/components/Footer";
 import PageTitle from "@/src/components/PageTitle";
@@ -13,6 +13,10 @@ import { useTranslations } from "next-intl";
 import Animated from "@/src/components/animations/Animated";
 import { fadeIn } from "@/src/components/animations/variants";
 import { useMediaQuery } from "react-responsive";
+import { RiHomeFill, RiHomeSmile2Fill } from "react-icons/ri";
+import Header from "@/src/components/header/Header";
+import Nav from "@/src/components/header/Nav";
+import NavMobile from "@/src/components/header/NavMobile";
 
 interface ApartmentProps {
   params: {
@@ -26,6 +30,37 @@ interface ApartmentProps {
 
 export default function Apartment({ params, searchParams }: ApartmentProps) {
   const t = useTranslations("ApartmentsPage");
+  const headerTrans = useTranslations("Header");
+  const pathname = usePathname();
+  const currentLanguage = pathname.split("/")[1] || "sr";
+
+  const links = [
+    {
+      path: `${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}`,
+      name: headerTrans("home"),
+      offset: 0,
+    },
+    {
+      path: `${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments`,
+      name: headerTrans("apartments"),
+      offset: 0,
+    },
+  ];
+
+  const mobileLinks = [
+    {
+      icon: <RiHomeFill />,
+      path: `${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}`,
+      name: headerTrans("home"),
+      offset: 0,
+    },
+    {
+      icon: <RiHomeSmile2Fill />,
+      path: `${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments`,
+      name: headerTrans("apartments"),
+      offset: 0,
+    },
+  ];
 
   const apartmentId = parseInt(params.id, 10);
   const apartment = apartmentsData.find((apt) => apt.id === apartmentId);
@@ -36,6 +71,24 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
 
   return (
     <section className="bg-white">
+      <Header
+        nav={
+          <Nav
+            links={links}
+            containerStyles="hidden xl:flex gap-x-12 text-black font-semibold"
+            linkStyles="capitalize hover:cursor-pointer"
+          />
+        }
+        navMobile={
+          <NavMobile
+            containerStyles="xl:hidden"
+            iconStyles="text-3xl"
+            linkStyles="uppercase"
+            links={mobileLinks}
+          />
+        }
+      />
+      <div className="h-[200px]"></div>
       <div className="container min-h-screen py-10">
         <PageTitle
           title={t(`titles.${apartment.titleKey}`)}
@@ -43,21 +96,20 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           className="border-2 shadow-sm border-outline rounded-md text-center mb-5 p-10 bg-background"
           textClassName="h3 font-medium mx-auto mb-8"
         />
-
         {filter && (
           <div className="mb-6 text-center text-sm text-gray-600">
             Query filter: {filter}
           </div>
         )}
-        <div className=" grid grid-cols-1 xl:grid-cols-3 gap-5">
+        <div className=" grid grid-cols-1 xl:grid-cols-4 gap-5">
           {/* Floor data */}
           <Animated
             className="col-span-1 xl:col-span-1 bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-8"
             elementType="div"
             animation={fadeIn("right", 0.2)}
           >
-            <h3 className="h3 md:h2 mb-6 md:mb-5">
-              {t(`floors.${apartment.floor}`)} - {t(`overview`)}
+            <h3 className="text-2xl md:text-xl mb-6 md:mb-5">
+              {t(`floors.${apartment.floor}`)}
             </h3>
             {floorPremises[apartment.floor].map((premise, index) => (
               <div
@@ -86,7 +138,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
 
           {/* img */}
           <Animated
-            className="col-span-1 xl:col-span-2 bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden relative"
+            className="col-span-1 xl:col-span-3 bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden relative"
             elementType="div"
             animation={fadeIn("left", 0.5)}
           >

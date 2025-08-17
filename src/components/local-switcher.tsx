@@ -13,10 +13,24 @@ export default function LocalSwitcher() {
 
   const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = e.target.value;
+
     startTransition(() => {
-      router.replace(`/${nextLocale}`);
+      // uzmi trenutnu putanju
+      const currentPath = window.location.pathname; // npr. "/sr/apartments/3"
+      const segments = currentPath.split("/").filter(Boolean); // ["sr", "apartments", "3"]
+
+      // zameni prvi segment (lokal) sa novim jezikom
+      if (segments.length > 0) {
+        segments[0] = nextLocale;
+      } else {
+        segments.unshift(nextLocale);
+      }
+
+      const newPath = "/" + segments.join("/"); // napravi novu putanju
+      router.replace(newPath);
     });
   };
+
   return (
     <label className="relative inline-block">
       <p className="sr-only">change language</p>
