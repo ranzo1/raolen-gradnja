@@ -161,7 +161,7 @@ export const premiseTypes = {
     name: "Entrance hall",
     icon: "/apartment/icons/hallway.svg",
   },
-  laundryRoom: { name: "Laundry room", icon: "/apartment/icons/Laundry.svg" },
+  laundryRoom: { name: "Laundry room", icon: "/apartment/icons/laundry.svg" },
   diningRoom: { name: "Dining room", icon: "/apartment/icons/dining-room.svg" },
 } as const;
 
