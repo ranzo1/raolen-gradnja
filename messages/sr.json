@@ -130,12 +130,13 @@
     "apartments1": "Srednji stanovi",
     "apartments2": "Posloni prostor",
     "apartments3": "Veći stanovi",
-     "floors": {
+    "floors": {
       "ground": "Prizemlje",
       "1": "1. sprat",
       "2": "2. sprat",
       "3": "3. sprat"
-    },"titles": {
+    },
+    "titles": {
       "office": "Poslovni prostor 1",
       "apartment1": "Stan 1",
       "apartment2": "Stan 2",
@@ -163,7 +164,35 @@
       "apartment24": "Stan 24",
       "apartment25": "Stan 25",
       "apartment26": "Stan 26"
-    }
+    },
+    "premises": {
+      "hallway": "Hodnik",
+      "hallwayWardrobe": "Hodnik sa garderobom",
+      "bedroom": "Spavaća soba",
+      "bathroom": "Kupatilo",
+      "mensToilet": "Muški toalet",
+      "womensToilet": "Ženski toalet",
+      "businessPremises": "Poslovni prostor",
+      "kidsRoom": "Dečija soba",
+      "kitchen": "Kuhinja",
+      "livingRoom": "Dnevna soba",
+      "livingRoomDiningArea": "Dnevna soba sa trpezarijom",
+      "balcony": "Balkon",
+      "loggia": "Lođa",
+      "entranceHall": "Degažman",
+      "laundryRoom": "Vešeraj",
+      "diningRoom": "Trpezarija"
+    },
+    "floorPremises": {
+      "lobby": "Trokadero",
+      "boilerRoom": "Kotlarnica",
+      "vestibule": "Vetrobran",
+      "hallway": "Hodnik",
+      "staircaseHall": "Stepenišni hol",
+      "staircase": "Stepenište",
+      "elevator": "Lift"
+    },
+    "overview": "Pregled"
   },
 
   "ProjectsPage": {

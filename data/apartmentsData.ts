@@ -1,6 +1,179 @@
+// Apartment types
 type ApartmentType = "small" | "medium" | "large" | "office";
 type FloorLevel = "ground" | "1" | "2" | "3";
 
+export interface FloorPremise {
+  key: string; // koristi se za prevod
+  name: string; // engleski naziv, fallback
+  icon: string;
+  area?: number | null;
+}
+
+export const floorPremises: Record<FloorLevel, FloorPremise[]> = {
+  ground: [
+    {
+      key: "lobby",
+      name: "Lobby",
+      icon: "/apartment/icons/hallway.svg",
+      area: 3.41,
+    },
+    {
+      key: "boilerRoom",
+      name: "Boiler room",
+      icon: "/apartment/icons/boiler-room.svg",
+      area: 4.69,
+    },
+    {
+      key: "vestibule",
+      name: "Vestibule",
+      icon: "/apartment/icons/hallway.svg",
+      area: 11.24,
+    },
+    {
+      key: "hallway",
+      name: "Hallway",
+      icon: "/apartment/icons/hallway.svg",
+      area: 24.34,
+    },
+    {
+      key: "staircaseHall",
+      name: "Staircase hall",
+      icon: "/apartment/icons/stairhall.svg",
+      area: 7.81,
+    },
+    {
+      key: "staircase",
+      name: "Staircase",
+      icon: "/apartment/icons/stairs.svg",
+      area: 11.13,
+    },
+    {
+      key: "elevator",
+      name: "Elevator",
+      icon: "/apartment/icons/elevator.svg",
+    },
+  ],
+  "1": [
+    {
+      key: "hallway",
+      name: "Hallway",
+      icon: "/apartment/icons/hallway.svg",
+      area: 57.17,
+    },
+    {
+      key: "staircaseHall",
+      name: "Staircase hall",
+      icon: "/apartment/icons/stairhall.svg",
+      area: 8.23,
+    },
+    {
+      key: "staircase",
+      name: "Staircase",
+      icon: "/apartment/icons/stairs.svg",
+      area: 11.13,
+    },
+    {
+      key: "elevator",
+      name: "Elevator",
+      icon: "/apartment/icons/elevator.svg",
+    },
+  ],
+  "2": [
+    {
+      key: "hallway",
+      name: "Hallway",
+      icon: "/apartment/icons/hallway.svg",
+      area: 57.17,
+    },
+    {
+      key: "staircaseHall",
+      name: "Staircase hall",
+      icon: "/apartment/icons/stairhall.svg",
+      area: 8.23,
+    },
+    {
+      key: "staircase",
+      name: "Staircase",
+      icon: "/apartment/icons/stairs.svg",
+      area: 11.13,
+    },
+    {
+      key: "elevator",
+      name: "Elevator",
+      icon: "/apartment/icons/elevator.svg",
+    },
+  ],
+  "3": [
+    {
+      key: "hallway",
+      name: "Hallway",
+      icon: "/apartment/icons/hallway.svg",
+      area: 54.69,
+    },
+    {
+      key: "staircaseHall",
+      name: "Staircase hall",
+      icon: "/apartment/icons/stairhall.svg",
+      area: 8.23,
+    },
+    {
+      key: "staircase",
+      name: "Staircase",
+      icon: "/apartment/icons/stairs.svg",
+      area: 11.13,
+    },
+    {
+      key: "elevator",
+      name: "Elevator",
+      icon: "/apartment/icons/elevator.svg",
+    },
+  ],
+};
+
+// Define premise types directly with `as const`
+export const premiseTypes = {
+  hallway: { name: "Hallway", icon: "/apartment/icons/hallway.svg" },
+  hallwayWardrobe: {
+    name: "Hallway with wardrobe",
+    icon: "/apartment/icons/hallway-wardrobe.svg",
+  },
+  bedroom: { name: "Bedroom", icon: "/apartment/icons/bedroom.svg" },
+  bathroom: { name: "Bathroom", icon: "/apartment/icons/bathroom.svg" },
+  mensToilet: { name: "Mens toilet", icon: "/apartment/icons/mens-toilet.svg" },
+  womensToilet: {
+    name: "Womens toilet",
+    icon: "/apartment/icons/womens-toilet.svg",
+  },
+  businessPremises: {
+    name: "Business premises",
+    icon: "/apartment/icons/business-premises.svg",
+  },
+  kidsRoom: { name: "Kids room", icon: "/apartment/icons/kids-room.svg" },
+  kitchen: { name: "Kitchen", icon: "/apartment/icons/kitchen.svg" },
+  livingRoom: { name: "Living room", icon: "/apartment/icons/living-room.svg" },
+  livingRoomDiningArea: {
+    name: "Living room with dining area",
+    icon: "/apartment/icons/living-room.svg",
+  },
+  balcony: { name: "Balcony", icon: "/apartment/icons/balcony.svg" },
+  loggia: { name: "Loggia", icon: "/apartment/icons/balcony.svg" },
+  entranceHall: {
+    name: "Entrance hall",
+    icon: "/apartment/icons/hallway.svg",
+  },
+  laundryRoom: { name: "Laundry room", icon: "/apartment/icons/Laundry.svg" },
+  diningRoom: { name: "Dining room", icon: "/apartment/icons/dining-room.svg" },
+} as const;
+
+// Premise type is inferred from the keys above
+export type PremiseKey = keyof typeof premiseTypes;
+
+export interface Premise {
+  type: PremiseKey;
+  area: number;
+}
+
+// Apartment interface
 interface Apartment {
   id: number;
   titleKey: string;
@@ -8,6 +181,7 @@ interface Apartment {
   area: number;
   type: ApartmentType;
   image: string;
+  premises: Premise[];
 }
 
 // Declare image variables
@@ -25,6 +199,11 @@ export const apartmentsData: Apartment[] = [
     area: 143.61,
     type: "office",
     image: officeImage,
+    premises: [
+      { type: "businessPremises", area: 140.21 },
+      { type: "mensToilet", area: 3.88 },
+      { type: "womensToilet", area: 3.96 },
+    ],
   },
   {
     id: 2,
@@ -33,14 +212,28 @@ export const apartmentsData: Apartment[] = [
     area: 29.08,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 2.77 },
+      { type: "bathroom", area: 3.54 },
+      { type: "kitchen", area: 7.8 },
+      { type: "livingRoomDiningArea", area: 15.87 },
+    ],
   },
   {
     id: 3,
     titleKey: "apartment2",
     floor: "ground",
-    area: 64.90,
+    area: 64.9,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallway", area: 9.92 },
+      { type: "bathroom", area: 3.52 },
+      { type: "kidsRoom", area: 7.82 },
+      { type: "bedroom", area: 9.39 },
+      { type: "livingRoomDiningArea", area: 26.49 },
+      { type: "kitchen", area: 5.88 },
+    ],
   },
   {
     id: 4,
@@ -49,6 +242,14 @@ export const apartmentsData: Apartment[] = [
     area: 61.77,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.06 },
+      { type: "bathroom", area: 4.43 },
+      { type: "kidsRoom", area: 7.78 },
+      { type: "bedroom", area: 10.76 },
+      { type: "livingRoomDiningArea", area: 27.5 },
+      { type: "kitchen", area: 6.18 },
+    ],
   },
   {
     id: 5,
@@ -57,6 +258,14 @@ export const apartmentsData: Apartment[] = [
     area: 38.64,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 4.83 },
+      { type: "bathroom", area: 3.61 },
+      { type: "bedroom", area: 8.99 },
+      { type: "livingRoomDiningArea", area: 13.21 },
+      { type: "kitchen", area: 5.81 },
+      { type: "loggia", area: 3.28 },
+    ],
   },
   {
     id: 6,
@@ -65,6 +274,15 @@ export const apartmentsData: Apartment[] = [
     area: 47.78,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 3.04 },
+      { type: "entranceHall", area: 1.88 },
+      { type: "bathroom", area: 3.74 },
+      { type: "bedroom", area: 12.67 },
+      { type: "livingRoomDiningArea", area: 19.09 },
+      { type: "kitchen", area: 4.96 },
+      { type: "loggia", area: 3.75 },
+    ],
   },
   {
     id: 7,
@@ -73,6 +291,15 @@ export const apartmentsData: Apartment[] = [
     area: 59.88,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 8.84 },
+      { type: "bathroom", area: 3.5 },
+      { type: "bedroom", area: 11.11 },
+      { type: "kidsRoom", area: 7.7 },
+      { type: "livingRoomDiningArea", area: 20.84 },
+      { type: "kitchen", area: 5.77 },
+      { type: "loggia", area: 3.85 },
+    ],
   },
   {
     id: 8,
@@ -81,6 +308,15 @@ export const apartmentsData: Apartment[] = [
     area: 58.43,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.48 },
+      { type: "bathroom", area: 4.47 },
+      { type: "bedroom", area: 11.07 },
+      { type: "kidsRoom", area: 7.75 },
+      { type: "livingRoomDiningArea", area: 18.73 },
+      { type: "kitchen", area: 4.07 },
+      { type: "balcony", area: 6.47 },
+    ],
   },
   {
     id: 9,
@@ -89,6 +325,15 @@ export const apartmentsData: Apartment[] = [
     area: 59.02,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.54 },
+      { type: "bathroom", area: 4.62 },
+      { type: "bedroom", area: 11.07 },
+      { type: "kidsRoom", area: 7.88 },
+      { type: "livingRoomDiningArea", area: 19.01 },
+      { type: "kitchen", area: 4.07 },
+      { type: "balcony", area: 6.47 },
+    ],
   },
   {
     id: 10,
@@ -97,6 +342,15 @@ export const apartmentsData: Apartment[] = [
     area: 51.52,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallway", area: 6.59 },
+      { type: "bathroom", area: 3.47 },
+      { type: "bedroom", area: 9.07 },
+      { type: "kidsRoom", area: 7.39 },
+      { type: "livingRoomDiningArea", area: 17.64 },
+      { type: "kitchen", area: 5.25 },
+      { type: "loggia", area: 3.6 },
+    ],
   },
   {
     id: 11,
@@ -105,6 +359,15 @@ export const apartmentsData: Apartment[] = [
     area: 49.56,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 6.6 },
+      { type: "entranceHall", area: 2.42 },
+      { type: "bathroom", area: 4.76 },
+      { type: "bedroom", area: 9.4 },
+      { type: "livingRoomDiningArea", area: 20.8 },
+      { type: "kitchen", area: 4.17 },
+      { type: "loggia", area: 2.86 },
+    ],
   },
   {
     id: 12,
@@ -113,6 +376,14 @@ export const apartmentsData: Apartment[] = [
     area: 39.99,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 4.79 },
+      { type: "bathroom", area: 4.83 },
+      { type: "bedroom", area: 9.33 },
+      { type: "livingRoomDiningArea", area: 14.67 },
+      { type: "kitchen", area: 4.28 },
+      { type: "loggia", area: 3.24 },
+    ],
   },
   {
     id: 13,
@@ -121,6 +392,14 @@ export const apartmentsData: Apartment[] = [
     area: 38.64,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 4.83 },
+      { type: "bathroom", area: 3.61 },
+      { type: "bedroom", area: 8.99 },
+      { type: "livingRoomDiningArea", area: 13.21 },
+      { type: "kitchen", area: 5.81 },
+      { type: "loggia", area: 3.28 },
+    ],
   },
   {
     id: 14,
@@ -129,6 +408,15 @@ export const apartmentsData: Apartment[] = [
     area: 47.57,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 3.04 },
+      { type: "entranceHall", area: 1.88 },
+      { type: "bathroom", area: 3.74 },
+      { type: "bedroom", area: 12.67 },
+      { type: "livingRoomDiningArea", area: 19.09 },
+      { type: "kitchen", area: 4.96 },
+      { type: "loggia", area: 3.75 },
+    ],
   },
   {
     id: 15,
@@ -137,6 +425,15 @@ export const apartmentsData: Apartment[] = [
     area: 59.88,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 8.84 },
+      { type: "bathroom", area: 3.5 },
+      { type: "bedroom", area: 11.11 },
+      { type: "kidsRoom", area: 7.7 },
+      { type: "livingRoomDiningArea", area: 20.84 },
+      { type: "kitchen", area: 5.77 },
+      { type: "loggia", area: 3.85 },
+    ],
   },
   {
     id: 16,
@@ -145,6 +442,15 @@ export const apartmentsData: Apartment[] = [
     area: 58.43,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.48 },
+      { type: "bathroom", area: 4.47 },
+      { type: "bedroom", area: 11.07 },
+      { type: "kidsRoom", area: 7.75 },
+      { type: "livingRoomDiningArea", area: 18.73 },
+      { type: "kitchen", area: 4.07 },
+      { type: "balcony", area: 6.47 },
+    ],
   },
   {
     id: 17,
@@ -153,6 +459,15 @@ export const apartmentsData: Apartment[] = [
     area: 59.02,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.54 },
+      { type: "bathroom", area: 4.62 },
+      { type: "bedroom", area: 11.07 },
+      { type: "kidsRoom", area: 7.88 },
+      { type: "livingRoomDiningArea", area: 19.01 },
+      { type: "kitchen", area: 4.07 },
+      { type: "balcony", area: 6.47 },
+    ],
   },
   {
     id: 18,
@@ -161,6 +476,15 @@ export const apartmentsData: Apartment[] = [
     area: 51.52,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallway", area: 6.59 },
+      { type: "bathroom", area: 3.47 },
+      { type: "bedroom", area: 9.07 },
+      { type: "kidsRoom", area: 7.39 },
+      { type: "livingRoomDiningArea", area: 17.64 },
+      { type: "kitchen", area: 5.25 },
+      { type: "loggia", area: 3.6 },
+    ],
   },
   {
     id: 19,
@@ -169,6 +493,15 @@ export const apartmentsData: Apartment[] = [
     area: 49.56,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 6.6 },
+      { type: "entranceHall", area: 2.42 },
+      { type: "bathroom", area: 4.76 },
+      { type: "bedroom", area: 9.4 },
+      { type: "livingRoomDiningArea", area: 20.8 },
+      { type: "kitchen", area: 4.17 },
+      { type: "loggia", area: 2.86 },
+    ],
   },
   {
     id: 20,
@@ -177,6 +510,14 @@ export const apartmentsData: Apartment[] = [
     area: 39.99,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 4.79 },
+      { type: "bathroom", area: 4.83 },
+      { type: "bedroom", area: 9.33 },
+      { type: "livingRoomDiningArea", area: 14.67 },
+      { type: "kitchen", area: 4.28 },
+      { type: "loggia", area: 3.24 },
+    ],
   },
   {
     id: 21,
@@ -185,6 +526,14 @@ export const apartmentsData: Apartment[] = [
     area: 38.64,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 4.83 },
+      { type: "bathroom", area: 3.61 },
+      { type: "bedroom", area: 8.99 },
+      { type: "livingRoomDiningArea", area: 13.21 },
+      { type: "kitchen", area: 5.81 },
+      { type: "loggia", area: 3.28 },
+    ],
   },
   {
     id: 22,
@@ -193,6 +542,15 @@ export const apartmentsData: Apartment[] = [
     area: 47.72,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 3.04 },
+      { type: "entranceHall", area: 1.88 },
+      { type: "bathroom", area: 3.74 },
+      { type: "bedroom", area: 12.67 },
+      { type: "livingRoomDiningArea", area: 18.99 },
+      { type: "kitchen", area: 5.07 },
+      { type: "loggia", area: 3.75 },
+    ],
   },
   {
     id: 23,
@@ -201,6 +559,15 @@ export const apartmentsData: Apartment[] = [
     area: 59.88,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 8.84 },
+      { type: "bathroom", area: 3.5 },
+      { type: "bedroom", area: 11.11 },
+      { type: "kidsRoom", area: 7.7 },
+      { type: "livingRoomDiningArea", area: 20.84 },
+      { type: "kitchen", area: 5.77 },
+      { type: "loggia", area: 3.85 },
+    ],
   },
   {
     id: 24,
@@ -209,6 +576,15 @@ export const apartmentsData: Apartment[] = [
     area: 58.43,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.48 },
+      { type: "bathroom", area: 4.47 },
+      { type: "bedroom", area: 11.07 },
+      { type: "kidsRoom", area: 7.75 },
+      { type: "livingRoomDiningArea", area: 18.73 },
+      { type: "kitchen", area: 4.07 },
+      { type: "balcony", area: 6.47 },
+    ],
   },
   {
     id: 25,
@@ -217,6 +593,15 @@ export const apartmentsData: Apartment[] = [
     area: 59.03,
     type: "medium",
     image: mediumImage,
+    premises: [
+      { type: "hallwayWardrobe", area: 7.54 },
+      { type: "bathroom", area: 4.62 },
+      { type: "bedroom", area: 11.07 },
+      { type: "kidsRoom", area: 7.88 },
+      { type: "livingRoomDiningArea", area: 19.01 },
+      { type: "kitchen", area: 4.07 },
+      { type: "balcony", area: 6.47 },
+    ],
   },
   {
     id: 26,
@@ -225,6 +610,19 @@ export const apartmentsData: Apartment[] = [
     area: 104.85,
     type: "large",
     image: largeImage,
+    premises: [
+      { type: "hallway", area: 12.77 },
+      { type: "bathroom", area: 3.31 },
+      { type: "bathroom", area: 3.86 },
+      { type: "bedroom", area: 9.67 },
+      { type: "kidsRoom", area: 8.92 },
+      { type: "kidsRoom", area: 8.35 },
+      { type: "laundryRoom", area: 2.65 },
+      { type: "livingRoom", area: 18.82 },
+      { type: "diningRoom", area: 10.85 },
+      { type: "kitchen", area: 5.73 },
+      { type: "balcony", area: 22.55 },
+    ],
   },
   {
     id: 27,
@@ -233,5 +631,13 @@ export const apartmentsData: Apartment[] = [
     area: 39.99,
     type: "small",
     image: smallImage,
+    premises: [
+      { type: "hallway", area: 4.79 },
+      { type: "bathroom", area: 4.83 },
+      { type: "bedroom", area: 9.33 },
+      { type: "livingRoomDiningArea", area: 14.67 },
+      { type: "kitchen", area: 4.28 },
+      { type: "loggia", area: 3.24 },
+    ],
   },
 ];

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -8,7 +8,6 @@ import { useTranslations } from "next-intl";
 import PageTitle from "@/src/components/PageTitle";
 import Animated from "../animations/Animated";
 import { fadeIn } from "../animations/variants";
-import Socials from "../Socials";
 
 interface Apartment {
   id: number;
@@ -29,11 +28,11 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   const t = useTranslations("ApartmentsPage");
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const currentLanguage = pathname.split('/')[1] || 'sr';
+  const currentLanguage = pathname.split("/")[1] || "sr";
 
   // Apartment types should match exactly what's used in the Apartments component
   const apartmentTypes = [
-    { value: "all", label: t("all")},
+    { value: "all", label: t("all") },
     { value: "small", label: t("studioApartments") },
     { value: "medium", label: t("apartments1") },
     { value: "large", label: t("apartments3") },
@@ -41,7 +40,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   ];
 
   // Get initial type from URL search params
-  const initialType = searchParams?.get('selected') || 'all';
+  const initialType = searchParams?.get("selected") || "all";
   const [apartmentType, setApartmentType] = useState<string>(initialType);
   const [filteredApartments, setFilteredApartments] = useState<Apartment[]>([]);
 
@@ -57,12 +56,12 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
     setApartmentType(value);
     // Update URL without page reload
     const newUrl = new URL(window.location.href);
-    if (value === 'all') {
-      newUrl.searchParams.delete('selected');
+    if (value === "all") {
+      newUrl.searchParams.delete("selected");
     } else {
-      newUrl.searchParams.set('selected', value);
+      newUrl.searchParams.set("selected", value);
     }
-    window.history.pushState({}, '', newUrl.toString());
+    window.history.pushState({}, "", newUrl.toString());
   };
 
   const picker = (
@@ -98,10 +97,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
             key={`${apartmentType}-${apartment.id}`}
           >
             <Link
-              href={{
-                pathname: `/${currentLanguage}/apartments`,
-                query: { selected: apartment.type }, // Consistent with Apartments component
-              }}
+              href={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments/${apartment.id}`}
               className="flex flex-col flex-grow"
             >
               <div className="relative w-full h-[200px] md:h-[300px]">
@@ -117,7 +113,9 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
                 <p className="group-hover:text-white mb-2 transition-all duration-300">
                   {t(`floors.${apartment.floor}`)}
                 </p>
-                <h4 className="h4 group-hover:text-white transition-all duration-300">{t(`titles.${apartment.titleKey}`)}</h4>
+                <h4 className="h4 group-hover:text-white transition-all duration-300">
+                  {t(`titles.${apartment.titleKey}`)}
+                </h4>
                 <p className="group-hover:text-white transition-all duration-300">
                   {apartment.area} m<sup>2</sup>
                 </p>
@@ -125,10 +123,8 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
             </Link>
           </Animated>
         ))}
-        
       </div>
-      <div className="h-[200px]">
-      </div>
+      <div className="h-[200px]"></div>
     </section>
   );
 };

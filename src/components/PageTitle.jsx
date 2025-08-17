@@ -1,3 +1,5 @@
+"use client";
+
 import Animated from "@/src/components/animations/Animated";
 import { fadeIn } from "@/src/components/animations/variants";
 import { Button } from "@/src/components/ui/button";
