@@ -1,14 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { validationSchema } from "@/utils/validations";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Confetti from "react-confetti";
-import { Button } from "@/src/components/ui/button";
 import { useTranslations } from "next-intl";
+import { createValidationSchema } from "@/utils/validations";
 
 type FormValues = {
   name: string;
@@ -19,8 +18,10 @@ type FormValues = {
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
-
   const t = useTranslations("Footer");
+
+  // Create the validation schema with translations
+  const validationSchema = createValidationSchema(t);
 
   const handleSubmit = async (
     values: FormValues,
@@ -31,7 +32,6 @@ const ContactForm = () => {
   ) => {
     try {
       setIsLoading(true);
-      // Send email using Nodemailer
       await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -40,13 +40,9 @@ const ContactForm = () => {
         body: JSON.stringify(values),
       });
 
-      // Reset the form
       resetForm();
-
-      // Show success message or redirect to a thank you page
       console.log("Email sent successfully!");
     } catch (error) {
-      // Handle error
       console.error("Failed to send email:", error);
     } finally {
       setSubmitting(false);
@@ -64,64 +60,113 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <div className=" mx-auto">
-            <div className="flex flex-col">
-              <div className="p-2 ">
-                <div className="relative">
-                  <label className="leading-7 text-sm font-medium text-black">
+          <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              {/* Name */}
+              <div style={{ padding: "8px" }}>
+                <div style={{ position: "relative" }}>
+                  <label
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      color: "black",
+                    }}
+                  >
                     {t("name")}
                   </label>
                   <Field
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full border border-grey rounded-sm py-1"
+                    style={{
+                      width: "100%",
+                      border: "1px solid grey",
+                      borderRadius: "4px",
+                      padding: "6px",
+                    }}
                   />
                   <ErrorMessage
                     name="name"
-                    component="div"
-                    className="text-red"
+                    render={(msg) => (
+                      <div style={{ color: "red", fontSize: "14px" }}>
+                        {msg}
+                      </div>
+                    )}
                   />
                 </div>
               </div>
-              <div className="p-2">
-                <div className="relative">
-                  <label className="leading-7 text-sm text-gray-600 font-medium text-black">
+
+              {/* Email */}
+              <div style={{ padding: "8px" }}>
+                <div style={{ position: "relative" }}>
+                  <label
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      color: "black",
+                    }}
+                  >
                     {t("email")}
                   </label>
                   <Field
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full border border-grey rounded-sm py-1"
+                    style={{
+                      width: "100%",
+                      border: "1px solid grey",
+                      borderRadius: "4px",
+                      padding: "6px",
+                    }}
                   />
                   <ErrorMessage
                     name="email"
-                    component="div"
-                    className="text-red"
+                    render={(msg) => (
+                      <div style={{ color: "red", fontSize: "14px" }}>
+                        {msg}
+                      </div>
+                    )}
                   />
                 </div>
               </div>
-              <div className="p-2 w-full">
-                <div className="relative">
-                  <label className="leading-7 text-sm text-gray-600 font-medium text-black">
+
+              {/* Message */}
+              <div style={{ padding: "8px", width: "100%" }}>
+                <div style={{ position: "relative" }}>
+                  <label
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      color: "black",
+                    }}
+                  >
                     {t("message")}
                   </label>
                   <Field
                     id="message"
                     name="message"
                     as="textarea"
-                    className="w-full border border-grey rounded-sm py-1"
-                    style={{ height: "200px" }} // Custom height
+                    style={{
+                      width: "100%",
+                      border: "1px solid grey",
+                      borderRadius: "4px",
+                      padding: "6px",
+                      height: "170px",
+                    }}
                   />
                   <ErrorMessage
                     name="message"
-                    component="div"
-                    className="text-red"
+                    render={(msg) => (
+                      <div style={{ color: "red", fontSize: "14px" }}>
+                        {msg}
+                      </div>
+                    )}
                   />
                 </div>
               </div>
-              <div className="p-2 w-full">
+
+              {/* Button */}
+              <div style={{ padding: "8px", width: "100%" }}>
                 <button
                   disabled={isLoading}
                   className="flex mx-auto text-white bg-gold border-0 p-3 focus:outline-none font-bold hover:bg-gold/90 rounded text-lg"
@@ -133,18 +178,7 @@ const ContactForm = () => {
           </div>
         </Form>
       </Formik>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <ToastContainer position="top-center" autoClose={5000} theme="light" />
       {showConfetti && (
         <Confetti
           width={window.innerWidth}

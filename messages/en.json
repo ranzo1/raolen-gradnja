@@ -216,6 +216,12 @@
     "message": "Message",
     "phone": "Phone",
     "email": "Email",
-    "send": "Send"
+    "send": "Send",
+    "errors": {
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "messageRequired": "Message is required"
+    }
   }
 }

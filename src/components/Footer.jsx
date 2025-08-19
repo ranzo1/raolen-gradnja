@@ -60,9 +60,7 @@ const Footer = () => {
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
                 {t("title")}
               </h2>
-              <p className="leading-relaxed mb-5 text-gray-600">
-                {t("subTitle")}
-              </p>
+              <p className="leading-relaxed text-gray-600">{t("subTitle")}</p>
               <ContactForm />
             </div>
           </div>

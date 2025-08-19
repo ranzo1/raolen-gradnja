@@ -52,7 +52,7 @@ export default function page() {
           />
         }
       />
-      <div className="h-[200px]"></div>
+      <div style={{ height: "130px" }}></div>
       <ApartmentList apartments={apartmentsData} />
       <Footer />
     </section>

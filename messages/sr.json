@@ -216,6 +216,12 @@
     "message": "Poruka",
     "phone": "Telefon",
     "email": "Email",
-    "send": "Pošalji"
+    "send": "Pošalji",
+    "errors": {
+      "nameRequired": "Ime je obavezno",
+      "emailRequired": "Email je obavezan",
+      "emailInvalid": "Neispravna email adresa",
+      "messageRequired": "Poruka je obavezna"
+    }
   }
 }

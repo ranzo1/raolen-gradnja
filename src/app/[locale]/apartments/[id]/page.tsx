@@ -88,7 +88,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           />
         }
       />
-      <div className="h-[200px]"></div>
+      <div style={{ height: "130px" }}></div>
       <div className="container min-h-screen py-10">
         <PageTitle
           title={t(`titles.${apartment.titleKey}`)}
