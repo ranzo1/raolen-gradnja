@@ -142,7 +142,7 @@ const Location = () => {
               <div className="text-center">
                 <div className="mx-auto mb-4 w-20 h-20 p-5 rounded-full shadow-md sm:w-16 sm:h-16 sm:p-4">
                   <Image
-                    alt=""
+                    alt={`Raolen Gradnja – ${marker.title} icon in Inđija, Serbia`}
                     src={marker.iconUrl}
                     height={40}
                     width={40}
@@ -203,7 +203,7 @@ const Location = () => {
                           src={marker.image}
                           width={250}
                           height={250}
-                          alt=""
+                          alt={`Raolen Gradnja – ${marker.title} facility in Inđija, Serbia`}
                         />
                       </div>
                     </div>

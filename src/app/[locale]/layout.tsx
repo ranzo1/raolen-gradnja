@@ -9,9 +9,14 @@ type RootLayoutProps = {
 
 // ✅ Default site-wide metadata
 export const metadata = {
-  title: "raolen-gradnja.rs",
+  title:
+    "Raolen Gradnja | Modern Apartments for Sale in Indjija – Modern Living, Great Locations",
   description:
     "Find modern apartments for your needs in center of Indjija, Serbia. Explore listings with photos, prices, and details to discover your perfect home.",
+  icons: {
+    icon: "/favicon.ico", // standard favicon
+    apple: "/apple-touch-icon.png", // Apple Touch Icon
+  },
 };
 
 export default async function RootLayout({

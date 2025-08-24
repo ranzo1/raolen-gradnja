@@ -103,7 +103,9 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
               <div className="relative w-full h-[200px] md:h-[300px]">
                 <Image
                   src={apartment.image}
-                  alt={t(`titles.${apartment.titleKey}`)}
+                  alt={`${t(`titles.${apartment.titleKey}`)} – ${
+                    apartment.area
+                  } m² apartment in Inđija, Serbia`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -54,7 +54,13 @@ const Footer = () => {
               {/* logo & text */}
               <div className="">
                 <Link href="/" className="mb-24">
-                  <Image src={logo} width={140} height={140} alt="" priority />
+                  <Image
+                    src={logo}
+                    width={140}
+                    height={140}
+                    alt="Raolen Gradnja logo"
+                    priority
+                  />
                 </Link>
               </div>
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">

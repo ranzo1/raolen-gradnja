@@ -253,7 +253,7 @@ const Plan = () => {
                       src={slide.img}
                       fill
                       className="rounded-md object-cover"
-                      alt="Background"
+                      alt={`Raolen Gradnja – ${slide.title} plan in Inđija, Serbia`}
                     />
                   </div>
                   {/* text */}

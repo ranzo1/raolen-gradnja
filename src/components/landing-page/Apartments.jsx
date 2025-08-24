@@ -15,7 +15,7 @@ const Apartments = () => {
   const pathname = usePathname(); // Get current pathname
 
   // Extract language from pathname (first segment)
-  const currentLanguage = pathname.split('/')[1] || 'sr'; // Default to 'sr' if not found
+  const currentLanguage = pathname.split("/")[1] || "sr"; // Default to 'sr' if not found
 
   useEffect(() => {
     const handleResize = () => {
@@ -89,7 +89,7 @@ const Apartments = () => {
           title={t("title")}
           text={t("p")}
           buttonText={t("buttonText")}
-           route={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments`} // Use dynamic language
+          route={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments`} // Use dynamic language
         />
         <Animated
           animation={fadeIn("up", 0.6)}
@@ -117,7 +117,7 @@ const Apartments = () => {
                   <div className="relative w-full h-[200px] md:h-[300px]">
                     <Image
                       src={apartment.image}
-                      alt=""
+                      alt={`Raolen Gradnja – ${apartment.name} in Inđija, Serbia, ${apartment.info} m²`}
                       layout="fill"
                       objectFit="cover"
                     />

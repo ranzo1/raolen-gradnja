@@ -148,7 +148,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
               width={400}
               height={400}
               className="rounded-md"
-              alt="Vision"
+              alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
             />
           </Animated>
         </div>

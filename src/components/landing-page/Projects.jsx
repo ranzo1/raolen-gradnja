@@ -82,7 +82,7 @@ const Projects = () => {
                         width={905}
                         height={528}
                         quality={100}
-                        alt=""
+                        alt={`Raolen Gradnja – ${project.title} project in Inđija, Serbia`}
                         className="xl:rounded-tl-md xl:rounded-bl-md"
                       />
                     </div>

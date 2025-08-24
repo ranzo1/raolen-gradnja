@@ -69,8 +69,8 @@ const Facilities = () => {
                         layout="responsive"
                         width={400}
                         height={400}
-                        className="rounded-md "
-                        alt="Background"
+                        className="rounded-md"
+                        alt={`Raolen Gradnja – ${slide.title} facility in Inđija, Serbia`}
                       />
                     </div>
                     {/* text */}

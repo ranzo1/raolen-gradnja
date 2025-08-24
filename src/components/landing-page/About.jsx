@@ -58,7 +58,7 @@ export default function About() {
             width={400}
             height={400}
             className="rounded-md"
-            alt="Vision"
+            alt="Raolen Gradnja vision – modern apartments with innovative residential projects in Inđija, Serbia"
           />
         </Animated>
         {/* Skills section */}
