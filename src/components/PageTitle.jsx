@@ -25,7 +25,7 @@ const PageTitle = ({
         "border-2 shadow-sm border-outline rounded-md text-center my-5 p-10 bg-background"
       }
     >
-      <h1 className={titleClassName ?? "h3 md:h2 mb-6 md:mb-10"}>{title}</h1>
+      <h2 className={titleClassName ?? "h3 md:h2 mb-6 md:mb-10"}>{title}</h2>
       <p className={textClassName ?? "max-w-[638px] mx-auto mb-8"}>{text}</p>
 
       {picker && <div className="mb-8">{picker}</div>}
