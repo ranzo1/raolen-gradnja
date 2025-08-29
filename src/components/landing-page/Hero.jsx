@@ -32,9 +32,9 @@ const Hero = () => {
             animation={fadeIn("down", 0.6)}
           >
             <div className="bg-grey bg-opacity-50 p-4 rounded-md">
-              <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
+              <h2 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
                 RAOLEN
-              </h1>
+              </h2>
             </div>
           </Animated>
         </div>
