@@ -95,6 +95,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           text={`${apartment.area} m²`}
           className="border-2 shadow-sm border-outline rounded-md text-center mb-5 p-10 bg-background"
           textClassName="h3 font-medium mx-auto mb-8"
+          titleHeading="h1"
         />
         {filter && (
           <div className="mb-6 text-center text-sm text-gray-600">

@@ -85,6 +85,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
         text={t("p")}
         className="border-2 shadow-sm border-outline rounded-md text-center mb-5 p-10 bg-background"
         titleClassName="h3 md:h2 mb-6 md:mb-10"
+        titleHeading="h1"
         picker={picker}
       />
 

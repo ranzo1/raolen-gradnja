@@ -12,10 +12,13 @@ const PageTitle = ({
   buttonText,
   route,
   picker,
-  className, // <- optional wrapper className
-  titleClassName, // <- optional title style
-  textClassName, // <- optional text style
+  className, // optional wrapper className
+  titleClassName, // optional title style
+  textClassName, // optional text style
+  titleHeading = "h2", // default is <h2>, can be changed to "h1", "h3", etc.
 }) => {
+  const HeadingTag = titleHeading;
+
   return (
     <Animated
       animation={fadeIn("up", 0.4)}
@@ -25,7 +28,10 @@ const PageTitle = ({
         "border-2 shadow-sm border-outline rounded-md text-center my-5 p-10 bg-background"
       }
     >
-      <h2 className={titleClassName ?? "h3 md:h2 mb-6 md:mb-10"}>{title}</h2>
+      <HeadingTag className={titleClassName ?? "h3 md:h2 mb-6 md:mb-10"}>
+        {title}
+      </HeadingTag>
+
       <p className={textClassName ?? "max-w-[638px] mx-auto mb-8"}>{text}</p>
 
       {picker && <div className="mb-8">{picker}</div>}
@@ -50,6 +56,7 @@ PageTitle.propTypes = {
   className: PropTypes.string,
   titleClassName: PropTypes.string,
   textClassName: PropTypes.string,
+  titleHeading: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
 };
 
 export default PageTitle;
