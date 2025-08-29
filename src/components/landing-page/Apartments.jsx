@@ -90,7 +90,6 @@ const Apartments = () => {
           text={t("p")}
           buttonText={t("buttonText")}
           route={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments`} // Use dynamic language
-          titleHeading="h1"
         />
         <Animated
           animation={fadeIn("up", 0.6)}
