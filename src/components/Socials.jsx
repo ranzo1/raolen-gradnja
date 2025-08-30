@@ -5,7 +5,7 @@ const Socials = ({ containerStyles }) => {
     <ul className={containerStyles}>
       <li key="instagram">
         <a
-          href="https://www.instagram.com/proticcdesign/"
+          href="https://www.instagram.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -16,7 +16,7 @@ const Socials = ({ containerStyles }) => {
       </li>
       <li key="facebook">
         <a
-          href="https://www.facebook.com/yourpage"
+          href="https://www.facebook.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"

@@ -169,64 +169,6 @@ const Plan = () => {
     },
   ];
 
-  const statsData = [
-    {
-      value: 3,
-      name: t("floors"),
-      unit: null,
-    },
-    {
-      value: 25,
-      name: t("appartments"),
-      unit: null,
-    },
-    {
-      value: 1,
-      name: t("businessPremises"),
-      unit: null,
-    },
-    {
-      value: 29,
-      name: t("parkingSpot"),
-      unit: null,
-    },
-    {
-      value: 2,
-      name: t("parkingSpotDisabledPeople"),
-      unit: null,
-    },
-    {
-      value: 1,
-      name: t("parkingSpotOutside"),
-      unit: null,
-    },
-    {
-      value: 34.36,
-      name: t("smallestApartment"),
-      unit: "m",
-    },
-    {
-      value: 110.64,
-      name: t("biggestApartment"),
-      unit: "m",
-    },
-    {
-      value: 1709.78,
-      name: t("apartmentNeto"),
-      unit: "m",
-    },
-    {
-      value: 146.35,
-      name: t("businessPremisesNeto"),
-      unit: "m",
-    },
-    {
-      value: 588.14,
-      name: t("greenArea"),
-      unit: "m",
-    },
-  ];
-
   return (
     <section className="mt-5 xl:pt-0" ref={ref} id="plan">
       {/* Title */}

@@ -43,7 +43,11 @@ export default function About() {
           animation={fadeIn("right", 0.2)}
         >
           <h3 className="h3 md:h2 mb-6 md:mb-10">{t("title")}</h3>
-          <p className="landing-loose mb-6">{t("intro")}</p>
+          <p className="landing-loose mb-6">
+            {" "}
+            <strong>Raolen Gradnja </strong>
+            {t("intro")}
+          </p>
           <p>{t("vision")}</p>
         </Animated>
         {/* img */}
