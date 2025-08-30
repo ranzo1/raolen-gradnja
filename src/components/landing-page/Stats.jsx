@@ -1,7 +1,5 @@
 "use client";
 
-import CountUp from "react-countup";
-
 const Stats = ({ statsData, includeSup = true }) => {
   return (
     <div className="flex flex-col gap-y-4">

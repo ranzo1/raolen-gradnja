@@ -1,18 +1,29 @@
-import Link from "next/link";
-import { RiInstagramFill, RiLinkedinFill } from "react-icons/ri";
+import { RiInstagramFill, RiFacebookFill } from "react-icons/ri";
 
 const Socials = ({ containerStyles }) => {
   return (
-    <ul className={`${containerStyles}`}>
+    <ul className={containerStyles}>
       <li key="instagram">
-        <Link href="/">
+        <a
+          href="https://www.instagram.com/proticcdesign/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <RiInstagramFill />
-        </Link>
+          <span className="sr-only">Instagram</span>
+        </a>
       </li>
-      <li key="linkedin">
-        <Link href="/">
-          <RiLinkedinFill />
-        </Link>
+      <li key="facebook">
+        <a
+          href="https://www.facebook.com/yourpage"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <RiFacebookFill />
+          <span className="sr-only">Facebook</span>
+        </a>
       </li>
     </ul>
   );

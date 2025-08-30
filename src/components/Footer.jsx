@@ -39,14 +39,34 @@ const Footer = () => {
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs uppercase">
                     {t("email")}
                   </h2>
-                  <a className="text-indigo-500  text-sm">
+                  <a
+                    href="mailto:raolengradnja@yahoo.com"
+                    className="text-indigo-500 text-sm"
+                    title="Contact Raolen Gradnja via email"
+                  >
                     raolengradnja@yahoo.com
                   </a>
+
                   <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4 uppercase">
                     {t("phone")}
                   </h2>
-                  <p className="leading-relaxed text-sm">+381628904781</p>
-                  <p className="leading-relaxed text-sm">+381638094249</p>
+                  <div className="flex flex-col">
+                    <a
+                      href="tel:+381628904781"
+                      className="leading-relaxed text-sm text-indigo-500"
+                      title="Call Raolen Gradnja at +381 62 890 4781"
+                    >
+                      +381 62 890 4781
+                    </a>
+
+                    <a
+                      href="tel:+381638094249"
+                      className="leading-relaxed text-sm text-indigo-500"
+                      title="Call Raolen Gradnja at +381 63 809 4249"
+                    >
+                      +381 63 809 4249
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -93,13 +93,6 @@ const Projects = () => {
           })}
         </Swiper>
       </Animated>
-      {/* pattern (xl:flex for displaying) */}
-      <Image
-        src={"/recommendation/pattern.svg"}
-        width={240}
-        height={240}
-        className="hidden absolute left-[135px] -bottom-[-40px]"
-      />
     </section>
   );
 };
