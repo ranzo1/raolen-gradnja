@@ -33,11 +33,7 @@ const Hero = () => {
           >
             <div className="bg-grey bg-opacity-50 p-4 rounded-md">
               <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
-                RAOLEN{" "}
-                <span className="sr-only">
-                  GRADNJA - Modern Apartments located in Serbia, in the center
-                  of the town of Inđija, Serbia
-                </span>
+                RAOLEN <span className="sr-only">GRADNJA - {t("h1")}</span>
               </h1>
             </div>
           </Animated>
