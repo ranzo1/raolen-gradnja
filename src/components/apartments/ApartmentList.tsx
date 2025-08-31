@@ -112,6 +112,11 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
+                {apartment.soldOut && (
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">SOLD</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 flex-grow flex flex-col justify-center text-center">
                 <p className="group-hover:text-white mb-2 transition-all duration-300">
