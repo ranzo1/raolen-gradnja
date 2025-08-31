@@ -182,6 +182,7 @@ interface Apartment {
   type: ApartmentType;
   image: string;
   premises: Premise[];
+  soldOut: boolean;
 }
 
 // Declare image variables
@@ -204,6 +205,7 @@ export const apartmentsData: Apartment[] = [
       { type: "mensToilet", area: 3.88 },
       { type: "womensToilet", area: 3.96 },
     ],
+    soldOut: true,
   },
   {
     id: 2,
@@ -218,6 +220,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 7.8 },
       { type: "livingRoomDiningArea", area: 15.87 },
     ],
+    soldOut: false,
   },
   {
     id: 3,
@@ -234,6 +237,7 @@ export const apartmentsData: Apartment[] = [
       { type: "livingRoomDiningArea", area: 26.49 },
       { type: "kitchen", area: 5.88 },
     ],
+    soldOut: false,
   },
   {
     id: 4,
@@ -250,6 +254,7 @@ export const apartmentsData: Apartment[] = [
       { type: "livingRoomDiningArea", area: 27.5 },
       { type: "kitchen", area: 6.18 },
     ],
+    soldOut: false,
   },
   {
     id: 5,
@@ -266,6 +271,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.81 },
       { type: "loggia", area: 3.28 },
     ],
+    soldOut: false,
   },
   {
     id: 6,
@@ -283,6 +289,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.96 },
       { type: "loggia", area: 3.75 },
     ],
+    soldOut: false,
   },
   {
     id: 7,
@@ -300,6 +307,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.77 },
       { type: "loggia", area: 3.85 },
     ],
+    soldOut: false,
   },
   {
     id: 8,
@@ -317,6 +325,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.07 },
       { type: "balcony", area: 6.47 },
     ],
+    soldOut: false,
   },
   {
     id: 9,
@@ -334,6 +343,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.07 },
       { type: "balcony", area: 6.47 },
     ],
+    soldOut: false,
   },
   {
     id: 10,
@@ -351,6 +361,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.25 },
       { type: "loggia", area: 3.6 },
     ],
+    soldOut: false,
   },
   {
     id: 11,
@@ -368,6 +379,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.17 },
       { type: "loggia", area: 2.86 },
     ],
+    soldOut: false,
   },
   {
     id: 12,
@@ -384,6 +396,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.28 },
       { type: "loggia", area: 3.24 },
     ],
+    soldOut: false,
   },
   {
     id: 13,
@@ -400,6 +413,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.81 },
       { type: "loggia", area: 3.28 },
     ],
+    soldOut: false,
   },
   {
     id: 14,
@@ -417,6 +431,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.96 },
       { type: "loggia", area: 3.75 },
     ],
+    soldOut: false,
   },
   {
     id: 15,
@@ -434,6 +449,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.77 },
       { type: "loggia", area: 3.85 },
     ],
+    soldOut: false,
   },
   {
     id: 16,
@@ -451,6 +467,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.07 },
       { type: "balcony", area: 6.47 },
     ],
+    soldOut: false,
   },
   {
     id: 17,
@@ -468,6 +485,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.07 },
       { type: "balcony", area: 6.47 },
     ],
+    soldOut: false,
   },
   {
     id: 18,
@@ -485,6 +503,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.25 },
       { type: "loggia", area: 3.6 },
     ],
+    soldOut: false,
   },
   {
     id: 19,
@@ -502,6 +521,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.17 },
       { type: "loggia", area: 2.86 },
     ],
+    soldOut: false,
   },
   {
     id: 20,
@@ -518,6 +538,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.28 },
       { type: "loggia", area: 3.24 },
     ],
+    soldOut: false,
   },
   {
     id: 21,
@@ -534,6 +555,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.81 },
       { type: "loggia", area: 3.28 },
     ],
+    soldOut: false,
   },
   {
     id: 22,
@@ -551,6 +573,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.07 },
       { type: "loggia", area: 3.75 },
     ],
+    soldOut: false,
   },
   {
     id: 23,
@@ -568,6 +591,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.77 },
       { type: "loggia", area: 3.85 },
     ],
+    soldOut: false,
   },
   {
     id: 24,
@@ -585,6 +609,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.07 },
       { type: "balcony", area: 6.47 },
     ],
+    soldOut: false,
   },
   {
     id: 25,
@@ -602,6 +627,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.07 },
       { type: "balcony", area: 6.47 },
     ],
+    soldOut: false,
   },
   {
     id: 26,
@@ -623,6 +649,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.73 },
       { type: "balcony", area: 22.55 },
     ],
+    soldOut: false,
   },
   {
     id: 27,
@@ -639,5 +666,6 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.28 },
       { type: "loggia", area: 3.24 },
     ],
+    soldOut: false,
   },
 ];

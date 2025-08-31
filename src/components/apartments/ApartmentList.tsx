@@ -16,6 +16,7 @@ interface Apartment {
   floor: string;
   titleKey: string;
   area: number;
+  soldOut?: boolean;
   // name: string;
   // info: string;
 }
