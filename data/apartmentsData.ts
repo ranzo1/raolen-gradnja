@@ -205,7 +205,7 @@ export const apartmentsData: Apartment[] = [
       { type: "mensToilet", area: 3.88 },
       { type: "womensToilet", area: 3.96 },
     ],
-    soldOut: true,
+    soldOut: false,
   },
   {
     id: 2,

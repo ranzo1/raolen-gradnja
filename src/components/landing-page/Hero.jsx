@@ -35,8 +35,8 @@ const Hero = () => {
               <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
                 RAOLEN{" "}
                 <span className="sr-only">
-                  GRADNJA - {t("h1")}Moderni stanovi smešteni u Srbiji, u centru
-                  grada Inđije
+                  GRADNJA - Moderni stanovi smešteni u Srbiji, u centru grada
+                  Inđije
                 </span>
               </h1>
             </div>
