@@ -113,10 +113,17 @@ const Location = () => {
     query: "(max-width: 768px)",
   });
 
-  const createCustomIcon = (iconUrl, iconSize, isFirst) => {
+  const createCustomIcon = (
+    iconUrl,
+    iconSize,
+    isFirst,
+    title = "location marker"
+  ) => {
     const customHtml = isFirst
-      ? `<div class=""><img src="${iconUrl}" class="" style="width: 180px; height: 180px;"></img></div>`
-      : `<div class="mx-auto bg-white mb-4 w-16 h-16 p-5 rounded-full shadow-md"><img src="${iconUrl}" class=""></img ></div>`;
+      ? `<div><img src="${iconUrl}" alt="${title}" style="width:180px; height:180px;" /></div>`
+      : `<div class="mx-auto bg-white mb-4 w-16 h-16 p-5 rounded-full shadow-md">
+         <img src="${iconUrl}" alt="${title}" />
+       </div>`;
 
     return divIcon({
       html: customHtml,
@@ -187,8 +194,10 @@ const Location = () => {
             const markerIcon = createCustomIcon(
               marker.iconUrl,
               marker.iconSize,
-              index === 0
+              index === 0,
+              `Raolen Gradnja – ${marker.title} marker in Inđija`
             );
+
             return (
               <Marker key={index} position={marker.position} icon={markerIcon}>
                 {marker.image ? (
