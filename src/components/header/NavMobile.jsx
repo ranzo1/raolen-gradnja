@@ -13,7 +13,7 @@ import { FaUsers, FaMap, FaBox, FaBuilding } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/footer/logo.png";
+import logo from "@/public/footer/logo.webp";
 import Socials from "../Socials";
 import { useTranslations } from "next-intl";
 

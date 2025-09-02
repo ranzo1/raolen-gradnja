@@ -29,7 +29,7 @@ const Plan = () => {
 
   const plansData = [
     {
-      img: "/plan/1.jpg",
+      img: "/plan/1.webp",
       message: t("apartmentsSlide.text"),
       title: t("apartmentsSlide.title"),
       // subtitle: t("marketSubTitle"),
@@ -57,7 +57,7 @@ const Plan = () => {
       ],
     },
     {
-      img: "/plan/2.jpg",
+      img: "/plan/2.webp",
       message: t("apartmentSizesSlide.text"),
       title: t("apartmentSizesSlide.title"),
       //subtitle: t("marketSubTitle"),
@@ -75,7 +75,7 @@ const Plan = () => {
       ],
     },
     {
-      img: "/plan/3.jpg",
+      img: "/plan/3.webp",
       message: t("businessPremisesSlide.text"),
       title: t("businessPremisesSlide.title"),
       //subtitle: t("cafeSubTitle"),
@@ -89,7 +89,7 @@ const Plan = () => {
       ],
     },
     {
-      img: "/plan/4.jpg",
+      img: "/plan/4.webp",
       message: t("apartmentNetoSlide.text"),
       title: t("apartmentNetoSlide.title"),
       //subtitle: t("playroomSubTitle"),
@@ -107,7 +107,7 @@ const Plan = () => {
       ],
     },
     {
-      img: "/plan/5.jpg",
+      img: "/plan/5.webp",
       message: t("parkingSlide.text"),
       title: t("parkingSlide.title"),
       //subtitle: t("playroomSubTitle"),
@@ -131,7 +131,7 @@ const Plan = () => {
     },
 
     {
-      img: "/plan/6.jpg",
+      img: "/plan/6.webp",
       message: t("greenAreaSlide.text"),
       title: t("greenAreaSlide.title"),
       //subtitle: t("cafeSubTitle"),
@@ -145,7 +145,7 @@ const Plan = () => {
     },
 
     {
-      img: "/plan/7.jpg",
+      img: "/plan/7.webp",
       message: t("completionTimelineSlide.text"),
       title: t("completionTimelineSlide.title"),
       //subtitle: t("marketSubTitle"),

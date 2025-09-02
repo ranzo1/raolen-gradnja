@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
-import logo from "@/public/header/logo.png";
+import logo from "@/public/header/logo.webp";
 import LocalSwitcher from "@/src/components/local-switcher";
 
 const Header = ({ nav, navMobile }) => {

@@ -18,19 +18,19 @@ const Facilities = () => {
   const t = useTranslations("FacilitiesPage");
   const facilitiesData = [
     {
-      img: "/facilities/img-4.png",
+      img: "/facilities/img-4.webp",
       message: t("marketText"),
       title: t("marketTitle"),
       subtitle: t("marketSubTitle"),
     },
     {
-      img: "/facilities/img-5.png",
+      img: "/facilities/img-5.webp",
       message: t("cafeText"),
       title: t("cafeTitle"),
       subtitle: t("cafeSubTitle"),
     },
     {
-      img: "/facilities/img-6.png",
+      img: "/facilities/img-6.webp",
       message: t("playroomText"),
       title: t("playroomTitle"),
       subtitle: t("playroomSubTitle"),

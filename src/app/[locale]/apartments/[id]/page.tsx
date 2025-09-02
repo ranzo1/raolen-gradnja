@@ -144,7 +144,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             animation={fadeIn("left", 0.5)}
           >
             <Image
-              src={"/apartment/3Drender.png"}
+              src={"/apartment/3Drender.webp"}
               layout="responsive"
               width={400}
               height={400}

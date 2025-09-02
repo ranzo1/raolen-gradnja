@@ -5,7 +5,7 @@ import Link from "next/link";
 import Socials from "./Socials";
 
 import { fadeIn } from "./animations/variants";
-import logo from "@/public/footer/logo.png";
+import logo from "@/public/footer/logo.webp";
 import ContactForm from "./contact/form";
 import Animated from "@/src/components/animations/Animated";
 import { useTranslations } from "next-intl";

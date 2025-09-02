@@ -57,7 +57,7 @@ export default function About() {
           animation={fadeIn("left", 0.5)}
         >
           <Image
-            src={"/about/vision1.png"}
+            src={"/about/vision1.webp"}
             layout="responsive"
             width={400}
             height={400}

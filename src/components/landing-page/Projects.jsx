@@ -23,14 +23,14 @@ const Projects = () => {
   const projectsData = [
     {
       title: t("projectTitle"),
-      image: "/projects/1.png",
+      image: "/projects/1.webp",
       subtitle: t("projectSubTitle"),
       text: t("projectText"),
       value: 90,
     },
     {
       title: t("projectTitle2"),
-      image: "/projects/2.png",
+      image: "/projects/2.webp",
       subtitle: t("projectSubTitle2"),
       text: t("projectText2"),
       value: 60,

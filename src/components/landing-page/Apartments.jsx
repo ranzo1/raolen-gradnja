@@ -28,25 +28,25 @@ const Apartments = () => {
 
   const apartmentDataMobile = [
     {
-      image: "/apartments/1.png",
+      image: "/apartments/1.webp",
       name: t("studioApartments"),
       value: "small",
       info: "< 50",
     },
     {
-      image: "/apartments/2.png",
+      image: "/apartments/2.webp",
       name: t("apartments1"),
       value: "medium",
       info: "50 - 70",
     },
     {
-      image: "/apartments/3.png",
+      image: "/apartments/3.webp",
       name: t("apartments2"),
       value: "large",
       info: "> 70",
     },
     {
-      image: "/apartments/4.png",
+      image: "/apartments/4.webp",
       name: t("apartments3"),
       value: "office",
       info: "144",
@@ -55,25 +55,25 @@ const Apartments = () => {
 
   const apartmentDataDesktop = [
     {
-      image: "/apartments/3.png",
+      image: "/apartments/3.webp",
       name: t("apartments2"),
       value: "office",
       info: "144",
     },
     {
-      image: "/apartments/1.png",
+      image: "/apartments/1.webp",
       name: t("studioApartments"),
       value: "small",
       info: "< 50",
     },
     {
-      image: "/apartments/2.png",
+      image: "/apartments/2.webp",
       name: t("apartments1"),
       value: "medium",
       info: "50 - 70",
     },
     {
-      image: "/apartments/4.png",
+      image: "/apartments/4.webp",
       name: t("apartments3"),
       value: "large",
       info: "> 70",

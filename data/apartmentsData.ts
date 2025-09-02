@@ -186,10 +186,10 @@ interface Apartment {
 }
 
 // Declare image variables
-const officeImage = "/apartments/3.png";
-const smallImage = "/apartments/1.png";
-const mediumImage = "/apartments/2.png";
-const largeImage = "/apartments/4.png";
+const officeImage = "/apartments/3.webp";
+const smallImage = "/apartments/1.webp";
+const mediumImage = "/apartments/2.webp";
+const largeImage = "/apartments/4.webp";
 
 // Apartments array
 export const apartmentsData: Apartment[] = [
