@@ -66,6 +66,7 @@ const ContactForm = () => {
               <div style={{ padding: "8px" }}>
                 <div style={{ position: "relative" }}>
                   <label
+                    htmlFor="name"
                     style={{
                       fontSize: "14px",
                       fontWeight: 500,
@@ -100,6 +101,7 @@ const ContactForm = () => {
               <div style={{ padding: "8px" }}>
                 <div style={{ position: "relative" }}>
                   <label
+                    htmlFor="email"
                     style={{
                       fontSize: "14px",
                       fontWeight: 500,
@@ -134,6 +136,7 @@ const ContactForm = () => {
               <div style={{ padding: "8px", width: "100%" }}>
                 <div style={{ position: "relative" }}>
                   <label
+                    htmlFor="message"
                     style={{
                       fontSize: "14px",
                       fontWeight: 500,
