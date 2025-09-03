@@ -45,7 +45,7 @@ export default function About() {
           <h3 className="h3 md:h2 mb-6 md:mb-10">{t("title")}</h3>
           <p className="landing-loose mb-6">
             {" "}
-            <strong>Raolen Gradnja </strong>
+            <strong className="text-black"> Raolen Gradnja </strong>
             {t("intro")}
           </p>
           <p>{t("vision")}</p>
