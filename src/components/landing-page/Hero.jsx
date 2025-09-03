@@ -13,7 +13,7 @@ const Hero = () => {
         id="home"
       >
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          {/* <video
+          <video
             className="absolute -z-1 inset-0 w-full h-full object-cover"
             autoPlay
             muted
@@ -21,7 +21,7 @@ const Hero = () => {
             playsInline // Added to prevent fullscreen on mobile
             src={require("@/public/hero/promo.mp4")}
             aria-label="Promotional video of Raolen Gradnja"
-          /> */}
+          />
         </div>
         {/* text & img */}
         <div className="relative z-10 flex items-center justify-center flex-col container h-full">
