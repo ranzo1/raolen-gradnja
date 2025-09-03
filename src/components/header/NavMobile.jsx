@@ -113,12 +113,7 @@ const NavMobile = ({
 
           {/* logo */}
           <Link href="/">
-            <Image
-              src={logo}
-              width={140}
-              height={140}
-              alt="Logo of mobile navbar"
-            />
+            <Image src={logo} width={140} alt="Logo of mobile navbar" />
           </Link>
 
           {/* links */}
