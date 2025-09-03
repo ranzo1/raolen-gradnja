@@ -26,11 +26,7 @@ const Hero = () => {
         {/* text & img */}
         <div className="relative z-10 flex items-center justify-center flex-col container h-full">
           {/* text */}
-          <Animated
-            className="w-full max-w-full text-center rounded-sm shadow-md"
-            elementType="div"
-            animation={fadeIn("down", 0.6)}
-          >
+          <div className="w-full max-w-full text-center rounded-sm shadow-md">
             <div className="bg-grey bg-opacity-50 p-4 rounded-md">
               <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
                 RAOLEN{" "}
@@ -40,7 +36,7 @@ const Hero = () => {
                 </span>
               </h1>
             </div>
-          </Animated>
+          </div>
         </div>
       </section>
     </>
