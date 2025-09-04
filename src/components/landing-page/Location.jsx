@@ -120,10 +120,35 @@ const Location = () => {
     title = "location marker"
   ) => {
     const customHtml = isFirst
-      ? `<div><img src="${iconUrl}" alt="${title}" style="width:180px; height:180px;" /></div>`
-      : `<div class="mx-auto bg-white mb-4 w-16 h-16 p-5 rounded-full shadow-md">
-         <img src="${iconUrl}" alt="${title}" />
-       </div>`;
+      ? `
+    <div>
+      <img src="${iconUrl}" alt="${title}" style="width:180px; height:180px;" />
+    </div>
+  `
+      : (() => {
+          const isMobile =
+            typeof window !== "undefined" && window.innerWidth < 640; // Tailwind's sm breakpoint
+          const size = isMobile ? 50 : 64;
+          const padding = isMobile ? 15 : 20;
+
+          return `
+        <div style="
+          margin: 0 auto;
+          background-color: white;
+          margin-bottom: 1rem;
+          width: ${size}px;
+          height: ${size}px;
+          padding: ${padding}px;
+          border-radius: 9999px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        ">
+          <img src="${iconUrl}" alt="${title}" style="max-width: 100%; max-height: 100%;" />
+        </div>
+      `;
+        })();
 
     return divIcon({
       html: customHtml,
