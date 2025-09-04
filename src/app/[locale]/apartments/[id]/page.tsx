@@ -17,6 +17,9 @@ import { RiHomeFill, RiHomeSmile2Fill } from "react-icons/ri";
 import Header from "@/src/components/header/Header";
 import Nav from "@/src/components/header/Nav";
 import NavMobile from "@/src/components/header/NavMobile";
+import { useState } from "react";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 interface ApartmentProps {
   params: {
@@ -33,6 +36,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
   const headerTrans = useTranslations("Header");
   const pathname = usePathname();
   const currentLanguage = pathname.split("/")[1] || "sr";
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const links = [
     {
@@ -139,8 +143,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                     width={40}
                     height={40}
                     style={{
-                      height: "2.5rem",
-                      width: "2.5rem",
+                      height: "2.5rem", // sm:h-8 = 32px, default = 40px
+                      width: "2.5rem", // sm:w-8 = 32px, default = 40px
                     }}
                   />
                 </div>
@@ -163,14 +167,16 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             elementType="div"
             animation={fadeIn("left", 0.5)}
           >
-            <Image
-              src={"/apartment/3Drender.webp"}
-              layout="responsive"
-              width={400}
-              height={400}
-              className="rounded-md"
-              alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
-            />
+            <Zoom>
+              <Image
+                src="/apartment/3Drender.webp"
+                layout="responsive"
+                width={400}
+                height={400}
+                className="rounded-md cursor-pointer"
+                alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
+              />
+            </Zoom>
           </Animated>
         </div>
         {/* premises */}
@@ -188,6 +194,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                 <div className="text-center">
                   <div
                     style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
                       marginBottom: "1rem",
                       width: "4rem",
                       height: "4rem",
@@ -205,8 +213,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                       height={40}
                       width={40}
                       style={{
-                        height: "2.5rem",
-                        width: "2.5rem",
+                        height: "2.5rem", // sm:h-8 = 32px, default = 40px
+                        width: "2.5rem", // sm:w-8 = 32px, default = 40px
                       }}
                     />
                   </div>
