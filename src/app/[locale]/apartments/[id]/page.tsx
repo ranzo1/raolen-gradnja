@@ -139,8 +139,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                     width={40}
                     height={40}
                     style={{
-                      height: "2.5rem", // sm:h-8 = 32px, default = 40px
-                      width: "2.5rem", // sm:w-8 = 32px, default = 40px
+                      height: "2.5rem",
+                      width: "2.5rem",
                     }}
                   />
                 </div>
@@ -188,12 +188,10 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                 <div className="text-center">
                   <div
                     style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
                       marginBottom: "1rem",
-                      width: isMobile ? "64px" : "80px",
-                      height: isMobile ? "64px" : "80px",
-                      padding: isMobile ? "16px" : "20px",
+                      width: "4rem",
+                      height: "4rem",
+                      padding: "1rem",
                       borderRadius: "9999px",
                       boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
                       display: "flex",
@@ -207,8 +205,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                       height={40}
                       width={40}
                       style={{
-                        height: isMobile ? "32px" : "40px", // sm:h-8 = 32px, default = 40px
-                        width: isMobile ? "32px" : "40px", // sm:w-8 = 32px, default = 40px
+                        height: "2.5rem",
+                        width: "2.5rem",
                       }}
                     />
                   </div>
