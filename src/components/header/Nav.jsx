@@ -9,10 +9,10 @@ const Nav = ({ containerStyles, linkStyles, links: customLinks }) => {
 
   const defaultLinks = [
     { path: "home", name: t("home"), offset: 0, type: "scroll" },
-    { path: "about", name: t("about"), offset: 40, type: "scroll" },
+    { path: "about", name: t("about"), offset: 70, type: "scroll" },
     { path: "plan", name: t("plan"), offset: -10, type: "scroll" },
-    { path: "location", name: t("location"), offset: -760, type: "scroll" },
-    { path: "facilities", name: t("facilities"), offset: -310, type: "scroll" },
+    { path: "location", name: t("location"), offset: -10, type: "scroll" },
+    { path: "facilities", name: t("facilities"), offset: -10, type: "scroll" },
     { path: "apartments", name: t("apartments"), offset: -10, type: "scroll" },
     { path: "projects", name: t("projects"), offset: -10, type: "scroll" },
     { path: "contact", name: t("contact"), offset: 0, type: "scroll" },

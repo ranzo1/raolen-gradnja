@@ -38,49 +38,49 @@ const NavMobile = ({
       icon: <FaUsers />,
       path: "about",
       name: t("about"),
-      offset: 0,
+      offset: 70,
       type: "scroll",
     },
     {
       icon: <FaBuilding />,
       path: "plan",
       name: t("plan"),
-      offset: 0,
+      offset: -10,
       type: "scroll",
     },
     {
       icon: <FaMap />,
       path: "location",
       name: t("location"),
-      offset: -1355,
+      offset: -10,
       type: "scroll",
     },
     {
       icon: <FaBox />,
       path: "facilities",
       name: t("facilities"),
-      offset: -350,
+      offset: -10,
       type: "scroll",
     },
     {
       icon: <RiHomeSmile2Fill />,
       path: "apartments",
       name: t("apartments"),
-      offset: -70,
+      offset: -10,
       type: "scroll",
     },
     {
       icon: <RiBuilding2Fill />,
       path: "projects",
       name: t("projects"),
-      offset: -100,
+      offset: -10,
       type: "scroll",
     },
     {
       icon: <RiContactsBookFill />,
       path: "contact",
       name: t("contact"),
-      offset: 0,
+      offset: 500,
       type: "scroll",
     },
   ];
@@ -89,7 +89,7 @@ const NavMobile = ({
     customLinks && customLinks.length > 0 ? customLinks : defaultLinks;
 
   return (
-    <div className={`${containerStyles}`} onTouchStart={() => setIsOpen(false)}>
+    <div className={`${containerStyles}`}>
       {/* nav trigger btn */}
       <div
         onClick={() => setIsOpen(!isOpen)}

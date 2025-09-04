@@ -37,14 +37,13 @@ const Facilities = () => {
     },
   ];
   return (
-    <div className=" bg-white xl:mb-0">
+    <div id="facilities" className=" bg-white xl:mb-0">
       {/* Title */}
       <PageTitle title={t("title")} text={t("p")} />
       <Animated
         animation={fadeIn("up", 0.2)}
         elementType="section"
         className=" w-full"
-        id="facilities"
       >
         <Animated animation={fadeIn("up", 0.4)} elementType="div" className="">
           <Swiper

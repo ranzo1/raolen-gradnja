@@ -158,7 +158,7 @@ const Location = () => {
   };
 
   return (
-    <section className="">
+    <section id="location" className="">
       {/* Title */}
       <PageTitle title={t("title")} text={t("p")} />
       {/* locations */}
@@ -196,11 +196,7 @@ const Location = () => {
       </div>
 
       {/* Map */}
-      <Animated
-        id="location"
-        animation={fadeIn("left", 0.2)}
-        elementType="section"
-      >
+      <Animated animation={fadeIn("left", 0.2)} elementType="section">
         <MapContainer
           center={[45.0459, 20.0848]}
           zoom={isMobile ? 14.5 : 15.4}
