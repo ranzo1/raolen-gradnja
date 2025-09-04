@@ -21,13 +21,13 @@ import { fadeIn } from "@/src/components/animations/variants";
 const Projects = () => {
   const t = useTranslations("ProjectsPage");
   const projectsData = [
-    {
-      title: t("projectTitle"),
-      image: "/projects/1.webp",
-      subtitle: t("projectSubTitle"),
-      text: t("projectText"),
-      value: 90,
-    },
+    // {
+    //   title: t("projectTitle"),
+    //   image: "/projects/1.webp",
+    //   subtitle: t("projectSubTitle"),
+    //   text: t("projectText"),
+    //   value: 90,
+    // },
     {
       title: t("projectTitle2"),
       image: "/projects/2.webp",
@@ -42,7 +42,7 @@ const Projects = () => {
       <PageTitle title={t("title")} text={t("p")} />
       {/* slider */}
       <Animated animation={fadeIn("up", 0.4)} elementType="div">
-        <Swiper
+        {/* <Swiper
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true }}
           autoplay={{
@@ -51,47 +51,45 @@ const Projects = () => {
           }}
           loop
           speed={2000}
-        >
-          {projectsData.map((project, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <div className="grid grid-cols-1 xl:grid-cols-3 gap-5">
-                  {/* text */}
-                  <div className=" bg-white border-2 shadow-sm border-outline rounded-md p-12">
-                    <h2 className="h2 mb-4">{project.title}</h2>
-                    <p className="text-gold text-sm mb-6">{project.subtitle}</p>
-                    <p className="mb-[60px]">{project.text}</p>
-                    <div className="flex items-center gap-x-[50px]">
-                      <Button variant="accent" className="px-[44px]">
-                        {" "}
-                        {t("buttonLabel")}
-                      </Button>
-                      <div className="flex flex-col text-black">
-                        <span className="font-bold text-2xl">
-                          {project.value}
-                        </span>
-                        <span className="text-sm">{t("label")}</span>
-                      </div>
-                    </div>
-                  </div>
-                  {/* image & testimonial */}
-                  <div className="relative xl:col-span-2 bg-white border-2 shadow-sm border-outline rounded-md">
-                    <div>
-                      <Image
-                        src={project.image}
-                        width={905}
-                        height={528}
-                        quality={100}
-                        alt={`Raolen Gradnja – ${project.title} project in Inđija, Serbia`}
-                        className="xl:rounded-tl-md xl:rounded-bl-md"
-                      />
-                    </div>
+        >  */}
+        {projectsData.map((project, index) => {
+          return (
+            // <SwiperSlide key={index}>
+            <div key={index} className="grid grid-cols-1 xl:grid-cols-3 gap-5">
+              {/* text */}
+              <div className=" bg-white border-2 shadow-sm border-outline rounded-md p-12">
+                <h2 className="h2 mb-4">{project.title}</h2>
+                <p className="text-gold text-sm mb-6">{project.subtitle}</p>
+                <p className="mb-[60px]">{project.text}</p>
+                <div className="flex items-center gap-x-[50px]">
+                  <Button variant="accent" className="px-[44px]">
+                    {" "}
+                    {t("buttonLabel")}
+                  </Button>
+                  <div className="flex flex-col text-black">
+                    <span className="font-bold text-2xl">{project.value}</span>
+                    <span className="text-sm">{t("label")}</span>
                   </div>
                 </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+              </div>
+              {/* image & testimonial */}
+              <div className="relative xl:col-span-2 bg-white border-2 shadow-sm border-outline rounded-md">
+                <div>
+                  <Image
+                    src={project.image}
+                    width={905}
+                    height={528}
+                    quality={100}
+                    alt={`Raolen Gradnja – ${project.title} project in Inđija, Serbia`}
+                    className="xl:rounded-tl-md xl:rounded-bl-md"
+                  />
+                </div>
+              </div>
+            </div>
+            /* </SwiperSlide> */
+          );
+        })}
+        {/* </Swiper> */}
       </Animated>
     </section>
   );

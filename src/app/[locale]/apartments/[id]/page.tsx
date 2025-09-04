@@ -64,6 +64,9 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
 
   const apartmentId = parseInt(params.id, 10);
   const apartment = apartmentsData.find((apt) => apt.id === apartmentId);
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
 
   const filter = searchParams.filter;
 
@@ -117,14 +120,31 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                 key={index}
                 className="flex items-center gap-4 p-3 rounded-md"
               >
-                <div className="mb-4 w-20 h-20 p-5 rounded-full shadow-md sm:w-16 sm:h-16 sm:p-4">
+                <div
+                  style={{
+                    marginBottom: "1rem",
+                    width: "4rem",
+                    height: "4rem",
+                    padding: "1rem",
+                    borderRadius: "9999px",
+                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
                   <Image
                     src={premise.icon}
-                    alt={t(`floorPremises.${apartment.floor}.${premise.key}`)}
+                    alt={t(`floorPremises.${premise.key}`)}
                     width={40}
                     height={40}
+                    style={{
+                      height: "2.5rem", // sm:h-8 = 32px, default = 40px
+                      width: "2.5rem", // sm:w-8 = 32px, default = 40px
+                    }}
                   />
                 </div>
+
                 <div>
                   <h4 className="text-md font-medium">
                     {t(`floorPremises.${premise.key}`)}
@@ -166,13 +186,30 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                 className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden flex-1 border-gray-200 p-6"
               >
                 <div className="text-center">
-                  <div className="mx-auto mb-4 w-20 h-20 p-5 rounded-full shadow-md sm:w-16 sm:h-16 sm:p-4">
+                  <div
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      marginBottom: "1rem",
+                      width: isMobile ? "64px" : "80px",
+                      height: isMobile ? "64px" : "80px",
+                      padding: isMobile ? "16px" : "20px",
+                      borderRadius: "9999px",
+                      boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Image
                       alt={info.name}
                       src={info.icon}
                       height={40}
                       width={40}
-                      className="mb-3 sm:h-8 sm:w-8"
+                      style={{
+                        height: isMobile ? "32px" : "40px", // sm:h-8 = 32px, default = 40px
+                        width: isMobile ? "32px" : "40px", // sm:w-8 = 32px, default = 40px
+                      }}
                     />
                   </div>
 
