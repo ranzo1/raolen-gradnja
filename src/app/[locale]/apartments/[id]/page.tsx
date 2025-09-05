@@ -95,7 +95,11 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           />
         }
       />
-      <div style={{ height: "130px" }}></div>
+      <div
+        style={{
+          height: isMobile ? "100px" : "130px",
+        }}
+      ></div>
       <div className="container min-h-screen py-10">
         <PageTitle
           title={t(`titles.${apartment.titleKey}`)}
@@ -231,7 +235,12 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           })}
         </div>
       </div>
-      <div className="h-[200px]"></div>
+      <div
+        style={{
+          height: isMobile ? "0" : "200px",
+        }}
+      ></div>
+
       <Footer />
     </section>
   );

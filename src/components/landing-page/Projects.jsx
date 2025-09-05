@@ -37,7 +37,12 @@ const Projects = () => {
     },
   ];
   return (
-    <section className="pb-40" id="projects">
+    <section
+      id="projects"
+      style={{
+        paddingBottom: "40px",
+      }}
+    >
       {/* Title */}
       <PageTitle title={t("title")} text={t("p")} />
       {/* slider */}

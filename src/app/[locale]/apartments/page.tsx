@@ -10,11 +10,15 @@ import { link } from "fs";
 import { usePathname, useSearchParams } from "next/navigation";
 import { RiHomeFill } from "react-icons/ri";
 import NavMobile from "@/src/components/header/NavMobile";
+import { useMediaQuery } from "react-responsive";
 
 export default function page() {
   const t = useTranslations("Header");
   const pathname = usePathname();
   const currentLanguage = pathname.split("/")[1] || "sr";
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
 
   const links = [
     {
@@ -52,7 +56,11 @@ export default function page() {
           />
         }
       />
-      <div style={{ height: "130px" }}></div>
+      <div
+        style={{
+          height: isMobile ? "100px" : "130px",
+        }}
+      ></div>
       <ApartmentList apartments={apartmentsData} />
       <Footer />
     </section>

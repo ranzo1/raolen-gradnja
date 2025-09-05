@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import PageTitle from "@/src/components/PageTitle";
 import Animated from "../animations/Animated";
 import { fadeIn } from "../animations/variants";
+import { useMediaQuery } from "react-responsive";
 
 interface Apartment {
   id: number;
@@ -30,6 +31,9 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentLanguage = pathname.split("/")[1] || "sr";
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
 
   // Apartment types should match exactly what's used in the Apartments component
   const apartmentTypes = [
@@ -133,7 +137,11 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
           </Animated>
         ))}
       </div>
-      <div className="h-[200px]"></div>
+      <div
+        style={{
+          height: isMobile ? "40px" : "200px",
+        }}
+      ></div>
     </section>
   );
 };
