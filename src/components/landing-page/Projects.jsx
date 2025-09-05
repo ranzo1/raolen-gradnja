@@ -40,7 +40,7 @@ const Projects = () => {
     <section
       id="projects"
       style={{
-        paddingBottom: "40px",
+        paddingBottom: "200px",
       }}
     >
       {/* Title */}
