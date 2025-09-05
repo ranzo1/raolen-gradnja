@@ -15,11 +15,16 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import PageTitle from "../PageTitle";
 import Animated from "@/src/components/animations/Animated";
+import { useMediaQuery } from "react-responsive";
 
 import { fadeIn } from "@/src/components/animations/variants";
 
 const Projects = () => {
   const t = useTranslations("ProjectsPage");
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   const projectsData = [
     // {
     //   title: t("projectTitle"),
@@ -40,7 +45,7 @@ const Projects = () => {
     <section
       id="projects"
       style={{
-        paddingBottom: "200px",
+        paddingBottom: isMobile ? "40px" : "200px",
       }}
     >
       {/* Title */}
