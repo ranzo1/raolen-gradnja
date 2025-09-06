@@ -120,7 +120,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             elementType="div"
             animation={fadeIn("right", 0.2)}
           >
-            <h3 className="text-2xl md:text-xl mb-6 md:mb-5">
+            <h3 className="h3 mb-6 md:mb-5">
               {t(`floors.${apartment.floor}`)}
             </h3>
             {floorPremises[apartment.floor].map((premise, index) => (
