@@ -106,22 +106,45 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
               href={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments/${apartment.id}`}
               className="flex flex-col flex-grow"
             >
-              <div className="relative w-full h-[200px] md:h-[300px]">
+              <div
+                style={{ position: "relative", width: "100%", height: "200px" }}
+              >
                 <Image
                   src={apartment.image}
                   alt={`${t(`titles.${apartment.titleKey}`)} – ${
                     apartment.area
                   } m² apartment in Inđija, Serbia`}
                   fill
-                  className="object-cover"
+                  style={{ objectFit: "cover" }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 {apartment.soldOut && (
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">SOLD</span>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      right: 0,
+                      bottom: 0,
+                      left: 0,
+                      backgroundColor: "rgba(0, 0, 0, 0.6)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "white",
+                        fontSize: "24px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {t("soldOut")}
+                    </span>
                   </div>
                 )}
               </div>
+
               <div className="p-6 flex-grow flex flex-col justify-center text-center">
                 <p className="group-hover:text-white mb-2 transition-all duration-300">
                   {t(`floors.${apartment.floor}`)}

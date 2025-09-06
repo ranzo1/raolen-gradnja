@@ -146,7 +146,7 @@ const NavMobile = ({
           </div>
 
           {/* Socials */}
-          <Socials containerStyles="flex text-black" />
+          <Socials containerStyles="flex gap-x-4 text-black mx-auto xl:mx-0" />
         </div>
       </aside>
     </div>

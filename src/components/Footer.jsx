@@ -52,19 +52,18 @@ const Footer = () => {
                   </h2>
                   <div className="flex flex-col">
                     <a
-                      href="tel:+381628904781"
-                      className="leading-relaxed text-sm text-indigo-500"
-                      title="Call Raolen Gradnja at +381 62 890 4781"
-                    >
-                      +381 62 890 4781
-                    </a>
-
-                    <a
                       href="tel:+381638094249"
                       className="leading-relaxed text-sm text-indigo-500"
                       title="Call Raolen Gradnja at +381 63 809 4249"
                     >
                       +381 63 809 4249
+                    </a>
+                    <a
+                      href="tel:+381628904781"
+                      className="leading-relaxed text-sm text-indigo-500"
+                      title="Call Raolen Gradnja at +381 62 890 4781"
+                    >
+                      +381 62 890 4781
                     </a>
                   </div>
                 </div>

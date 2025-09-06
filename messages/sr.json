@@ -193,20 +193,24 @@
       "staircase": "Stepenište",
       "elevator": "Lift"
     },
-    "overview": "Pregled"
+    "3Drender": "*Primer slike — individualni 3D renderi uskoro",
+    "overview": "Pregled",
+    "soldOut": "PRODATO"
   },
 
   "ProjectsPage": {
     "title": "Projekti",
     "p": "Predstavljamo vam druge naše projekte u portfoliju.",
-    "projectTitle": "Projekat u Nišu",
-    "projectSubTitle": "Nikole Pašića 10, Niš",
-    "projectText": "U srcu Niša, između istorijskih spomenika i savremenih zgrada, smestila se inovativna firma za nekretnine koja nosi ime 'Niš Real Estate Solutions'. Ova kompanija nije samo posrednik u prodaji i kupovini nekretnina, već je i arhitekta života, spajajući ljude sa domovima iz snova.",
-    "projectTitle2": "Projekat u Kragujevcu",
-    "projectSubTitle2": "Kneza Miloša 22, Kragujevac",
-    "projectText2": "U srcu Šumadije, u jednom od najživopisnijih gradova Srbije, procvetala je izuzetna firma za nekretnine po imenu 'Kragujevac Real Estate Hub'. Ova agencija nije samo posrednik u transakcijama nekretnina; ona je stub zajednice, povezujući ljude sa domovima svojih snova i unapređujući kvalitet života u Kragujevcu.",
+    "projectTitle2": "Niš",
+    "projectSubTitle2": "Nišavska 31A, 18000, Niš",
+    "projectText2": "",
+    "projectTitle": "Kragujevac",
+    "projectSubTitle": "Tanaska Rajića 21/33, Kragujevac",
+    "projectText": "",
     "buttonLabel": "Saznaj više",
-    "label": "Stanova"
+    "apartmentsLabel": "Stanova",
+    "parkingSpotsLabel": "Garažna mesta",
+    "florsLabel": "Spratova"
   },
 
   "Footer": {

@@ -193,20 +193,24 @@
       "staircase": "Staircase",
       "elevator": "Elevator"
     },
-    "overview": "Overview"
+    "3Drender": "*Example image — individual 3D renders soon",
+    "overview": "Overview",
+    "soldOut": "SOLD"
   },
 
   "ProjectsPage": {
     "title": "Projects",
-    "p": "We present to you our other projects in the portfolio.",
-    "projectTitle": "Project in Niš",
-    "projectSubTitle": "Nikole Pašića 10, Niš",
-    "projectText": "In the heart of Niš, between historical monuments and modern buildings, there is an innovative real estate company named 'Niš Real Estate Solutions'. This company is not just a mediator in the sale and purchase of real estate but also an architect of life, connecting people with their dream homes.",
-    "projectTitle2": "Project in Kragujevac",
-    "projectSubTitle2": "Kneza Miloša 22, Kragujevac",
-    "projectText2": "In the heart of Šumadija, in one of the most picturesque cities in Serbia, a remarkable real estate company named 'Kragujevac Real Estate Hub' has blossomed. This agency is not just a mediator in real estate transactions; it is a pillar of the community, connecting people with their dream homes and improving the quality of life in Kragujevac.",
+    "p": "We present to you other projects from our portfolio.",
+    "projectTitle2": "Niš",
+    "projectSubTitle2": "Nišavska 31A, 18000, Niš",
+    "projectText2": "",
+    "projectTitle": "Kragujevac",
+    "projectSubTitle": "Tanaska Rajića 21/33, Kragujevac",
+    "projectText": "",
     "buttonLabel": "Learn more",
-    "label": "Apartments"
+    "apartmentsLabel": "Apartments",
+    "parkingSpotsLabel": "Parking spots",
+    "florsLabel": "Floors"
   },
 
   "Footer": {

@@ -181,6 +181,16 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                 alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
               />
             </Zoom>
+            <p
+              style={{
+                fontSize: isMobile ? "0.7rem" : "0.75rem", // text-sm
+                color: "#4B5563", // text-gray-600
+                marginTop: "0.5rem", // mt-2
+                textAlign: "center", // align text to the right
+              }}
+            >
+              {t(`3Drender`)}
+            </p>
           </Animated>
         </div>
         {/* premises */}
