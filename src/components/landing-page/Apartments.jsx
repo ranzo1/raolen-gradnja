@@ -40,14 +40,14 @@ const Apartments = () => {
       info: "50 - 70",
     },
     {
-      image: "/apartments/3.webp",
-      name: t("apartments2"),
+      image: "/apartments/4.webp",
+      name: t("apartments3"),
       value: "large",
       info: "> 70",
     },
     {
-      image: "/apartments/4.webp",
-      name: t("apartments3"),
+      image: "/apartments/3.webp",
+      name: t("apartments2"),
       value: "office",
       info: "144",
     },
