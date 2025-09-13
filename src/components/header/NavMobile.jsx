@@ -13,7 +13,7 @@ import { FaUsers, FaMap, FaBox, FaBuilding } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/footer/logo.webp";
+import Logo from "../Logo";
 import Socials from "../Socials";
 import { useTranslations } from "next-intl";
 
@@ -112,9 +112,7 @@ const NavMobile = ({
           </div>
 
           {/* logo */}
-          <Link href="/">
-            <Image src={logo} width={140} alt="Logo of mobile navbar" />
-          </Link>
+          <Logo width={120} height={120} />
 
           {/* links */}
           <div className="flex flex-col gap-y-8">

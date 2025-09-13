@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import Nav from "./Nav";
 import NavMobile from "./NavMobile";
-import logo from "@/public/header/logo.webp";
+import Logo from "../Logo";
 import LocalSwitcher from "@/src/components/local-switcher";
 
 const Header = ({ nav, navMobile }) => {
@@ -56,15 +56,7 @@ const Header = ({ nav, navMobile }) => {
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
-          <Link href="/">
-            <Image
-              src={logo}
-              width={imageSize.width}
-              height={imageSize.height}
-              alt="Logo"
-            />
-          </Link>
-
+          <Logo width={imageSize.width} height={imageSize.height} />
           {/* desktop nav */}
           {nav || (
             <Nav

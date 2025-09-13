@@ -5,7 +5,7 @@ import Link from "next/link";
 import Socials from "./Socials";
 
 import { fadeIn } from "./animations/variants";
-import logo from "@/public/footer/logo.webp";
+import Logo from "./Logo";
 import ContactForm from "./contact/form";
 import Animated from "@/src/components/animations/Animated";
 import { useTranslations } from "next-intl";
@@ -71,17 +71,8 @@ const Footer = () => {
             </div>
             <div className="bg-white flex flex-col w-full mt-4 xl:mt-0">
               {/* logo & text */}
-              <div className="">
-                <Link href="/" className="mb-24">
-                  <Image
-                    src={logo}
-                    width={140}
-                    height={140}
-                    alt="Raolen Gradnja logo"
-                    priority
-                  />
-                </Link>
-              </div>
+              <Logo width={120} height={120} />
+
               <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
                 {t("title")}
               </h2>

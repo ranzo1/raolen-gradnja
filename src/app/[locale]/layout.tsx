@@ -1,23 +1,32 @@
+// app/[locale]/layout.tsx or app/layout.tsx depending on your structure
+
 import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider, useMessages } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import { Metadata } from "next";
 
 type RootLayoutProps = {
   children: React.ReactNode;
   params: { locale: string };
 };
 
-// ✅ Default site-wide metadata
-export const metadata = {
-  title:
-    "Modern Apartments for Sale | Raolen Gradnja",
-  description:
-    "Find modern apartments for your needs in center of Indjija, Serbia. Explore listings with photos, prices, and details to discover your perfect home.",
-  icons: {
-    icon: "/favicon.ico", // standard favicon
-    apple: "/apple-touch-icon.png", // Apple Touch Icon
-  },
-};
+// ✅ Dynamic Metadata Translation
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
+  };
+}
 
 export const viewport = {
   width: "device-width",

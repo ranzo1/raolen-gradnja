@@ -29,11 +29,7 @@ const Hero = () => {
           <div className="w-full max-w-full text-center rounded-sm shadow-md">
             <div className="bg-grey bg-opacity-50 p-4 rounded-md">
               <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
-                RAOLEN{" "}
-                <span className="sr-only">
-                  GRADNJA - Moderni stanovi smešteni u Srbiji, u centru grada
-                  Inđije
-                </span>
+                RAOLEN <span className="sr-only">{t("h1")}</span>
               </h1>
             </div>
           </div>
