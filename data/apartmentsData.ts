@@ -419,7 +419,7 @@ export const apartmentsData: Apartment[] = [
     id: 14,
     titleKey: "apartment13",
     floor: "2",
-    area: 47.57,
+    area: 47.78,
     type: "small",
     image: smallImage,
     premises: [

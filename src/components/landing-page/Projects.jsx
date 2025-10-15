@@ -32,7 +32,7 @@ const Projects = () => {
       subtitle: t("projectSubTitle"),
       text: t("projectText"),
       apartments: 99,
-      parkingSpots: 99,
+      parkingSpots: 101,
       flors: 6,
     },
     {
@@ -42,7 +42,7 @@ const Projects = () => {
       text: t("projectText2"),
       apartments: 99,
       parkingSpots: 99,
-      flors: 6,
+      flors: 7,
     },
   ];
 
