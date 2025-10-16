@@ -122,7 +122,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
                 )}
               </div>
 
-              <div className="p-6 flex-grow flex flex-col justify-center text-center bg-background transition-colors duration-300 group-hover:bg-gold">
+              <div className="p-3 xl:p-6 flex-grow flex flex-col justify-center text-center bg-background transition-colors duration-300 group-hover:bg-gold">
                 <p className="mb-2 transition-colors duration-300 group-hover:text-white">
                   {t(`floors.${apartment.floor}`)}
                 </p>
