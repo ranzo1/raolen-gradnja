@@ -97,7 +97,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
       />
       <div
         style={{
-          height: isMobile ? "100px" : "130px",
+          height: isMobile ? "60px" : "100px",
         }}
       ></div>
       <div className="container min-h-screen py-10">
@@ -113,136 +113,100 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             Query filter: {filter}
           </div>
         )}
-        <div className=" grid grid-cols-1 xl:grid-cols-4 gap-5">
-          {/* Floor data */}
-          <Animated
-            className="col-span-1 xl:col-span-1 bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-8"
-            elementType="div"
-            animation={fadeIn("right", 0.2)}
-          >
-            <h3 className="h3 mb-6 md:mb-5">
-              {t(`floors.${apartment.floor}`)}
-            </h3>
-            {floorPremises[apartment.floor].map((premise, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 p-3 rounded-md"
-              >
-                <div
-                  style={{
-                    marginBottom: "1rem",
-                    width: "4rem",
-                    height: "4rem",
-                    padding: "1rem",
-                    borderRadius: "9999px",
-                    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Image
-                    src={premise.icon}
-                    alt={t(`floorPremises.${premise.key}`)}
-                    width={40}
-                    height={40}
-                    style={{
-                      height: "2.5rem", // sm:h-8 = 32px, default = 40px
-                      width: "2.5rem", // sm:w-8 = 32px, default = 40px
-                    }}
-                  />
-                </div>
 
-                <div>
-                  <h4 className="text-md font-medium">
-                    {t(`floorPremises.${premise.key}`)}
-                  </h4>
-                  {premise.area && (
-                    <p className="text-sm text-gray-600">{premise.area} m²</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </Animated>
-
-          {/* img */}
-          <Animated
-            className="col-span-1 xl:col-span-3 bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden relative"
-            elementType="div"
-            animation={fadeIn("left", 0.5)}
-          >
-            <Zoom>
-              <Image
-                src="/apartment/3Drender.webp"
-                layout="responsive"
-                width={400}
-                height={400}
-                className="rounded-md cursor-pointer"
-                alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
-              />
-            </Zoom>
-            <p
-              style={{
-                fontSize: isMobile ? "0.7rem" : "0.75rem", // text-sm
-                color: "#4B5563", // text-gray-600
-                marginTop: "0.5rem", // mt-2
-                textAlign: "center", // align text to the right
-              }}
-            >
-              {t(`3Drender`)}
-            </p>
-          </Animated>
-        </div>
-        {/* premises */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 pb-5 gap-5 my-5">
-          {apartment.premises.map((premise, index) => {
-            const info = premiseTypes[premise.type];
-
-            return (
-              <Animated
-                animation={fadeIn("right", 0.4)}
-                elementType="div"
-                key={index}
-                className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden flex-1 border-gray-200 p-6"
-              >
-                <div className="text-center">
-                  <div
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "auto",
-                      marginBottom: "1rem",
-                      width: "4rem",
-                      height: "4rem",
-                      padding: "1rem",
-                      borderRadius: "9999px",
-                      boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
+        {/* img */}
+        <Animated
+          className="border-2 shadow-sm border-outline bg-white rounded-md overflow-hidden relative"
+          elementType="div"
+          animation={fadeIn("left", 0.5)}
+        >
+          <Zoom>
+            <Image
+              src={apartment.image}
+              width={400}
+              height={400}
+              className="block w-full h-auto cursor-pointer"
+              alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
+              sizes="(max-width: 1000px) 100vw, 75vw"
+              quality={90}
+              priority
+            />
+          </Zoom>
+        </Animated>
+        <div className="grid grid-cols-1 gap-5">
+          {/* Premises (cards) */}
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 my-5 pb-5">
+              {apartment.premises.map((premise, index) => {
+                const info = premiseTypes[premise.type];
+                return (
+                  <Animated
+                    key={index}
+                    elementType="div"
+                    animation={fadeIn("right", 0.4)}
+                    className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-6"
                   >
-                    <Image
-                      alt={info.name}
-                      src={info.icon}
-                      height={40}
-                      width={40}
-                      style={{
-                        height: "2.5rem", // sm:h-8 = 32px, default = 40px
-                        width: "2.5rem", // sm:w-8 = 32px, default = 40px
-                      }}
-                    />
-                  </div>
+                    <div className="text-center">
+                      <div className="mx-auto mb-4 w-16 h-16 p-4 rounded-full shadow-md flex items-center justify-center">
+                        <Image
+                          alt={info.name}
+                          src={info.icon}
+                          height={40}
+                          width={40}
+                          className="h-10 w-10"
+                        />
+                      </div>
+                      <h2 className="text-lg leading-6 text-gray-900 font-medium title-font">
+                        {t(`premises.${premise.type}`)}
+                      </h2>
+                      <h4 className="text-black font-normal mt-1">
+                        {premise.area} m²
+                      </h4>
+                    </div>
+                  </Animated>
+                );
+              })}
+            </div>
+          </div>
 
-                  <h2 className="text-lg leading-6 text-gray-900 font-medium title-font">
-                    {t(`premises.${premise.type}`)}
-                  </h2>
-                  <h4 className="text-black font-normal mt-1">
-                    {premise.area} m²
-                  </h4>
-                </div>
-              </Animated>
-            );
-          })}
+          {/* Floor data (cards below premises) */}
+          <div>
+            <div className="text-center">
+              <h3 className="h3 mb-6 md:mb-5">
+                {t(`floors.${apartment.floor}`)}
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+              {floorPremises[apartment.floor].map((premise, index) => (
+                <Animated
+                  key={index}
+                  elementType="div"
+                  animation={fadeIn("right", 0.2)}
+                  className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-6"
+                >
+                  <div className="text-center">
+                    <div className="mx-auto mb-4 w-16 h-16 p-4 rounded-full shadow-md flex items-center justify-center">
+                      <Image
+                        src={premise.icon}
+                        alt={t(`floorPremises.${premise.key}`)}
+                        width={40}
+                        height={40}
+                        className="h-10 w-10"
+                      />
+                    </div>
+                    <h4 className="text-lg leading-6 text-gray-900 font-medium title-font">
+                      {t(`floorPremises.${premise.key}`)}
+                    </h4>
+                    {premise.area && (
+                      <p className="text-black font-normal mt-1">
+                        {premise.area} m²
+                      </p>
+                    )}
+                  </div>
+                </Animated>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <div

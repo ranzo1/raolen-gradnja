@@ -13,13 +13,11 @@ import { useMediaQuery } from "react-responsive";
 interface Apartment {
   id: number;
   type: string;
-  image: string;
+  coverImage: string;
   floor: string;
   titleKey: string;
   area: number;
   soldOut?: boolean;
-  // name: string;
-  // info: string;
 }
 
 interface ApartmentListProps {
@@ -31,9 +29,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentLanguage = pathname.split("/")[1] || "sr";
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   // Apartment types should match exactly what's used in the Apartments component
   const apartmentTypes = [
@@ -51,9 +47,9 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
 
   // Filter apartments whenever type changes
   useEffect(() => {
-    const filtered = apartments.filter((apartment) => {
-      return apartmentType === "all" ? true : apartment.type === apartmentType;
-    });
+    const filtered = apartments.filter((apartment) =>
+      apartmentType === "all" ? true : apartment.type === apartmentType
+    );
     setFilteredApartments(filtered);
   }, [apartmentType, apartments]);
 
@@ -71,7 +67,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
 
   const picker = (
     <select
-      className="w-[240px] lg:w-[540px] h-[46px] mx-auto block border border-gray-300 rounded-md px-4 py-2 text-sm shadow-sm focus:outline-none"
+      className="w-[200px] h-[40px] mx-auto block border border-gray-300 rounded-md px-4 py-2 text-sm shadow-sm focus:outline-none"
       onChange={(e) => handleTypeChange(e.target.value)}
       value={apartmentType}
     >
@@ -94,7 +90,8 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
         picker={picker}
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {/* Tailwind responsive grid replaces JS-based columns */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {filteredApartments.map((apartment) => (
           <Animated
             elementType="div"
@@ -104,55 +101,35 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
           >
             <Link
               href={`${process.env.NEXT_PUBLIC_BASE_URL}/${currentLanguage}/apartments/${apartment.id}`}
-              className="flex flex-col flex-grow"
+              className="group flex flex-col flex-grow"
             >
-              <div
-                style={{ position: "relative", width: "100%", height: "200px" }}
-              >
+              <div className="relative w-full h-[200px]">
                 <Image
-                  src={apartment.image}
+                  src={apartment.coverImage}
                   alt={`${t(`titles.${apartment.titleKey}`)} – ${
                     apartment.area
                   } m² apartment in Inđija, Serbia`}
                   fill
-                  style={{ objectFit: "cover" }}
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 {apartment.soldOut && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      right: 0,
-                      bottom: 0,
-                      left: 0,
-                      backgroundColor: "rgba(0, 0, 0, 0.6)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "white",
-                        fontSize: "24px",
-                        fontWeight: "bold",
-                      }}
-                    >
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">
                       {t("soldOut")}
                     </span>
                   </div>
                 )}
               </div>
 
-              <div className="p-6 flex-grow flex flex-col justify-center text-center">
-                <p className="group-hover:text-white mb-2 transition-all duration-300">
+              <div className="p-6 flex-grow flex flex-col justify-center text-center bg-background transition-colors duration-300 group-hover:bg-gold">
+                <p className="mb-2 transition-colors duration-300 group-hover:text-white">
                   {t(`floors.${apartment.floor}`)}
                 </p>
-                <h4 className="h4 group-hover:text-white transition-all duration-300">
+                <h4 className="h4 transition-colors duration-300 group-hover:text-white">
                   {t(`titles.${apartment.titleKey}`)}
                 </h4>
-                <p className="group-hover:text-white transition-all duration-300">
+                <p className="transition-colors duration-300 group-hover:text-white">
                   {apartment.area} m<sup>2</sup>
                 </p>
               </div>
@@ -160,11 +137,8 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
           </Animated>
         ))}
       </div>
-      <div
-        style={{
-          height: isMobile ? "40px" : "200px",
-        }}
-      ></div>
+
+      <div className={isMobile ? "h-10" : "h-[200px]"} />
     </section>
   );
 };
