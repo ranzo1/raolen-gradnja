@@ -1,27 +1,27 @@
 import { RiInstagramFill, RiFacebookFill } from "react-icons/ri";
 
-const Socials = ({ containerStyles }) => {
+const Socials = ({ containerStyles }: { containerStyles?: string }) => {
   return (
     <ul className={containerStyles}>
-      <li key="instagram">
+      <li>
         <a
           href="https://www.instagram.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <RiInstagramFill />
+          <RiInstagramFill size={30} />
           <span className="sr-only">Instagram</span>
         </a>
       </li>
-      <li key="facebook">
+      <li>
         <a
           href="https://www.facebook.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
         >
-          <RiFacebookFill />
+          <RiFacebookFill size={30} />
           <span className="sr-only">Facebook</span>
         </a>
       </li>

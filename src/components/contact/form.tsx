@@ -51,7 +51,7 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <div className="max-w-[640px] mx-auto px-4">
+          <div className="max-w-[640px] mx-auto ">
             <div className="rounded-xl border border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm p-6 sm:p-8 space-y-5">
               {/* Header */}
               <div className="space-y-1">

@@ -6,16 +6,9 @@ const Contact = () => {
 
   return (
     <section className="text-gray-600 body-font" id="contact">
-      <div className="container mx-auto px-5 py-16">
+      <div className="container  mx-auto px-5 py-16">
         {/* Header (optional, improves hierarchy) */}
-        <div className="mb-8 sm:mb-10 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-black">
-            Contact
-          </h2>
-          <p className="mt-2 text-sm text-gray-500">
-            Reach out or find us on the map below.
-          </p>
-        </div>
+        <div className="mb-8 sm:mb-10 text-center"></div>
 
         {/* Balanced grid: equal columns on md+, stacked on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
