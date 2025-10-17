@@ -143,7 +143,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                   <Animated
                     key={index}
                     elementType="div"
-                    animation={fadeIn("right", 0.4)}
+                    animation={fadeIn("right", 0.2)}
                     className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-6"
                   >
                     <div className="text-center">
@@ -172,9 +172,13 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           {/* Floor data (cards below premises) */}
           <div>
             <div className="text-center">
-              <h3 className="h3 mb-6 md:mb-5">
+              <Animated
+                elementType="h3"
+                animation={fadeIn("right", 0.2)}
+                className="h3 mb-6 md:mb-5"
+              >
                 {t(`floors.${apartment.floor}`)}
-              </h3>
+              </Animated>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
               {floorPremises[apartment.floor].map((premise, index) => (

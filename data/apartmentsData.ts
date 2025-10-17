@@ -159,7 +159,7 @@ export const premiseTypes = {
   loggia: { name: "Loggia", icon: "/apartment/icons/balcony.svg" },
   entranceHall: {
     name: "Entrance hall",
-    icon: "/apartment/icons/hallway.svg",
+    icon: "/apartment/icons/entranceHall.svg",
   },
   laundryRoom: { name: "Laundry room", icon: "/apartment/icons/laundry.svg" },
   diningRoom: { name: "Dining room", icon: "/apartment/icons/dining-room.svg" },

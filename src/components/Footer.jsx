@@ -5,7 +5,6 @@ import Link from "next/link";
 import Socials from "./Socials";
 
 import { fadeIn } from "./animations/variants";
-import Logo from "./Logo";
 import ContactForm from "./contact/form";
 import Animated from "@/src/components/animations/Animated";
 import { useTranslations } from "next-intl";
@@ -28,55 +27,112 @@ const Footer = () => {
                 className="w-full h-full absolute inset-0 border-0 filter grayscale-100 contrast-120 opacity-40"
                 scrolling="no"
               />
-              <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
-                <div className="lg:w-1/2 px-6">
-                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs uppercase">
-                    {t("address")}
-                  </h2>
-                  <p className="mt-1 text-sm">Jug Bogdana 29 Inđija, Srbija</p>
-                </div>
-                <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs uppercase">
-                    {t("email")}
-                  </h2>
-                  <a
-                    href="mailto:raolengradnja@yahoo.com"
-                    className="text-indigo-500 text-sm"
-                    title="Contact Raolen Gradnja via email"
-                  >
-                    raolengradnja@yahoo.com
-                  </a>
+              <div className="relative rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm p-5 sm:p-6">
+                <div className="flex flex-col lg:flex-row gap-6">
+                  {/* Address */}
+                  <div className="lg:w-1/2 px-0 lg:px-2">
+                    <h2 className="text-[11px] font-semibold tracking-widest uppercase text-gray-500">
+                      {t("address")}
+                    </h2>
+                    <p className="mt-2 text-sm text-black">
+                      Jug Bogdana 29, Inđija, Srbija
+                    </p>
+                  </div>
 
-                  <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4 uppercase">
-                    {t("phone")}
-                  </h2>
-                  <div className="flex flex-col">
+                  {/* Divider on large screens */}
+                  <div className="hidden lg:block w-px bg-gray-200" />
+
+                  {/* Contact */}
+                  <div className="lg:w-1/2 px-0 lg:px-2">
+                    <h2 className="text-[11px] font-semibold tracking-widest uppercase text-gray-500">
+                      {t("email")}
+                    </h2>
                     <a
-                      href="tel:+381638094249"
-                      className="leading-relaxed text-sm text-indigo-500"
-                      title="Call Raolen Gradnja at +381 63 809 4249"
+                      href="mailto:raolengradnja@yahoo.com"
+                      className="mt-2 inline-flex items-center gap-2 text-sm text-black hover:text-gold focus:text-gold transition-colors underline decoration-transparent hover:decoration-gold focus:decoration-gold decoration-2 underline-offset-4"
+                      title="Contact Raolen Gradnja via email"
+                      aria-label="Email Raolen Gradnja"
                     >
-                      +381 63 809 4249
+                      <svg
+                        aria-hidden="true"
+                        className="h-4 w-4 text-gray-400"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M3 7l9 6 9-6"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <rect
+                          x="3"
+                          y="5"
+                          width="18"
+                          height="14"
+                          rx="2"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                        />
+                      </svg>
+                      raolengradnja@yahoo.com
                     </a>
-                    <a
-                      href="tel:+381628904781"
-                      className="leading-relaxed text-sm text-indigo-500"
-                      title="Call Raolen Gradnja at +381 62 890 4781"
-                    >
-                      +381 62 890 4781
-                    </a>
+
+                    <h2 className="mt-5 text-[11px] font-semibold tracking-widest uppercase text-gray-500">
+                      {t("phone")}
+                    </h2>
+                    <div className="mt-2 flex flex-col gap-1.5">
+                      <a
+                        href="tel:+381638094249"
+                        className="inline-flex items-center gap-2 text-sm text-black hover:text-gold focus:text-gold transition-colors"
+                        title="Call Raolen Gradnja at +381 63 809 4249"
+                        aria-label="Call +381 63 809 4249"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="h-4 w-4 text-gray-400"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M22 16.92v2a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.64-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.1 5.18 2 2 0 0 1 4.11 3h2a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L7.1 10.9a16 16 0 0 0 6 6l1.47-1.17a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        +381 63 809 4249
+                      </a>
+                      <a
+                        href="tel:+381628904781"
+                        className="inline-flex items-center gap-2 text-sm text-black hover:text-gold focus:text-gold transition-colors"
+                        title="Call Raolen Gradnja at +381 62 890 4781"
+                        aria-label="Call +381 62 890 4781"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="h-4 w-4 text-gray-400"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M22 16.92v2a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.64-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.1 5.18 2 2 0 0 1 4.11 3h2a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L7.1 10.9a16 16 0 0 0 6 6l1.47-1.17a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        +381 62 890 4781
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="bg-white flex flex-col w-full mt-4 xl:mt-0">
-              {/* logo & text */}
-              <Logo width={120} height={120} />
-
-              <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-                {t("title")}
-              </h2>
-              <p className="leading-relaxed text-gray-600">{t("subTitle")}</p>
               <ContactForm />
             </div>
           </div>

@@ -8,19 +8,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Confetti from "react-confetti";
 import { useTranslations } from "next-intl";
 import { createValidationSchema } from "@/utils/validations";
+import Logo from "@/src/components/Logo";
 
-type FormValues = {
-  name: string;
-  email: string;
-  message: string;
-};
+type FormValues = { name: string; email: string; message: string };
 
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const t = useTranslations("Footer");
-
-  // Create the validation schema with translations
   const validationSchema = createValidationSchema(t);
 
   const handleSubmit = async (
@@ -28,22 +23,18 @@ const ContactForm = () => {
     {
       setSubmitting,
       resetForm,
-    }: { setSubmitting: (isSubmitting: boolean) => void; resetForm: () => void }
+    }: { setSubmitting: (b: boolean) => void; resetForm: () => void }
   ) => {
     try {
       setIsLoading(true);
       await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
-
       resetForm();
-      console.log("Email sent successfully!");
     } catch (error) {
-      console.error("Failed to send email:", error);
+      // log or surface error
     } finally {
       setSubmitting(false);
       toast.success("Form submitted successfully!");
@@ -60,132 +51,113 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+          <div className="max-w-[640px] mx-auto px-4">
+            <div className="rounded-xl border border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm p-6 sm:p-8 space-y-5">
+              {/* Header */}
+              <div className="space-y-1">
+                {/* logo & text */}
+                <Logo width={120} height={120} />
+                <h2 className="text-xl font-semibold text-black tracking-tight">
+                  {t("title")}
+                </h2>
+                <p className="text-sm text-gray-500">{t("subTitle")}</p>
+              </div>
+
               {/* Name */}
-              <div style={{ padding: "8px" }}>
-                <div style={{ position: "relative" }}>
-                  <label
-                    htmlFor="name"
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 500,
-                      color: "black",
-                    }}
-                  >
-                    {t("name")}
-                  </label>
-                  <Field
-                    type="text"
-                    id="name"
-                    name="name"
-                    style={{
-                      width: "100%",
-                      border: "1px solid grey",
-                      borderRadius: "4px",
-                      padding: "6px",
-                    }}
-                  />
-                  <ErrorMessage
-                    name="name"
-                    render={(msg) => (
-                      <div style={{ color: "red", fontSize: "14px" }}>
-                        {msg}
-                      </div>
-                    )}
-                  />
-                </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-medium text-black"
+                >
+                  {t("name")}
+                </label>
+                <Field
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jane Doe"
+                  className="w-full text-black placeholder:text-gray-400 border border-gray-300 rounded-md px-3 py-2 bg-white shadow-sm focus:outline-none focus:ring-4 focus:ring-gold/30 focus:border-gold transition-[box-shadow,border-color] duration-200"
+                />
+                <ErrorMessage
+                  name="name"
+                  render={(msg) => (
+                    <div className="text-red text-xs">{msg}</div>
+                  )}
+                />
               </div>
 
               {/* Email */}
-              <div style={{ padding: "8px" }}>
-                <div style={{ position: "relative" }}>
-                  <label
-                    htmlFor="email"
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 500,
-                      color: "black",
-                    }}
-                  >
-                    {t("email")}
-                  </label>
-                  <Field
-                    type="email"
-                    id="email"
-                    name="email"
-                    style={{
-                      width: "100%",
-                      border: "1px solid grey",
-                      borderRadius: "4px",
-                      padding: "6px",
-                    }}
-                  />
-                  <ErrorMessage
-                    name="email"
-                    render={(msg) => (
-                      <div style={{ color: "red", fontSize: "14px" }}>
-                        {msg}
-                      </div>
-                    )}
-                  />
-                </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-medium text-black"
+                >
+                  {t("email")}
+                </label>
+                <Field
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@example.com"
+                  className="w-full text-black placeholder:text-gray-400 border border-gray-300 rounded-md px-3 py-2 bg-white shadow-sm focus:outline-none focus:ring-4 focus:ring-gold/30 focus:border-gold transition-[box-shadow,border-color] duration-200"
+                />
+                <ErrorMessage
+                  name="email"
+                  render={(msg) => (
+                    <div className="text-red text-xs">{msg}</div>
+                  )}
+                />
               </div>
 
               {/* Message */}
-              <div style={{ padding: "8px", width: "100%" }}>
-                <div style={{ position: "relative" }}>
-                  <label
-                    htmlFor="message"
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 500,
-                      color: "black",
-                    }}
-                  >
-                    {t("message")}
-                  </label>
-                  <Field
-                    id="message"
-                    name="message"
-                    as="textarea"
-                    style={{
-                      width: "100%",
-                      border: "1px solid grey",
-                      borderRadius: "4px",
-                      padding: "6px",
-                      height: "170px",
-                    }}
-                  />
-                  <ErrorMessage
-                    name="message"
-                    render={(msg) => (
-                      <div style={{ color: "red", fontSize: "14px" }}>
-                        {msg}
-                      </div>
-                    )}
-                  />
-                </div>
+              <div className="space-y-2">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-black"
+                >
+                  {t("message")}
+                </label>
+                <Field
+                  as="textarea"
+                  id="message"
+                  name="message"
+                  placeholder={t("placeholderMessage")}
+                  className="w-full text-black placeholder:text-gray-400 border border-gray-300 rounded-md px-3 py-2 h-44 resize-y bg-white shadow-sm focus:outline-none focus:ring-4 focus:ring-gold/30 focus:border-gold transition-[box-shadow,border-color] duration-200"
+                />
+                <ErrorMessage
+                  name="message"
+                  render={(msg) => (
+                    <div className="text-red text-xs">{msg}</div>
+                  )}
+                />
               </div>
 
-              {/* Button */}
-              <div style={{ padding: "8px", width: "100%" }}>
+              {/* Actions */}
+              <div className="pt-2">
                 <button
+                  type="submit"
                   disabled={isLoading}
-                  className="flex mx-auto text-white bg-gold border-0 p-3 focus:outline-none font-bold hover:bg-gold/90 rounded text-lg"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-gold text-black font-semibold shadow-sm hover:bg-gold/90 active:bg-gold/80 focus:outline-none focus:ring-4 focus:ring-gold/40 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
                 >
                   {t("send")}
                 </button>
               </div>
+
+              {/* Footnote */}
+              {/* <p className="text-xs text-gray-500">
+                By submitting, you agree to our processing of your information
+                for support purposes.
+              </p> */}
             </div>
           </div>
         </Form>
       </Formik>
+
       <ToastContainer position="top-center" autoClose={5000} theme="light" />
       {showConfetti && (
         <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={typeof window !== "undefined" ? window.innerWidth : 0}
+          height={typeof window !== "undefined" ? window.innerHeight : 0}
           recycle={false}
         />
       )}

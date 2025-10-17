@@ -110,7 +110,7 @@
   },
   "FacilitiesPage": {
     "title": "Facilities",
-    "p": "One of the key elements of our philosophy is the introduction of additional amenities within the buildings, creating a vibrant micro-environment. In our facilities, you will find more than just residential space. We offer additional conveniences that make our residents' lives simpler and more enjoyable.",
+    "p": "One of the key elements of our philosophy is the introduction of additional amenities within buildings, creating a vibrant microenvironment. In our offer, you will find more than just living space. We present to you some of the potential features that make life simpler and more enjoyable.",
     "marketTitle": "Market",
     "marketSubTitle": "Convenient shopping at your fingertips",
     "marketText": "One of the potential options is to provide our residents with the privilege of enjoying their own market. This market offers a wide range of fresh groceries, essential supplies, and products crucial for everyday life. Our market is here to simplify your daily routine, allowing you to get everything you need without leaving the comfort of your home.",
@@ -215,13 +215,14 @@
 
   "Footer": {
     "title": "Contact",
-    "subTitle": "We are here for all your questions, write to us!",
+    "subTitle": "For more information, write to us via the contact form or call us.",
     "name": "Name",
     "address": "Address",
     "message": "Message",
     "phone": "Phone",
     "email": "Email",
     "send": "Send",
+    "placeholderMessage": "How can we help?",
     "errors": {
       "nameRequired": "Name is required",
       "emailRequired": "Email is required",

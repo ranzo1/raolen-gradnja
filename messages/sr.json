@@ -110,7 +110,7 @@
 
   "FacilitiesPage": {
     "title": "Objekti",
-    "p": "Jedan od ključnih elemenata naše filozofije je uvođenje dodatnih sadržaja unutar zgrada, čime stvaramo živopisno mikrookruženje. U našim objektima pronaći ćete više od samo stambenog prostora. Nudimo dodatne pogodnosti koje čine život naših stanara jednostavnijim i ugodnijim.",
+    "p": "Jedan od ključnih elemenata naše filozofije je uvođenje dodatnih sadržaja unutar zgrada, čime stvaramo živopisno mikrookruženje. U našim ponudi pronaći ćete više od samo stambenog prostora. Predstavljamo vam neka od potencijalnih pogodnosti koje život čine jednostavnijim i ugodnijim.",
     "marketTitle": "Market",
     "marketSubTitle": "Praktična nabavka na dohvat ruke",
     "marketText": "Jedna od potencijalnih opcija jeste da našim stanarima omogućimo privilegiju uživanja u sopstvenom marketu. Ovaj market je mesto na kom se nalazi širok spektar svežih namirnica, osnovnih potrepština i proizvoda bitnih za svakodnevni život. Naš market je tu kako bi olakšao vašu svakodnevicu, omogućavajući vam da nabavite sve što vam je potrebno bez napuštanja komfora vašeg doma.",
@@ -215,10 +215,11 @@
 
   "Footer": {
     "title": "Kontakt",
-    "subTitle": "Tu smo za sva vaša pitanja, pišite nam!",
+    "subTitle": "Za više informacija pišite nam putem kontakt forme ili nas pozovite.",
     "name": "Ime",
     "address": "Adresa",
     "message": "Poruka",
+    "placeholderMessage": "Kako vam mozemo pomoci?",
     "phone": "Telefon",
     "email": "Email",
     "send": "Pošalji",

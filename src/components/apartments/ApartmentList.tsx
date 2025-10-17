@@ -80,18 +80,21 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   );
 
   return (
-    <section className="container min-h-screen flex flex-col justify-between">
+    <section className="container md:min-h-screen flex flex-col">
       <PageTitle
         title={t("title")}
         text={t("p")}
-        className="border-2 shadow-sm border-outline rounded-md text-center mb-5 p-10 bg-background"
-        titleClassName="h3 md:h2 mb-6 md:mb-10"
+        className="border-2 shadow-sm border-outline rounded-md text-center mb-3 md:mb-5 p-6 md:p-10 bg-background"
+        titleClassName="h3 md:h2 mb-4 md:mb-10"
         titleHeading="h1"
         picker={picker}
       />
 
-      {/* Tailwind responsive grid replaces JS-based columns */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div
+        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ${
+          filteredApartments.length === 1 ? "mt-2" : ""
+        }`}
+      >
         {filteredApartments.map((apartment) => (
           <Animated
             elementType="div"
@@ -138,7 +141,11 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
         ))}
       </div>
 
-      <div className={isMobile ? "h-10" : "h-[200px]"} />
+      {filteredApartments.length > 1 ? (
+        <div className="h-10 md:h-[200px]" />
+      ) : (
+        <div className="h-4 md:h-8" />
+      )}
     </section>
   );
 };
