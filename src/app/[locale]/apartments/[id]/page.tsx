@@ -114,9 +114,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           </div>
         )}
 
-        {/* img */}
         <Animated
-          className="border-2 shadow-sm border-outline bg-white rounded-md overflow-hidden relative"
+          className="border-2 shadow-sm border-outline bg-white rounded-md overflow-hidden relative h-[200px] sm:h-auto flex items-center justify-center sm:block sm:h-auto"
           elementType="div"
           animation={fadeIn("left", 0.5)}
         >
@@ -125,7 +124,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
               src={apartment.image}
               width={400}
               height={400}
-              className="block w-full h-auto cursor-pointer"
+              className="block w-full h-auto max-h-full cursor-pointer object-contain"
               alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
               sizes="(max-width: 1000px) 100vw, 75vw"
               quality={90}
@@ -133,6 +132,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             />
           </Zoom>
         </Animated>
+
         <div className="grid grid-cols-1 gap-5">
           {/* Premises (cards) */}
           <div>

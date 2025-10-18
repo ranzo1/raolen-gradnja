@@ -25,7 +25,7 @@ const PageTitle = ({
       elementType="div"
       className={
         className ??
-        "border-2 shadow-sm border-outline rounded-md text-center my-5 p-10 bg-background"
+        "border-2 shadow-sm border-outline rounded-md text-center my-3 md:my-5 py-4 md:py-10 px-5 md:px-10 bg-background"
       }
     >
       <HeadingTag className={titleClassName ?? "h3 md:h2 mb-6 md:mb-10"}>
