@@ -115,7 +115,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
         )}
 
         <Animated
-          className="border-2 shadow-sm border-outline bg-white rounded-md overflow-hidden relative h-[200px] sm:h-auto flex items-center justify-center sm:block sm:h-auto"
+          className="border-2 shadow-sm border-outline bg-white rounded-md overflow-hidden relative h-[250px] lg:h-auto flex items-center justify-center lg:block"
           elementType="div"
           animation={fadeIn("left", 0.5)}
         >
