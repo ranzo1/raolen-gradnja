@@ -10,7 +10,7 @@ const Socials = ({ containerStyles }: { containerStyles?: string }) => {
           rel="noopener noreferrer"
           aria-label="Instagram"
         >
-          <RiInstagramFill size={30} />
+          <RiInstagramFill size={25} />
           <span className="sr-only">Instagram</span>
         </a>
       </li>
@@ -21,7 +21,7 @@ const Socials = ({ containerStyles }: { containerStyles?: string }) => {
           rel="noopener noreferrer"
           aria-label="Facebook"
         >
-          <RiFacebookFill size={30} />
+          <RiFacebookFill size={25} />
           <span className="sr-only">Facebook</span>
         </a>
       </li>

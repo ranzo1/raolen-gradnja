@@ -6,11 +6,12 @@ export async function POST(request) {
   const { name, email, message } = await request.json();
 
   const smtpEmail = process.env.EMAIL;
+  const emailTo = process.env.EMAIL_TO;
   const smtpPassword = process.env.PASSWORD;
 
   const mailOptions = {
     from: smtpEmail, // Ensure this is a valid email, registered in Yahoo Mail
-    to: smtpEmail, // Recipient
+    to: emailTo, // Recipient
     cc: email, // Optionally cc the sender
     subject: `Poruka od ${email}`,
     //text: `<h1> ${message} <h1>`,
