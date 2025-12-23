@@ -100,7 +100,7 @@ const Plan = () => {
           unit: "m",
         },
         {
-          value: 143,
+          value: 144,
           name: t("apartmentNetoSlide.businessPremisesNeto"),
           unit: "m",
         },

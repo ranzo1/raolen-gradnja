@@ -16,7 +16,7 @@ const Socials = ({ containerStyles }: { containerStyles?: string }) => {
       </li>
       <li>
         <a
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/raolengradnja"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"

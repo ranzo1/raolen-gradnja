@@ -119,7 +119,6 @@ const ContactForm = () => {
                   as="textarea"
                   id="message"
                   name="message"
-                  //placeholder={t("placeholderMessage")}
                   className="w-full text-black placeholder:text-gray-400 border border-gray-300 rounded-md px-3 py-2 h-44 resize-y bg-white shadow-sm focus:outline-none focus:ring-4 focus:ring-gold/30 focus:border-gold transition-[box-shadow,border-color] duration-200"
                 />
                 <ErrorMessage
@@ -135,7 +134,7 @@ const ContactForm = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-gold text-black font-semibold shadow-sm hover:bg-gold/90 active:bg-gold/80 focus:outline-none focus:ring-4 focus:ring-gold/40 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-gold text-white font-semibold shadow-sm hover:bg-gold/90 active:bg-gold/80 focus:outline-none focus:ring-4 focus:ring-gold/40 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
                 >
                   {t("send")}
                 </button>
