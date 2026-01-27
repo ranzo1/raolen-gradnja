@@ -151,17 +151,17 @@ const Plan = () => {
       //subtitle: t("marketSubTitle"),
       statsData: [
         {
-          value: 2025,
+          value: 2026,
           name: t("completionTimelineSlide.permit"),
           unit: null,
         },
         {
-          value: 2025,
+          value: 2026,
           name: t("completionTimelineSlide.construction"),
           unit: null,
         },
         {
-          value: 2026,
+          value: 2027,
           name: t("completionTimelineSlide.movingInApartment"),
           unit: null,
         },
