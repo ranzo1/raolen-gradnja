@@ -202,7 +202,13 @@
     },
     "3Drender": "*Example image — individual 3D renders soon",
     "overview": "Overview",
-    "soldOut": "SOLD"
+    "soldOut": "SOLD",
+    "zoom": {
+      "close": "Close",
+      "zoomIn": "+",
+      "zoomOut": "-",
+      "reset": "Reset"
+    }
   },
 
   "ProjectsPage": {

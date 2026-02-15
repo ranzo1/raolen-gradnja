@@ -202,7 +202,13 @@
     },
     "3Drender": "*Primer slike — individualni 3D renderi uskoro",
     "overview": "Pregled",
-    "soldOut": "PRODATO"
+    "soldOut": "PRODATO",
+    "zoom": {
+      "close": "Zatvori",
+      "zoomIn": "+",
+      "zoomOut": "-",
+      "reset": "Resetuj"
+    }
   },
 
   "ProjectsPage": {

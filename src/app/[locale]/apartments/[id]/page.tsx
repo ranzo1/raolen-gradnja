@@ -324,7 +324,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
               className="absolute top-4 right-4 text-white text-sm font-semibold z-10 px-4 py-2 bg-gold rounded hover:bg-gold/90"
               aria-label="Close zoom"
             >
-              Close
+              {t("zoom.close")}
             </button>
             <div className="flex-1 bg-white w-full h-full">
               <TransformWrapper
@@ -344,21 +344,21 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                         onClick={() => zoomIn()}
                         className="px-3 py-1 rounded bg-gold text-white text-sm font-semibold hover:bg-gold/90 pointer-events-auto"
                       >
-                        +
+                        {t("zoom.zoomIn")}
                       </button>
                       <button
                         type="button"
                         onClick={() => zoomOut()}
                         className="px-3 py-1 rounded bg-gold text-white text-sm font-semibold hover:bg-gold/90 pointer-events-auto"
                       >
-                        -
+                        {t("zoom.zoomOut")}
                       </button>
                       <button
                         type="button"
                         onClick={() => resetTransform()}
                         className="px-3 py-1 rounded bg-gold text-white text-sm font-semibold hover:bg-gold/90 pointer-events-auto"
                       >
-                        Reset
+                        {t("zoom.reset")}
                       </button>
                     </div>
                     <TransformComponent
