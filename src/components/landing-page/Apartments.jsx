@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation"; // Add this import
 import { fadeIn } from "@/src/components/animations/variants";
 import PageTitle from "../PageTitle";
@@ -11,6 +11,8 @@ import Animated from "@/src/components/animations/Animated";
 
 const Apartments = () => {
   const t = useTranslations("ApartmentsPage");
+  const locale = useLocale();
+  const isRussian = locale === "ru";
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname(); // Get current pathname
 
@@ -123,10 +125,22 @@ const Apartments = () => {
                     />
                   </div>
                   <div className="p-6 flex-grow flex flex-col justify-center text-center">
-                    <h4 className="h4 group-hover:text-white transition-all duration-300">
+                    <h4
+                      className={
+                        isRussian
+                          ? "text-base lg:h4 group-hover:text-white transition-all duration-300"
+                          : "h4 group-hover:text-white transition-all duration-300"
+                      }
+                    >
                       {apartment.name}
                     </h4>
-                    <p className="group-hover:text-white transition-all duration-300">
+                    <p
+                      className={
+                        isRussian
+                          ? "text-sm lg:text-base group-hover:text-white transition-all duration-300"
+                          : "group-hover:text-white transition-all duration-300"
+                      }
+                    >
                       {apartment.info} m<sup>2</sup>
                     </p>
                   </div>

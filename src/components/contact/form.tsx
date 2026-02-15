@@ -6,7 +6,7 @@ import { toFormikValidationSchema } from "zod-formik-adapter";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Confetti from "react-confetti";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { createValidationSchema } from "@/utils/validations";
 import Logo from "@/src/components/Logo";
 
@@ -16,6 +16,8 @@ const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const t = useTranslations("Footer");
+  const locale = useLocale();
+  const isRussian = locale === "ru";
   const validationSchema = createValidationSchema(t);
 
   const handleSubmit = async (
@@ -23,7 +25,7 @@ const ContactForm = () => {
     {
       setSubmitting,
       resetForm,
-    }: { setSubmitting: (b: boolean) => void; resetForm: () => void }
+    }: { setSubmitting: (b: boolean) => void; resetForm: () => void },
   ) => {
     try {
       setIsLoading(true);
@@ -51,23 +53,41 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <div className="max-w-[640px] mx-auto ">
-            <div className="rounded-xl border border-gray-200 bg-white/70 backdrop-blur-sm shadow-sm p-6 sm:p-8 space-y-5">
+          <div className="w-full max-w-3xl mx-auto">
+            <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-6 sm:p-8 space-y-5">
               {/* Header */}
               <div className="space-y-1">
                 {/* logo & text */}
                 <Logo width={120} height={120} />
-                <h2 className="text-xl font-semibold text-black tracking-tight">
+                <h2
+                  className={
+                    isRussian
+                      ? "text-lg lg:text-xl font-semibold text-black tracking-tight"
+                      : "text-xl font-semibold text-black tracking-tight"
+                  }
+                >
                   {t("title")}
                 </h2>
-                <p className="text-sm text-gray-500">{t("subTitle")}</p>
+                <p
+                  className={
+                    isRussian
+                      ? "text-xs lg:text-sm text-gray-500"
+                      : "text-sm text-gray-500"
+                  }
+                >
+                  {t("subTitle")}
+                </p>
               </div>
 
               {/* Name */}
               <div className="space-y-2">
                 <label
                   htmlFor="name"
-                  className="text-sm font-medium text-black"
+                  className={
+                    isRussian
+                      ? "text-xs lg:text-sm font-medium text-black"
+                      : "text-sm font-medium text-black"
+                  }
                 >
                   {t("name")}
                 </label>
@@ -89,7 +109,11 @@ const ContactForm = () => {
               <div className="space-y-2">
                 <label
                   htmlFor="email"
-                  className="text-sm font-medium text-black"
+                  className={
+                    isRussian
+                      ? "text-xs lg:text-sm font-medium text-black"
+                      : "text-sm font-medium text-black"
+                  }
                 >
                   {t("email")}
                 </label>
@@ -111,7 +135,11 @@ const ContactForm = () => {
               <div className="space-y-2">
                 <label
                   htmlFor="message"
-                  className="text-sm font-medium text-black"
+                  className={
+                    isRussian
+                      ? "text-xs lg:text-sm font-medium text-black"
+                      : "text-sm font-medium text-black"
+                  }
                 >
                   {t("message")}
                 </label>

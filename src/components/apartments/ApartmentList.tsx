@@ -48,7 +48,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   // Filter apartments whenever type changes
   useEffect(() => {
     const filtered = apartments.filter((apartment) =>
-      apartmentType === "all" ? true : apartment.type === apartmentType
+      apartmentType === "all" ? true : apartment.type === apartmentType,
     );
     setFilteredApartments(filtered);
   }, [apartmentType, apartments]);
@@ -167,7 +167,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
       </div>
 
       {filteredApartments.length > 1 ? (
-        <div className="h-10 md:h-[200px]" />
+        <div className="h-5 md:h-[100px]" />
       ) : (
         <div className="h-4 md:h-8" />
       )}

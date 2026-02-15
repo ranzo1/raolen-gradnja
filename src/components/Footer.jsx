@@ -16,19 +16,19 @@ const Footer = () => {
     "https://maps.google.com/maps?width=100%&height=600&hl=en&q=%20Jug%20Bogdana%2029%20In%C4%91ija,%20Jug%20Bogdana,%20In%C4%91ija,%20Serbia&ie=UTF8&t=&z=14&iwloc=B&ll=45.04678,20.085750&output=embed";
 
   return (
-    <footer className="bg-background relative pt-12 xl:pt-3">
+    <footer className="bg-background relative mt-32 border-t border-gray-200">
       <div className="container mx-auto">
         <Animated animation={fadeIn("up", 0.2)} elementType="div" id="contact">
-          <div className="flex flex-col xl:flex-row bg-white shadow-md p-5 rounded-sm min-h-[394px] xl:p-20 xl:-translate-y-36 xl:gap-x-6">
-            <div className="relative w-full h-[500px] bg-gray-300 rounded-lg overflow-hidden p-10 flex items-end justify-start">
+          <div className="flex flex-col lg:flex-row mt-10 bg-white shadow-md p-5 rounded-sm min-h-[394px] xl:p-20 -translate-y-36 lg:gap-x-6">
+            <div className="relative w-full h-[500px] bg-gray-300 rounded-lg overflow-hidden p-2 xl:p-3 flex items-end justify-start">
               <iframe
                 title="map"
                 src={iframeSrc}
                 className="w-full h-full absolute inset-0 border-0 filter grayscale-100 contrast-120 opacity-40"
                 scrolling="no"
               />
-              <div className="relative rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm p-5 sm:p-6">
-                <div className="flex flex-col lg:flex-row gap-6">
+              <div className="relative w-full rounded-xl border border-gray-200 bg-white/80 backdrop-blur-sm shadow-sm p-5 sm:p-6">
+                <div className="flex flex-col lg:flex-row gap-2">
                   {/* Address */}
                   <div className="lg:w-1/2 px-0 lg:px-2">
                     <h2 className="text-[11px] font-semibold tracking-widest uppercase text-gray-500">
@@ -76,7 +76,11 @@ const Footer = () => {
                           strokeWidth="1.5"
                         />
                       </svg>
-                      raolengradnja@yahoo.com
+                      <span className="leading-tight">
+                        <span className="block sm:inline">
+                          raolengradnja@yahoo.com
+                        </span>
+                      </span>
                     </a>
 
                     <h2 className="mt-5 text-[11px] font-semibold tracking-widest uppercase text-gray-500">
@@ -132,17 +136,17 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white flex flex-col w-full mt-4 xl:mt-0">
+            <div className="bg-white flex flex-col w-full mt-4 lg:mt-0">
               <ContactForm />
             </div>
           </div>
         </Animated>
         {/* copyright text */}
-        <div className="py-12 xl:-mt-32 flex flex-col xl:flex-row xl:justify-between">
-          <p className="text-black font-semibold text-center mb-4 xl:mb-0">
+        <div className="py-12 mt-6 flex flex-col lg:flex-row lg:justify-between">
+          <p className="text-black font-semibold text-center mb-4 lg:mb-0">
             Copyright &copy; 2025. All rights reserved
           </p>
-          <Socials containerStyles="flex gap-x-4 text-black mx-auto xl:mx-0" />
+          <Socials containerStyles="flex gap-x-4 text-black mx-auto lg:mx-0" />
         </div>
       </div>
     </footer>

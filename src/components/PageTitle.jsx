@@ -5,6 +5,7 @@ import { fadeIn } from "@/src/components/animations/variants";
 import { Button } from "@/src/components/ui/button";
 import Link from "next/link";
 import PropTypes from "prop-types";
+import { useLocale } from "next-intl";
 
 const PageTitle = ({
   title,
@@ -18,6 +19,8 @@ const PageTitle = ({
   titleHeading = "h2", // default is <h2>, can be changed to "h1", "h3", etc.
 }) => {
   const HeadingTag = titleHeading;
+  const locale = useLocale();
+  const isRussian = locale === "ru";
 
   return (
     <Animated
@@ -28,11 +31,27 @@ const PageTitle = ({
         "border-2 shadow-sm border-outline rounded-md text-center my-3 md:my-5 py-4 md:py-10 px-5 md:px-10 bg-background"
       }
     >
-      <HeadingTag className={titleClassName ?? "h3 md:h2 mb-6 md:mb-10"}>
+      <HeadingTag
+        className={
+          titleClassName ??
+          (isRussian
+            ? "text-xl lg:text-3xl mb-6 md:mb-10"
+            : "h3 md:h2 mb-6 md:mb-10")
+        }
+      >
         {title}
       </HeadingTag>
 
-      <p className={textClassName ?? "max-w-[638px] mx-auto mb-8"}>{text}</p>
+      <p
+        className={
+          textClassName ??
+          (isRussian
+            ? "text-sm lg:text-sm max-w-[638px] mx-auto mb-8"
+            : "max-w-[638px] mx-auto mb-8")
+        }
+      >
+        {text}
+      </p>
 
       {picker && <div className="mb-8">{picker}</div>}
 

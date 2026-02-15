@@ -9,13 +9,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { fadeIn } from "@/src/components/animations/variants";
 import PageTitle from "../PageTitle";
 import Animated from "@/src/components/animations/Animated";
 
 const Facilities = () => {
   const t = useTranslations("FacilitiesPage");
+  const locale = useLocale();
+  const isRussian = locale === "ru";
   const facilitiesData = [
     {
       img: "/facilities/img-4.webp",
@@ -46,6 +48,12 @@ const Facilities = () => {
         className=" w-full"
       >
         <Animated animation={fadeIn("up", 0.4)} elementType="div" className="">
+          <style jsx global>{`
+            .plan-swiper .swiper-pagination {
+              position: static;
+              margin-top: 8px;
+            }
+          `}</style>
           <Swiper
             modules={[Autoplay, Pagination]}
             pagination={{ clickable: true }}
@@ -55,14 +63,14 @@ const Facilities = () => {
             }}
             loop
             speed={2000}
-            className=" overflow-hidden"
+            className="plan-swiper overflow-hidden"
           >
             {facilitiesData.map((slide, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className=" grid grid-cols-1 xl:grid-cols-3 gap-5">
+                  <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5">
                     {/* img */}
-                    <div className="relative xl:col-span-2 bg-white border-2 shadow-sm border-outline rounded-md">
+                    <div className="relative lg:col-span-2 bg-white border-2 shadow-sm border-outline rounded-md">
                       <Image
                         src={slide.img}
                         layout="responsive"
@@ -74,12 +82,30 @@ const Facilities = () => {
                     </div>
                     {/* text */}
                     <div
-                      className=" bg-white border-2 shadow-sm border-outline rounded-md p-12"
+                      className=" bg-white border-2 shadow-sm border-outline rounded-md p-9"
                       elementType="div"
                     >
-                      <h2 className="h2 mb-2 mt-2">{slide.title}</h2>
-                      <p className="text-gold text-sm mb-6">{slide.subtitle}</p>
-                      <p>{slide.message}</p>
+                      <h2
+                        className={
+                          isRussian
+                            ? "text-xl lg:text-3xl mb-2 mt-2"
+                            : "h3 md:h2 mb-2 mt-2"
+                        }
+                      >
+                        {slide.title}
+                      </h2>
+                      <p
+                        className={
+                          isRussian
+                            ? "text-gold text-xs lg:text-sm mb-6"
+                            : "text-gold text-sm mb-6"
+                        }
+                      >
+                        {slide.subtitle}
+                      </p>
+                      <p className={isRussian ? "text-sm lg:text-sm" : ""}>
+                        {slide.message}
+                      </p>
                     </div>
                   </div>
                 </SwiperSlide>

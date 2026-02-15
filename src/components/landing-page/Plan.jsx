@@ -12,7 +12,7 @@ import Image from "next/image";
 import { fadeIn } from "@/src/components/animations/variants";
 import { useInView } from "react-intersection-observer";
 import { useMediaQuery } from "react-responsive";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Stats from "@/src/components/landing-page/Stats";
 import Animated from "@/src/components/animations/Animated";
 import PageTitle from "@/src/components/PageTitle";
@@ -20,6 +20,8 @@ import { useEffect } from "react";
 
 const Plan = () => {
   const t = useTranslations("PlanPage");
+  const locale = useLocale();
+  const isRussian = locale === "ru";
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
@@ -170,10 +172,16 @@ const Plan = () => {
   ];
 
   return (
-    <section className="mt-5 xl:pt-0" ref={ref} id="plan">
+    <section className="mt-5 lg:pt-0" ref={ref} id="plan">
       {/* Title */}
       <PageTitle title={t("title")} text={t("p")} />
       <Animated animation={fadeIn("up", 0.4)} elementType="div" className="">
+        <style jsx global>{`
+          .plan-swiper .swiper-pagination {
+            position: static;
+            margin-top: 8px;
+          }
+        `}</style>
         <Swiper
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true }}
@@ -183,14 +191,14 @@ const Plan = () => {
           }}
           loop
           speed={2000}
-          className=" overflow-hidden"
+          className="plan-swiper overflow-hidden"
         >
           {plansData.map((slide, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="grid grid-cols-1 xl:grid-cols-4 gap-5 h-auto xl:h-[500px]">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 h-auto lg:h-[500px]">
                   {/* img */}
-                  <div className="relative xl:col-span-3 bg-white border-2 shadow-sm border-outline rounded-md w-full h-[250px] md:h-[300px] xl:h-full">
+                  <div className="relative lg:col-span-3 bg-white border-2 shadow-sm border-outline rounded-md w-full h-[250px] md:h-[400px] lg:h-full">
                     <Image
                       src={slide.img}
                       fill
@@ -203,19 +211,31 @@ const Plan = () => {
                     className="bg-white border-2 shadow-sm border-outline rounded-md p-4 md:p-6 flex flex-col justify-between min-h-[20rem] "
                     elementType="div"
                   >
-                    <h2 className="text-lg md:text-3xl font-bold mb-2">
+                    <h2
+                      className={
+                        isRussian
+                          ? "text-xl lg:text-3xl font-bold mb-2"
+                          : "text-lg md:text-3xl font-bold mb-2"
+                      }
+                    >
                       {slide.title}
                     </h2>
-                    <p className="text-sm md:text-base flex-grow">
+                    <p
+                      className={
+                        isRussian
+                          ? "text-sm lg:text-sm flex-grow"
+                          : "text-sm md:text-base flex-grow"
+                      }
+                    >
                       {slide.message}
                     </p>
 
                     {/* stats */}
-                    <div className="flex mt-4 xl:mt-6 h-full">
+                    <div className="flex mt-4 lg:mt-6 h-full scale-[0.95] origin-top-left">
                       <Stats
                         statsData={slide.statsData}
                         includeSup={slide.statsData.every(
-                          (item) => item.unit === "m"
+                          (item) => item.unit === "m",
                         )}
                       />
                     </div>

@@ -25,7 +25,7 @@ const Location = () => {
       type: null,
       image: null,
       iconUrl: "/logo.svg",
-      iconSize: [120, 120],
+      iconSize: [80, 80],
     },
     {
       position: [45.04083166147802, 20.08672533005239],
@@ -117,19 +117,20 @@ const Location = () => {
     iconUrl,
     iconSize,
     isFirst,
-    title = "location marker"
+    title = "location marker",
   ) => {
+    const isMobileScreen =
+      typeof window !== "undefined" && window.innerWidth < 640; // Tailwind's sm breakpoint
+
     const customHtml = isFirst
       ? `
     <div>
-      <img src="${iconUrl}" alt="${title}" style="width:180px; height:180px;" />
+      <img src="${iconUrl}" alt="${title}" style="width:${isMobileScreen ? 80 : 120}px; height:${isMobileScreen ? 80 : 120}px;" />
     </div>
   `
       : (() => {
-          const isMobile =
-            typeof window !== "undefined" && window.innerWidth < 640; // Tailwind's sm breakpoint
-          const size = isMobile ? 50 : 64;
-          const padding = isMobile ? 15 : 20;
+          const size = isMobileScreen ? 50 : 64;
+          const padding = isMobileScreen ? 15 : 20;
 
           return `
         <div style="
@@ -153,7 +154,7 @@ const Location = () => {
     return divIcon({
       html: customHtml,
       className: "",
-      iconSize: iconSize,
+      iconSize: isFirst && isMobileScreen ? [64, 64] : iconSize,
     });
   };
 
@@ -216,7 +217,7 @@ const Location = () => {
               marker.iconUrl,
               marker.iconSize,
               index === 0,
-              `Raolen Gradnja – ${marker.title} marker in Inđija`
+              `Raolen Gradnja – ${marker.title} marker in Inđija`,
             );
 
             return (

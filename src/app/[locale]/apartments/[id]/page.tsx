@@ -20,6 +20,10 @@ import NavMobile from "@/src/components/header/NavMobile";
 import { useState } from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 interface ApartmentProps {
   params: {
@@ -114,7 +118,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           </div>
         )}
 
-        <Animated
+        {/* <Animated
           className="border-2 shadow-sm border-outline bg-white rounded-md overflow-hidden relative h-[250px] lg:h-auto flex items-center justify-center lg:block"
           elementType="div"
           animation={fadeIn("left", 0.5)}
@@ -131,12 +135,60 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
               priority
             />
           </Zoom>
+        </Animated> */}
+
+        {/* slider */}
+        <Animated
+          animation={fadeIn("up", 0.4)}
+          elementType="div"
+          className="w-full mb-4 md:mb-6"
+        >
+          <style jsx global>{`
+            .apartment-swiper .swiper-pagination {
+              position: static;
+              margin-top: 8px;
+            }
+          `}</style>
+          <Swiper
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            speed={2000}
+            className="apartment-swiper w-full overflow-hidden"
+            autoHeight
+          >
+            {apartment.image.map((image, index) => {
+              return (
+                <SwiperSlide key={index} style={{ height: "auto" }}>
+                  <div className="flex flex-col gap-2 w-full h-auto">
+                    <div className="relative bg-white border-2 shadow-sm border-outline rounded-md w-full">
+                      <Zoom>
+                        <Image
+                          src={image}
+                          width={1400}
+                          height={900}
+                          sizes="(max-width: 1280px) 100vw, 75vw"
+                          className="w-full h-auto"
+                          style={{
+                            objectFit: "contain",
+                            borderRadius: "0.375rem",
+                          }}
+                          alt={`3D render of apartment ${apartment.titleKey} in Inđija, Serbia`}
+                          quality={90}
+                          priority
+                        />
+                      </Zoom>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </Animated>
 
         <div className="grid grid-cols-1 gap-5">
           {/* Premises (cards) */}
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 my-5 pb-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 pb-5">
               {apartment.premises.map((premise, index) => {
                 const info = premiseTypes[premise.type];
                 return (
@@ -213,11 +265,6 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          height: isMobile ? "0" : "200px",
-        }}
-      ></div>
 
       <Footer />
     </section>
