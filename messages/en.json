@@ -193,6 +193,13 @@
       "staircase": "Staircase",
       "elevator": "Elevator"
     },
+    "finishes": {
+      "title": "Finishes",
+      "underfloorHeating": "Underfloor heating",
+      "ceramicFlooring": "Ceramic flooring",
+      "acrylicWallPaint": "Acrylic wall paint",
+      "ceilingEmulsion": "Ceiling finish: emulsion"
+    },
     "3Drender": "*Example image — individual 3D renders soon",
     "overview": "Overview",
     "soldOut": "SOLD"

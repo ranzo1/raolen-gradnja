@@ -194,6 +194,13 @@
       "staircase": "Лестница",
       "elevator": "Лифт"
     },
+    "finishes": {
+      "title": "Отделка",
+      "underfloorHeating": "Подогрев пола",
+      "ceramicFlooring": "Керамический пол",
+      "acrylicWallPaint": "Акриловая краска для стен",
+      "ceilingEmulsion": "Отделка потолка: дисперсия"
+    },
     "3Drender": "*Пример изображения — индивидуальные 3D рендеры скоро",
     "overview": "Обзор",
     "soldOut": "ПРОДАНО"

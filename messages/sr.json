@@ -193,6 +193,13 @@
       "staircase": "Stepenište",
       "elevator": "Lift"
     },
+    "finishes": {
+      "title": "Završni radovi",
+      "underfloorHeating": "Podno grejanje",
+      "ceramicFlooring": "Podna keramika",
+      "acrylicWallPaint": "Akrilne zidne boje",
+      "ceilingEmulsion": "Obrada plafona: disperzija"
+    },
     "3Drender": "*Primer slike — individualni 3D renderi uskoro",
     "overview": "Pregled",
     "soldOut": "PRODATO"

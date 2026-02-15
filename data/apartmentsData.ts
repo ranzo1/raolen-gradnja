@@ -130,6 +130,29 @@ export const floorPremises: Record<FloorLevel, FloorPremise[]> = {
   ],
 };
 
+export const finishes = [
+  {
+    key: "underfloorHeating",
+    name: "Underfloor heating",
+    icon: "/apartment/icons/underfloor-heating.svg",
+  },
+  {
+    key: "ceramicFlooring",
+    name: "Ceramic flooring",
+    icon: "/apartment/icons/ceramic-flooring.svg",
+  },
+  {
+    key: "acrylicWallPaint",
+    name: "Acrylic wall paint",
+    icon: "/apartment/icons/wall-paint.svg",
+  },
+  {
+    key: "ceilingEmulsion",
+    name: "Ceiling finish: Emulsion",
+    icon: "/apartment/icons/ceiling-emulsion.svg",
+  },
+];
+
 // Define premise types directly with `as const`
 export const premiseTypes = {
   hallway: { name: "Hallway", icon: "/apartment/icons/hallway.svg" },

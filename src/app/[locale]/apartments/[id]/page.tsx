@@ -4,6 +4,7 @@ import {
   apartmentsData,
   floorPremises,
   premiseTypes,
+  finishes,
 } from "@/data/apartmentsData";
 import { notFound, usePathname } from "next/navigation";
 import Image from "next/image";
@@ -75,6 +76,8 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
+  const isBusinessPremise =
+    apartment?.premises?.[0]?.type === "businessPremises";
 
   const filter = searchParams.filter;
 
@@ -196,7 +199,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                     key={index}
                     elementType="div"
                     animation={fadeIn("right", 0.2)}
-                    className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-6"
+                    className="bg-white border-2 min-h-[190px] shadow-sm border-outline rounded-md overflow-hidden p-6"
                   >
                     <div className="text-center">
                       <div className="mx-auto mb-4 w-16 h-16 p-4 rounded-full shadow-md flex items-center justify-center">
@@ -221,7 +224,48 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
             </div>
           </div>
 
-          {/* Floor data (cards below premises) */}
+          {/* finishes data (cards below premises) */}
+          {!isBusinessPremise && (
+            <div>
+              <div className="text-center">
+                <Animated
+                  elementType="h3"
+                  animation={fadeIn("right", 0.2)}
+                  className="h3 mb-6 md:mb-5"
+                >
+                  {t(`finishes.title`)}
+                </Animated>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+                {finishes.map((finish, index) => (
+                  <Animated
+                    key={index}
+                    elementType="div"
+                    animation={fadeIn("right", 0.2)}
+                    className="bg-white border-2 min-h-[190px] shadow-sm border-outline rounded-md overflow-hidden p-6"
+                  >
+                    <div className="text-center">
+                      <div className="mx-auto mb-4 w-16 h-16 p-4 rounded-full shadow-md flex items-center justify-center">
+                        <Image
+                          src={finish.icon}
+                          alt={t(`finishes.${finish.key}`)}
+                          width={40}
+                          height={40}
+                          className="h-10 w-10"
+                        />
+                      </div>
+                      <h4 className="text-lg leading-6 text-gray-900 font-medium title-font">
+                        {t(`finishes.${finish.key}`)}
+                      </h4>
+                      {/* Finishes don’t have area */}
+                    </div>
+                  </Animated>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Floor data (cards below characteristics) */}
           <div>
             <div className="text-center">
               <Animated
@@ -238,7 +282,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
                   key={index}
                   elementType="div"
                   animation={fadeIn("right", 0.2)}
-                  className="bg-white border-2 shadow-sm border-outline rounded-md overflow-hidden p-6"
+                  className="bg-white border-2 min-h-[190px] shadow-sm border-outline rounded-md overflow-hidden p-6"
                 >
                   <div className="text-center">
                     <div className="mx-auto mb-4 w-16 h-16 p-4 rounded-full shadow-md flex items-center justify-center">
