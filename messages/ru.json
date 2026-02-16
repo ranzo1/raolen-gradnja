@@ -237,6 +237,7 @@
     "phone": "Телефон",
     "email": "E-мейл",
     "send": "Отправить",
+    "copyright": "© Raolen Gradnja. Все права защищены.",
     "errors": {
       "nameRequired": "Имя обязательно",
       "emailRequired": "Электронная почта обязательна",

@@ -144,7 +144,7 @@ const Footer = () => {
         {/* copyright text */}
         <div className="py-4 mb-0 flex flex-col lg:flex-row lg:justify-between">
           <p className="text-black font-semibold text-center mb-4 lg:mb-0">
-            Copyright &copy; 2025. All rights reserved
+            {t("copyright")}
           </p>
           <Socials containerStyles="flex gap-x-4 text-black mx-auto lg:mx-0" />
         </div>

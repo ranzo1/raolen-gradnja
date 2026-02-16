@@ -236,6 +236,7 @@
     "email": "Email",
     "send": "Send",
     "placeholderMessage": "How can we help?",
+    "copyright": "© Raolen Gradnja. All rights reserved.",
     "errors": {
       "nameRequired": "Name is required",
       "emailRequired": "Email is required",
