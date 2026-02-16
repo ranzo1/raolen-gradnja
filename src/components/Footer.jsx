@@ -142,7 +142,7 @@ const Footer = () => {
           </div>
         </Animated>
         {/* copyright text */}
-        <div className="py-12 mt-6 flex flex-col lg:flex-row lg:justify-between">
+        <div className="py-4 mb-0 flex flex-col lg:flex-row lg:justify-between">
           <p className="text-black font-semibold text-center mb-4 lg:mb-0">
             Copyright &copy; 2025. All rights reserved
           </p>

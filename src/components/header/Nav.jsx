@@ -14,8 +14,8 @@ const Nav = ({ containerStyles, linkStyles, links: customLinks }) => {
     { path: "location", name: t("location"), offset: -10, type: "scroll" },
     { path: "facilities", name: t("facilities"), offset: -10, type: "scroll" },
     { path: "apartments", name: t("apartments"), offset: -10, type: "scroll" },
-    { path: "projects", name: t("projects"), offset: -10, type: "scroll" },
-    { path: "contact", name: t("contact"), offset: 0, type: "scroll" },
+    { path: "contact", name: t("contact"), offset: -110, type: "scroll" },
+    /*{ path: "projects", name: t("projects"), offset: -10, type: "scroll" },*/
   ];
 
   const links =

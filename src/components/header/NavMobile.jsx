@@ -69,18 +69,18 @@ const NavMobile = ({
       offset: -10,
       type: "scroll",
     },
-    {
+    /*{
       icon: <RiBuilding2Fill />,
       path: "projects",
       name: t("projects"),
       offset: -10,
       type: "scroll",
-    },
+    },*/
     {
       icon: <RiContactsBookFill />,
       path: "contact",
       name: t("contact"),
-      offset: 500,
+      offset: -160,
       type: "scroll",
     },
   ];

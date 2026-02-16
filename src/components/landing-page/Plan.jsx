@@ -207,10 +207,7 @@ const Plan = () => {
                     />
                   </div>
                   {/* text */}
-                  <div
-                    className="bg-white border-2 shadow-sm border-outline rounded-md p-4 md:p-6 flex flex-col justify-between min-h-[20rem] "
-                    elementType="div"
-                  >
+                  <div className="bg-white border-2 shadow-sm border-outline rounded-md p-4 md:p-6 flex flex-col justify-between min-h-[20rem] ">
                     <h2
                       className={
                         isRussian

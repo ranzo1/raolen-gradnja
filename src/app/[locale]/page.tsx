@@ -14,7 +14,7 @@ const Location = dynamic(
   () => import("@/src/components/landing-page/Location"),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function Home() {
@@ -30,10 +30,9 @@ export default function Home() {
         <Location />
         <Facilities />
         <Apartments />
-        <Projects />
+        {/*<Projects />*/}
       </div>
       <Footer />
-      {/* <div className="h-[4000px]"></div> */}
     </main>
   );
 }
