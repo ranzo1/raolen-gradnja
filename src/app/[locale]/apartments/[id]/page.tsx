@@ -330,7 +330,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
               <TransformWrapper
                 initialScale={1}
                 minScale={1}
-                maxScale={5}
+                maxScale={10}
                 wheel={{ step: 0.1 }}
                 doubleClick={{ mode: "zoomIn", step: 0.5 }}
                 centerOnInit
