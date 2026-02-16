@@ -149,6 +149,7 @@ const Apartments = () => {
             );
           })}
         </Animated>
+        <div className="h-5 md:h-[100px]" />
       </div>
     </section>
   );
