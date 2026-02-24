@@ -17,6 +17,7 @@ interface Apartment {
   floor: string;
   titleKey: string;
   area: number;
+  rooms: string | null;
   soldOut?: boolean;
 }
 
@@ -158,6 +159,7 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
                   {t(`titles.${apartment.titleKey}`)}
                 </h4>
                 <p className="transition-colors duration-300 group-hover:text-white">
+                  {apartment.rooms && `${t(`rooms.${apartment.rooms}`)} - `}
                   {apartment.area} m<sup>2</sup>
                 </p>
               </div>

@@ -200,6 +200,13 @@
       "acrylicWallPaint": "Acrylic wall paint",
       "ceilingEmulsion": "Ceiling finish: emulsion"
     },
+    "rooms": {
+      "studio": "Studio",
+      "twoRooms": "Two-room",
+      "threeRooms": "Three-room",
+      "fourRooms": "Four-room",
+      "null": ""
+    },
     "3Drender": "*Example image — individual 3D renders soon",
     "overview": "Overview",
     "soldOut": "SOLD",

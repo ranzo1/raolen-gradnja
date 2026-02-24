@@ -200,6 +200,13 @@
       "acrylicWallPaint": "Akrilne zidne boje",
       "ceilingEmulsion": "Obrada plafona: disperzija"
     },
+    "rooms": {
+      "studio": "Garsonjera",
+      "twoRooms": "Dvosoban",
+      "threeRooms": "Trosoban",
+      "fourRooms": "Četvorosoban",
+      "null": ""
+    },
     "3Drender": "*Primer slike — individualni 3D renderi uskoro",
     "overview": "Pregled",
     "soldOut": "PRODATO",
