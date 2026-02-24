@@ -207,6 +207,13 @@
       "fourRooms": "Four-room",
       "null": ""
     },
+    "roomsPlural": {
+      "studio": "Studios",
+      "twoRooms": "Two-room",
+      "threeRooms": "Three-room",
+      "fourRooms": "Four-room",
+      "null": ""
+    },
     "3Drender": "*Example image — individual 3D renders soon",
     "overview": "Overview",
     "soldOut": "SOLD",

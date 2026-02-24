@@ -207,6 +207,13 @@
       "fourRooms": "Četvorosoban",
       "null": ""
     },
+    "roomsPlural": {
+      "studio": "Garsonjere",
+      "twoRooms": "Dvosobni",
+      "threeRooms": "Trosobni",
+      "fourRooms": "Četvorosobni",
+      "null": ""
+    },
     "3Drender": "*Primer slike — individualni 3D renderi uskoro",
     "overview": "Pregled",
     "soldOut": "PRODATO",

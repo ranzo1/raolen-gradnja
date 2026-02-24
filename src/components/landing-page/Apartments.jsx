@@ -31,19 +31,19 @@ const Apartments = () => {
   const apartmentDataMobile = [
     {
       image: "/apartments/1.webp",
-      name: t("studioApartments"),
+      name: `${t("roomsPlural.studio")} / ${t("roomsPlural.twoRooms")}`,
       value: "small",
       info: "< 50",
     },
     {
       image: "/apartments/2.webp",
-      name: t("apartments1"),
+      name: t("roomsPlural.threeRooms"),
       value: "medium",
       info: "50 - 70",
     },
     {
       image: "/apartments/4.webp",
-      name: t("apartments3"),
+      name: t("roomsPlural.fourRooms"),
       value: "large",
       info: "> 70",
     },
@@ -64,19 +64,19 @@ const Apartments = () => {
     },
     {
       image: "/apartments/1.webp",
-      name: t("studioApartments"),
+      name: `${t("roomsPlural.studio")} / ${t("roomsPlural.twoRooms")}`,
       value: "small",
       info: "< 50",
     },
     {
       image: "/apartments/2.webp",
-      name: t("apartments1"),
+      name: t("roomsPlural.threeRooms"),
       value: "medium",
       info: "50 - 70",
     },
     {
       image: "/apartments/4.webp",
-      name: t("apartments3"),
+      name: t("roomsPlural.fourRooms"),
       value: "large",
       info: "> 70",
     },
@@ -124,7 +124,7 @@ const Apartments = () => {
                       objectFit="cover"
                     />
                   </div>
-                  <div className="p-6 flex-grow flex flex-col justify-center text-center">
+                  <div className="px-2 py-7 flex-grow flex flex-col justify-center text-center">
                     <h4
                       className={
                         isRussian

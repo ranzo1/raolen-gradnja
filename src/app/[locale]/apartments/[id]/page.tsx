@@ -108,7 +108,7 @@ export default function Apartment({ params, searchParams }: ApartmentProps) {
       <div className="container min-h-screen py-10">
         <PageTitle
           title={t(`titles.${apartment.titleKey}`)}
-          text={`${t(`rooms.${apartment.rooms}`)} - ${apartment.area} m²`}
+          text={apartment.rooms ? `${t(`rooms.${apartment.rooms}`)} - ${apartment.area} m²` : `${apartment.area} m²`}
           className="border-2 shadow-sm border-outline rounded-md text-center mb-5 p-10 bg-background"
           textClassName="h3 font-medium mx-auto mb-8"
           titleHeading="h1"

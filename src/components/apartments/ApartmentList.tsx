@@ -35,9 +35,12 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   // Apartment types should match exactly what's used in the Apartments component
   const apartmentTypes = [
     { value: "all", label: t("all") },
-    { value: "small", label: t("studioApartments") },
-    { value: "medium", label: t("apartments1") },
-    { value: "large", label: t("apartments3") },
+    {
+      value: "small",
+      label: `${t("roomsPlural.studio")} / ${t("roomsPlural.twoRooms")}`,
+    },
+    { value: "medium", label: t("roomsPlural.threeRooms") },
+    { value: "large", label: t("roomsPlural.fourRooms") },
     { value: "office", label: t("apartments2") },
   ];
 
@@ -67,10 +70,10 @@ const ApartmentList: React.FC<ApartmentListProps> = ({ apartments }) => {
   };
 
   const picker = (
-    <div className="relative w-[220px] mx-auto">
+    <div className="relative w-full max-w-[250px] mx-auto">
       <select
         className="
-        peer w-full h-11 pl-4 pr-10 text-sm text-black
+        peer w-full h-11 px-10 text-sm text-black text-center
         rounded-md border border-gray-300 bg-white shadow-sm
         appearance-none
         transition-[box-shadow,border-color] duration-200
