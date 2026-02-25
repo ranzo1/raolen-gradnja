@@ -51,7 +51,7 @@ const Apartments = () => {
       image: "/apartments/3.webp",
       name: t("apartments2"),
       value: "office",
-      info: "144",
+      info: "143",
     },
   ];
 
@@ -60,7 +60,7 @@ const Apartments = () => {
       image: "/apartments/3.webp",
       name: t("apartments2"),
       value: "office",
-      info: "144",
+      info: "143",
     },
     {
       image: "/apartments/1.webp",
