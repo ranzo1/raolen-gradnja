@@ -47,7 +47,7 @@ const Header = ({ nav, navMobile }) => {
     <header
       ref={headerRef}
       className={`${
-        active ? "bg-white shadow-lg py-3 xl:py-4" : "bg-white py-3 xl:py-4"
+        active ? "bg-white shadow-lg py-3 xl:py-4" : "bg-white py-3 xl:py-3"
       } fixed top-0 w-full z-50 left-0 right-0 transition-all duration-300 ${
         scrollDir === "down" && window.scrollY > 250
           ? "transform -translate-y-full"
