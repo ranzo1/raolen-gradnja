@@ -12,9 +12,9 @@ const Hero = () => {
         className="relative flex items-center justify-center h-[600px] lg:h-[1000px] xl:h-screen"
         id="home"
       >
-        <div className="absolute inset-0 w-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
           <img
-            className="absolute -z-1 w-full h-full object-cover xl:h-auto xl:top-0 xl:left-0 xl:right-0 object-[center_40%]"
+            className="absolute -z-1 inset-0 w-full h-full object-cover"
             src="/hero/hero.webp"
             alt="Raolen Gradnja"
           />
