@@ -24,7 +24,13 @@ const Hero = () => {
           {/* text */}
           <div className="w-full max-w-full text-center rounded-sm shadow-md">
             <div className="bg-grey bg-opacity-60 p-4 rounded-md">
-              <h1 className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]">
+              <h1
+                className="text-gold text-5xl sm:text-6xl md:text-8xl xl:text-9xl tracking-[0.5em] lg:tracking-[1em]"
+                style={{
+                  textShadow:
+                    "2px 2px 4px rgba(0,0,0,0.3), 4px 4px 8px rgba(0,0,0,0.2), 6px 6px 12px rgba(0,0,0,0.1)",
+                }}
+              >
                 RAOLEN <span className="sr-only">{t("h1")}</span>
               </h1>
             </div>
