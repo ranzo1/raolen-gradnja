@@ -30,7 +30,7 @@ const Header = ({ nav, navMobile }) => {
     const mediaQuery = window.matchMedia("(max-width: 640px)");
     const handleMediaQueryChange = (e) => {
       setImageSize(
-        e.matches ? { width: 80, height: 80 } : { width: 130, height: 130 }
+        e.matches ? { width: 80, height: 80 } : { width: 130, height: 130 },
       );
     };
 
@@ -47,7 +47,7 @@ const Header = ({ nav, navMobile }) => {
     <header
       ref={headerRef}
       className={`${
-        active ? "bg-white shadow-lg py-3 xl:py-4" : "bg-none py-5 xl:py-8"
+        active ? "bg-white shadow-lg py-3 xl:py-4" : "bg-white py-3 xl:py-4"
       } fixed top-0 w-full z-50 left-0 right-0 transition-all duration-300 ${
         scrollDir === "down" && window.scrollY > 250
           ? "transform -translate-y-full"
