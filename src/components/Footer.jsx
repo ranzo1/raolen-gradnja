@@ -88,28 +88,6 @@ const Footer = () => {
                     </h2>
                     <div className="mt-2 flex flex-col gap-1.5">
                       <a
-                        href="tel:+381638094249"
-                        className="inline-flex items-center gap-2 text-sm text-black hover:text-gold focus:text-gold transition-colors"
-                        title="Call Raolen Gradnja at +381 63 809 4249"
-                        aria-label="Call +381 63 809 4249"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          className="h-4 w-4 text-gray-400"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            d="M22 16.92v2a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.64-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.1 5.18 2 2 0 0 1 4.11 3h2a2 2 0 0 1 2 1.72c.12.89.32 1.76.59 2.6a2 2 0 0 1-.45 2.11L7.1 10.9a16 16 0 0 0 6 6l1.47-1.17a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.6.59A2 2 0 0 1 22 16.92z"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        +381 63 809 4249
-                      </a>
-                      <a
                         href="tel:+381628904781"
                         className="inline-flex items-center gap-2 text-sm text-black hover:text-gold focus:text-gold transition-colors"
                         title="Call Raolen Gradnja at +381 62 890 4781"
