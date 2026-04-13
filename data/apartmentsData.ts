@@ -513,7 +513,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 4.24 },
       { type: "loggia", area: 3.24 },
     ],
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 12,
