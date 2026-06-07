@@ -335,6 +335,7 @@ export const apartmentsData: Apartment[] = [
       { type: "bedroom", area: 9.39 },
       { type: "livingRoomDiningArea", area: 26.49 },
       { type: "kitchen", area: 5.86 },
+      { type: "loggia", area: 3.85 },
     ],
     soldOut: false,
   },
