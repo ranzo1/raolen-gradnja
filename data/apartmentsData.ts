@@ -250,39 +250,39 @@ const C10_C18 = "/3DRenders/C10-C18.webp";
 const C11_C19_C26 = "/3DRenders/C11-C19-C26.webp";
 const C25 = "/3DRenders/C25.webp";
 
-const office_floorplan = "/floorplans/office.webp";
-const C1_floorplan = "/floorplans/c1.webp";
-const C2_floorplan = "/floorplans/c2.webp";
-const C3_floorplan = "/floorplans/c3.webp";
-const C4_floorplan = "/floorplans/c4.webp";
-const C5_floorplan = "/floorplans/c5.webp";
-const C6_floorplan = "/floorplans/c6.webp";
-const C7_floorplan = "/floorplans/c7.webp";
-const C8_floorplan = "/floorplans/c8.webp";
-const C9_floorplan = "/floorplans/c9.webp";
-const C10_floorplan = "/floorplans/c10.webp";
-const C11_floorplan = "/floorplans/c11.webp";
-const C12_floorplan = "/floorplans/c12.webp";
-const C13_floorplan = "/floorplans/c13.webp";
-const C14_floorplan = "/floorplans/c14.webp";
-const C15_floorplan = "/floorplans/c15.webp";
-const C16_floorplan = "/floorplans/c16.webp";
-const C17_floorplan = "/floorplans/c17.webp";
-const C18_floorplan = "/floorplans/c18.webp";
-const C19_floorplan = "/floorplans/c19.webp";
-const C20_floorplan = "/floorplans/c20.webp";
-const C21_floorplan = "/floorplans/c21.webp";
-const C22_floorplan = "/floorplans/c22.webp";
-const C23_floorplan = "/floorplans/c23.webp";
-const C24_floorplan = "/floorplans/c24.webp";
-const C25_floorplan = "/floorplans/c25.webp";
-const C26_floorplan = "/floorplans/c26.webp";
+// const office_floorplan = "/floorplans/office.webp";
+// const C1_floorplan = "/floorplans/c1.webp";
+// const C2_floorplan = "/floorplans/c2.webp";
+// const C3_floorplan = "/floorplans/c3.webp";
+// const C4_floorplan = "/floorplans/c4.webp";
+// const C5_floorplan = "/floorplans/c5.webp";
+// const C6_floorplan = "/floorplans/c6.webp";
+// const C7_floorplan = "/floorplans/c7.webp";
+// const C8_floorplan = "/floorplans/c8.webp";
+// const C9_floorplan = "/floorplans/c9.webp";
+// const C10_floorplan = "/floorplans/c10.webp";
+// const C11_floorplan = "/floorplans/c11.webp";
+// const C12_floorplan = "/floorplans/c12.webp";
+// const C13_floorplan = "/floorplans/c13.webp";
+// const C14_floorplan = "/floorplans/c14.webp";
+// const C15_floorplan = "/floorplans/c15.webp";
+// const C16_floorplan = "/floorplans/c16.webp";
+// const C17_floorplan = "/floorplans/c17.webp";
+// const C18_floorplan = "/floorplans/c18.webp";
+// const C19_floorplan = "/floorplans/c19.webp";
+// const C20_floorplan = "/floorplans/c20.webp";
+// const C21_floorplan = "/floorplans/c21.webp";
+// const C22_floorplan = "/floorplans/c22.webp";
+// const C23_floorplan = "/floorplans/c23.webp";
+// const C24_floorplan = "/floorplans/c24.webp";
+// const C25_floorplan = "/floorplans/c25.webp";
+// const C26_floorplan = "/floorplans/c26.webp";
 
 // Floor images
-const ground_floor = "/floorplans/floors/ground.jpg";
-const floor_1 = "/floorplans/floors/1.jpg";
-const floor_2 = "/floorplans/floors/2.jpg";
-const floor_3 = "/floorplans/floors/3.jpg";
+//const ground_floor = "/floorplans/floors/ground.jpg";
+//const floor_1 = "/floorplans/floors/1.jpg";
+//const floor_2 = "/floorplans/floors/2.jpg";
+//const floor_3 = "/floorplans/floors/3.jpg";
 
 // Apartments array
 export const apartmentsData: Apartment[] = [
@@ -294,7 +294,7 @@ export const apartmentsData: Apartment[] = [
     type: "office",
     rooms: null,
     coverImage: office_cover,
-    image: [office, office_floorplan, ground_floor],
+    image: [office],
     premises: [
       { type: "businessPremises", area: 139.99 },
       { type: "mensToilet", area: 3.92 },
@@ -310,7 +310,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "studio",
     coverImage: C1_cover,
-    image: [C1, C1_floorplan, ground_floor],
+    image: [C1],
     premises: [
       { type: "hallwayWardrobe", area: 2.77 },
       { type: "bathroom", area: 3.54 },
@@ -327,7 +327,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C2_cover,
-    image: [C2, C2_floorplan, ground_floor],
+    image: [C2],
     premises: [
       { type: "hallway", area: 9.92 },
       { type: "bathroom", area: 3.52 },
@@ -347,7 +347,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C3_cover,
-    image: [C3, C3_floorplan, ground_floor],
+    image: [C3],
     premises: [
       { type: "hallwayWardrobe", area: 6.98 },
       { type: "bathroom", area: 4.43 },
@@ -366,7 +366,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C4_C12_C20_cover,
-    image: [C4_C12_C20, C4_floorplan, floor_1],
+    image: [C4_C12_C20],
     premises: [
       { type: "hallwayWardrobe", area: 4.71 },
       { type: "bathroom", area: 3.61 },
@@ -385,7 +385,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C5_C13_C21_cover,
-    image: [C5_C13_C21, C5_floorplan, floor_1],
+    image: [C5_C13_C21],
     premises: [
       { type: "hallway", area: 3.04 },
       { type: "entranceHall", area: 1.88 },
@@ -405,7 +405,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C6_C14_C22_cover,
-    image: [C6_C14_C22, C6_floorplan, floor_1],
+    image: [C6_C14_C22],
     premises: [
       { type: "hallwayWardrobe", area: 8.84 },
       { type: "bathroom", area: 3.5 },
@@ -425,7 +425,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C7_C15_C23_cover,
-    image: [C7_C15_C23, C7_floorplan, floor_1],
+    image: [C7_C15_C23],
     premises: [
       { type: "hallwayWardrobe", area: 7.48 },
       { type: "bathroom", area: 4.47 },
@@ -445,7 +445,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C8_C16_C24_cover,
-    image: [C8_C16_C24, C8_floorplan, floor_1],
+    image: [C8_C16_C24],
     premises: [
       { type: "hallwayWardrobe", area: 7.54 },
       { type: "bathroom", area: 4.62 },
@@ -465,7 +465,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C9_C17_cover,
-    image: [C9_C17, C9_floorplan, floor_1],
+    image: [C9_C17],
     premises: [
       { type: "hallway", area: 6.59 },
       { type: "bathroom", area: 3.33 },
@@ -485,7 +485,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C10_C18_cover,
-    image: [C10_C18, C10_floorplan, floor_1],
+    image: [C10_C18],
     premises: [
       { type: "hallway", area: 6.94 },
       { type: "entranceHall", area: 2.37 },
@@ -505,7 +505,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C11_C19_C26_cover,
-    image: [C11_C19_C26, C11_floorplan, floor_1],
+    image: [C11_C19_C26],
     premises: [
       { type: "hallway", area: 4.62 },
       { type: "bathroom", area: 4.83 },
@@ -524,7 +524,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C4_C12_C20_cover,
-    image: [C4_C12_C20, C12_floorplan, floor_2],
+    image: [C4_C12_C20],
     premises: [
       { type: "hallwayWardrobe", area: 4.71 },
       { type: "bathroom", area: 3.61 },
@@ -543,7 +543,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C5_C13_C21_cover,
-    image: [C5_C13_C21, C13_floorplan, floor_2],
+    image: [C5_C13_C21],
     premises: [
       { type: "hallway", area: 3.04 },
       { type: "entranceHall", area: 1.88 },
@@ -563,7 +563,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C6_C14_C22_cover,
-    image: [C6_C14_C22, C14_floorplan, floor_2],
+    image: [C6_C14_C22],
     premises: [
       { type: "hallwayWardrobe", area: 8.84 },
       { type: "bathroom", area: 3.5 },
@@ -583,7 +583,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C7_C15_C23_cover,
-    image: [C7_C15_C23, C15_floorplan, floor_2],
+    image: [C7_C15_C23],
     premises: [
       { type: "hallwayWardrobe", area: 7.48 },
       { type: "bathroom", area: 4.47 },
@@ -603,7 +603,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C8_C16_C24_cover,
-    image: [C8_C16_C24, C16_floorplan, floor_2],
+    image: [C8_C16_C24],
     premises: [
       { type: "hallwayWardrobe", area: 7.54 },
       { type: "bathroom", area: 4.62 },
@@ -623,7 +623,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C9_C17_cover,
-    image: [C9_C17, C17_floorplan, floor_2],
+    image: [C9_C17],
     premises: [
       { type: "hallway", area: 6.59 },
       { type: "bathroom", area: 3.33 },
@@ -643,7 +643,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C10_C18_cover,
-    image: [C10_C18, C18_floorplan, floor_2],
+    image: [C10_C18],
     premises: [
       { type: "hallway", area: 6.94 },
       { type: "entranceHall", area: 2.37 },
@@ -663,7 +663,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C11_C19_C26_cover,
-    image: [C11_C19_C26, C19_floorplan, floor_2],
+    image: [C11_C19_C26],
     premises: [
       { type: "hallway", area: 4.62 },
       { type: "bathroom", area: 4.83 },
@@ -682,7 +682,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C4_C12_C20_cover,
-    image: [C4_C12_C20, C20_floorplan, floor_3],
+    image: [C4_C12_C20],
     premises: [
       { type: "hallwayWardrobe", area: 4.71 },
       { type: "bathroom", area: 3.61 },
@@ -691,7 +691,7 @@ export const apartmentsData: Apartment[] = [
       { type: "kitchen", area: 5.81 },
       { type: "loggia", area: 3.28 },
     ],
-    soldOut: false,
+    soldOut: true,
   },
   {
     id: 21,
@@ -701,7 +701,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C5_C13_C21_cover,
-    image: [C5_C13_C21, C21_floorplan, floor_3],
+    image: [C5_C13_C21],
     premises: [
       { type: "hallway", area: 3.04 },
       { type: "entranceHall", area: 1.88 },
@@ -721,7 +721,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C6_C14_C22_cover,
-    image: [C6_C14_C22, C22_floorplan, floor_3],
+    image: [C6_C14_C22],
     premises: [
       { type: "hallwayWardrobe", area: 8.84 },
       { type: "bathroom", area: 3.5 },
@@ -741,7 +741,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C7_C15_C23_cover,
-    image: [C7_C15_C23, C23_floorplan, floor_3],
+    image: [C7_C15_C23],
     premises: [
       { type: "hallwayWardrobe", area: 7.48 },
       { type: "bathroom", area: 4.47 },
@@ -761,7 +761,7 @@ export const apartmentsData: Apartment[] = [
     type: "medium",
     rooms: "threeRooms",
     coverImage: C8_C16_C24_cover,
-    image: [C8_C16_C24, C24_floorplan, floor_3],
+    image: [C8_C16_C24],
     premises: [
       { type: "hallwayWardrobe", area: 7.54 },
       { type: "bathroom", area: 4.61 },
@@ -781,7 +781,7 @@ export const apartmentsData: Apartment[] = [
     type: "large",
     rooms: "fourRooms",
     coverImage: C25_cover,
-    image: [C25, C25_floorplan, floor_3],
+    image: [C25],
     premises: [
       { type: "hallway", area: 12.64 },
       { type: "bathroom", area: 3.31 },
@@ -805,7 +805,7 @@ export const apartmentsData: Apartment[] = [
     type: "small",
     rooms: "twoRooms",
     coverImage: C11_C19_C26_cover,
-    image: [C11_C19_C26, C26_floorplan, floor_3],
+    image: [C11_C19_C26],
     premises: [
       { type: "hallway", area: 4.82 },
       { type: "bathroom", area: 4.83 },
