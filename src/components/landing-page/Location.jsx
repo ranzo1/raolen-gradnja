@@ -210,7 +210,9 @@ const Location = () => {
           scrollWheelZoom={false}
           attributionControl={false}
         >
-          <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+          <TileLayer
+            url={`https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_CARTO_API_KEY}`}
+          />
           {/* markers */}
           {markers.map((marker, index) => {
             const markerIcon = createCustomIcon(
